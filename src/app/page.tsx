@@ -21,7 +21,7 @@ export default function HomePage() {
             data-ai-hint="pickleball game professional"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-20" /* Increased opacity */
+            className="opacity-20" 
             priority
           />
         </div>
@@ -56,12 +56,12 @@ export default function HomePage() {
             </div>
             <AnimatedSection delay={150} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-12 md:mt-0">
               <Image
-                src="https://placehold.co/500x500.png"
-                alt="Pickleball player"
-                data-ai-hint="pickleball player pose"
+                src="/ball.png"
+                alt="Pickleball"
                 width={500}
                 height={500}
                 className="rounded-lg shadow-xl mx-auto object-cover aspect-square"
+                priority
               />
             </AnimatedSection>
           </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
       <AnimatedSection animationClass="animate-fadeIn" delay={600}>
         <section className="py-16">
           <div className="md:grid md:grid-cols-2 gap-12 items-center mb-16">
-            <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0">
+            <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0 order-first md:order-last">
                <Image
                   src="https://placehold.co/500x350.png"
                   alt="Pickleball equipment"

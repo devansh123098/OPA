@@ -15,11 +15,11 @@ const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
-          <LogoIcon className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl text-foreground hover:text-primary transition-colors">
+          <LogoIcon className="h-8 w-8" /> {/* text-primary removed as SVG has its own colors */}
+          <span className="font-bold text-xl text-sidebar-foreground hover:opacity-90 transition-opacity">
             Arunachal Pradesh Pickleball Association
           </span>
         </Link>
@@ -32,8 +32,10 @@ const Header = () => {
               variant="ghost"
               asChild
               className={cn(
-                "text-sm font-medium transition-colors", // Removed hover:text-primary
-                pathname === link.href ? "text-primary font-semibold" : "text-muted-foreground"
+                "text-sm font-medium transition-colors",
+                pathname === link.href 
+                  ? "bg-accent text-accent-foreground font-semibold" // Active: Sky Blue BG, White Text
+                  : "text-sidebar-foreground hover:bg-accent hover:text-accent-foreground" // Inactive: White text, Sky Blue BG on hover
               )}
             >
               <Link href={link.href}>{link.label}</Link>
@@ -45,20 +47,20 @@ const Header = () => {
         <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
+            <SheetContent side="right" className="w-full max-w-xs bg-sidebar text-sidebar-foreground p-6">
               <div className="flex flex-col space-y-6">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
-                        <LogoIcon className="h-7 w-7 text-primary" />
-                        <span className="font-semibold text-lg text-foreground">APPA</span>
+                        <LogoIcon className="h-7 w-7" />
+                        <span className="font-semibold text-lg text-sidebar-foreground">APPA</span>
                     </Link>
                     <SheetClose asChild>
-                        <Button variant="ghost" size="icon">
+                        <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
                             <X className="h-6 w-6" />
                             <span className="sr-only">Close menu</span>
                         </Button>
@@ -71,8 +73,10 @@ const Header = () => {
                       variant="ghost"
                       asChild
                       className={cn(
-                        "justify-start text-base font-medium transition-colors", // Removed hover:text-primary and hover:bg-accent/50
-                        pathname === link.href ? "text-primary bg-accent/30" : "text-foreground"
+                        "justify-start text-base font-medium transition-colors",
+                        pathname === link.href 
+                          ? "bg-accent text-accent-foreground" // Active: Sky Blue BG, White text
+                          : "text-sidebar-foreground hover:bg-accent hover:text-accent-foreground" // Inactive: White text, Sky Blue BG on hover
                       )}
                       onClick={() => setIsSheetOpen(false)}
                     >

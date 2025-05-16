@@ -32,7 +32,7 @@ const Header = () => {
               variant="ghost"
               asChild
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors", // Removed hover:text-primary
                 pathname === link.href ? "text-primary font-semibold" : "text-muted-foreground"
               )}
             >
@@ -71,7 +71,7 @@ const Header = () => {
                       variant="ghost"
                       asChild
                       className={cn(
-                        "justify-start text-base font-medium transition-colors hover:text-primary hover:bg-accent/50",
+                        "justify-start text-base font-medium transition-colors", // Removed hover:text-primary and hover:bg-accent/50
                         pathname === link.href ? "text-primary bg-accent/30" : "text-foreground"
                       )}
                       onClick={() => setIsSheetOpen(false)}

@@ -1,5 +1,4 @@
 
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -41,8 +40,8 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <div className="md:grid md:grid-cols-2 gap-12 items-center"> {/* Changed to md:grid-cols-2 */}
-            <div className="md:col-span-2 text-center md:text-left"> {/* Changed to md:col-span-2 */}
+          <div className="md:grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left"> {/* Adjusted: Removed md:col-span-2 */}
               <AnimatedSection animationClass="animate-fadeInUp">
                 <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-gradientWave">
@@ -69,7 +68,19 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Image removed from here */}
+            {/* Image Column */}
+            <div className="hidden md:flex justify-center items-center">
+              <AnimatedSection animationClass="animate-slideInFromRight" delay={600}>
+                <Image
+                  src="/pickleball ball .webp" // Using the filename as provided
+                  alt="Pickleball"
+                  width={150}
+                  height={150}
+                  className="animate-float object-contain"
+                  priority
+                />
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
@@ -202,18 +213,7 @@ export default function HomePage() {
       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-             {/* Swapped order for alternating layout */}
-            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="order-last md:order-first">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Pickleball History"
-                data-ai-hint="vintage sport history"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </AnimatedSection>
-             <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="text-center md:text-left order-first md:order-last">
+             <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="text-center md:text-left order-first md:order-first"> {/* Text first */}
               <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
@@ -224,10 +224,19 @@ export default function HomePage() {
                 </Link>
               </Button>
             </AnimatedSection>
+             <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="order-last md:order-last"> {/* Image last */}
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="Pickleball History"
+                data-ai-hint="vintage sport history"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </AnimatedSection>
           </div>
         </div>
       </section>
     </PageWrapper>
   );
 }
-

@@ -16,9 +16,8 @@ export default function HomePage() {
       <section className="relative py-20 md:py-32 rounded-xl overflow-hidden bg-background">
         <div className="absolute inset-0">
           <Image
-            src="https://placehold.co/1200x600.png"
+            src="/player.jpg"
             alt="Pickleball action background"
-            data-ai-hint="pickleball game professional"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-10" 

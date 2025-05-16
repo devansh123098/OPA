@@ -75,7 +75,7 @@ export default function HomePage() {
               { title: "Club Directory", desc: "Connect with local clubs and coaches.", href: "/clubs", icon: PaddleIcon, hint: "sports directory" },
               { title: "AI Workout", desc: "Get personalized practice routines.", href: "/ai-workout", icon: Sparkles, hint: "fitness training" }
             ].map((item, index) => (
-              <AnimatedSection key={item.title} delay={index * 150} animationClass="animate-fadeInUp">
+              <AnimatedSection key={item.title} delay={index * 150} animationClass="animate-scaleFadeInUp">
                 <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card">
                   <CardHeader className="items-center text-center">
                     <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">

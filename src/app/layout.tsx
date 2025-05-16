@@ -1,6 +1,7 @@
 
 import type { Metadata } from 'next';
 import { Inter, Roboto_Mono } from 'next/font/google'; // Changed from Geist_Sans, Geist_Mono
+import Image from 'next/image';
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -35,8 +36,17 @@ export default function RootLayout({
         </div>
         <Footer />
         <Toaster />
+        <div className="hidden md:block fixed right-6 top-1/2 -translate-y-1/2 z-50">
+          <Image
+            src="/pickleball ball .webp"
+            alt="Floating pickleball icon"
+            width={80}
+            height={80}
+            className="animate-float"
+            priority
+          />
+        </div>
       </body>
     </html>
   );
 }
-

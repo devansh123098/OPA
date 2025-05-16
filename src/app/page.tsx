@@ -41,8 +41,8 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <div className="md:grid md:grid-cols-5 gap-12 items-center">
-            <div className="md:col-span-3 text-center md:text-left">
+          <div className="md:grid md:grid-cols-2 gap-12 items-center"> {/* Changed to md:grid-cols-2 */}
+            <div className="md:col-span-2 text-center md:text-left"> {/* Changed to md:col-span-2 */}
               <AnimatedSection animationClass="animate-fadeInUp">
                 <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-gradientWave">
@@ -69,16 +69,7 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            <AnimatedSection delay={300} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-8 md:mt-0">
-               <Image
-                src="/ball.png"
-                alt="Pickleball"
-                width={500}
-                height={500}
-                className="rounded-lg shadow-xl mx-auto object-contain aspect-square animate-float"
-                priority
-              />
-            </AnimatedSection>
+            {/* Image removed from here */}
           </div>
         </div>
       </section>

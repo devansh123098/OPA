@@ -21,7 +21,7 @@ export default function HomePage() {
             data-ai-hint="pickleball game professional"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-20" 
+            className="opacity-10" 
             priority
           />
         </div>
@@ -54,14 +54,13 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Image for Hero Section - right side on larger screens */}
             <AnimatedSection delay={300} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-8 md:mt-0 hidden md:block">
               <Image
                 src="/ball.png"
                 alt="Pickleball"
                 width={500}
                 height={500}
-                className="rounded-lg shadow-xl mx-auto object-contain aspect-square"
+                className="rounded-lg shadow-xl mx-auto object-contain aspect-square animate-float"
                 priority
               />
             </AnimatedSection>
@@ -73,8 +72,7 @@ export default function HomePage() {
       <AnimatedSection animationClass="animate-fadeIn" delay={600}>
         <section className="py-16">
           <div className="md:grid md:grid-cols-2 gap-12 items-center mb-16">
-             {/* Image for "Discover What We Offer" */}
-            <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0 order-first md:order-last">
+            <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0 order-first md:order-first">
                <Image
                   src="https://placehold.co/500x350.png"
                   alt="Pickleball equipment"
@@ -84,8 +82,7 @@ export default function HomePage() {
                   className="rounded-lg shadow-lg object-cover w-full"
                 />
             </AnimatedSection>
-            {/* Text content for "Discover What We Offer" */}
-            <div className="text-center md:text-left order-last md:order-first">
+            <div className="text-center md:text-left order-last md:order-last">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-foreground">Discover What We Offer</h2>
               </AnimatedSection>
@@ -130,8 +127,7 @@ export default function HomePage() {
       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Text content now on the left */}
-            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="text-center md:text-left">
+            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="text-center md:text-left order-first">
               <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
@@ -142,8 +138,7 @@ export default function HomePage() {
                 </Link>
               </Button>
             </AnimatedSection>
-            {/* Image now on the right */}
-            <AnimatedSection delay={200} animationClass="animate-slideInFromRight">
+            <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="order-last">
               <Image
                 src="https://placehold.co/600x400.png"
                 alt="Pickleball History"

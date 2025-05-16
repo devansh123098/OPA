@@ -13,60 +13,85 @@ export default function HomePage() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section className="relative text-center py-20 md:py-32 rounded-xl overflow-hidden bg-background"> {/* Simplified background */}
+      <section className="relative py-20 md:py-32 rounded-xl overflow-hidden bg-background">
         <div className="absolute inset-0">
           <Image
             src="https://placehold.co/1200x600.png"
-            alt="Pickleball action"
-            data-ai-hint="pickleball game professional" /* Adjusted hint */
+            alt="Pickleball action background"
+            data-ai-hint="pickleball game professional"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-20" /* Adjusted opacity for softer background image */
+            className="opacity-10" /* Further reduced opacity */
             priority
           />
-           {/* Removed dark overlay, relying on text color for contrast or a very subtle one if needed */}
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <AnimatedSection animationClass="animate-fadeInUp">
-            <PickleballIcon className="h-16 w-16 text-primary mx-auto mb-6" /> {/* Primary color for icon */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground"> {/* Text foreground for main title */}
-              Welcome to Arunachal Pradesh Pickleball Association
-            </h1>
-          </AnimatedSection>
-          <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-            <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-muted-foreground"> {/* Muted foreground for subtitle */}
-              Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
-            </p>
-          </AnimatedSection>
-          <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-            <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                <Link href="/events">
-                  Explore Events <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="text-foreground border-border hover:bg-secondary hover:text-secondary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                <Link href="/about-pickleball">
-                  What is Pickleball?
-                </Link>
-              </Button>
+          <div className="md:grid md:grid-cols-5 gap-12 items-center">
+            <div className="md:col-span-3 text-center md:text-left">
+              <AnimatedSection animationClass="animate-fadeInUp">
+                <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                  Welcome to Arunachal Pradesh Pickleball Association
+                </h1>
+              </AnimatedSection>
+              <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+                <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-muted-foreground">
+                  Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={400} animationClass="animate-fadeInUp">
+                <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    <Link href="/events">
+                      Explore Events <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="text-foreground border-border hover:bg-secondary hover:text-secondary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    <Link href="/about-pickleball">
+                      What is Pickleball?
+                    </Link>
+                  </Button>
+                </div>
+              </AnimatedSection>
             </div>
-          </AnimatedSection>
+            <AnimatedSection delay={150} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-12 md:mt-0">
+              <Image
+                src="https://placehold.co/500x500.png"
+                alt="Pickleball player"
+                data-ai-hint="pickleball player pose"
+                width={500}
+                height={500}
+                className="rounded-lg shadow-xl mx-auto object-cover aspect-square"
+              />
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Quick Links Section */}
       <AnimatedSection animationClass="animate-fadeIn" delay={600}>
         <section className="py-16">
-          <div className="text-center mb-12">
-            <AnimatedSection animationClass="animate-fadeInUp">
-              <h2 className="text-3xl font-bold text-foreground">Discover What We Offer</h2>
+          <div className="md:grid md:grid-cols-2 gap-12 items-center mb-16">
+            <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0">
+               <Image
+                  src="https://placehold.co/500x350.png"
+                  alt="Pickleball equipment"
+                  data-ai-hint="pickleball equipment"
+                  width={500}
+                  height={350}
+                  className="rounded-lg shadow-lg object-cover w-full"
+                />
             </AnimatedSection>
-            <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
-              <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-                Explore key features of the Arunachal Pradesh Pickleball Association.
-              </p>
-            </AnimatedSection>
+            <div className="text-center md:text-left">
+              <AnimatedSection animationClass="animate-fadeInUp">
+                <h2 className="text-3xl font-bold text-foreground">Discover What We Offer</h2>
+              </AnimatedSection>
+              <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
+                <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
+                  Explore key features of the Arunachal Pradesh Pickleball Association.
+                </p>
+              </AnimatedSection>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -75,7 +100,7 @@ export default function HomePage() {
               { title: "Club Directory", desc: "Connect with local clubs and coaches.", href: "/clubs", icon: PaddleIcon, hint: "sports directory" },
               { title: "AI Workout", desc: "Get personalized practice routines.", href: "/ai-workout", icon: Sparkles, hint: "fitness training" }
             ].map((item, index) => (
-              <AnimatedSection key={item.title} delay={index * 150 + 700} animationClass="animate-scaleFadeInUp"> {/* Increased base delay for staggering */}
+              <AnimatedSection key={item.title} delay={index * 150 + 700} animationClass="animate-scaleFadeInUp">
                 <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card">
                   <CardHeader className="items-center text-center">
                     <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
@@ -99,10 +124,10 @@ export default function HomePage() {
       </AnimatedSection>
       
       {/* About Pickleball Teaser */}
-      <section className="py-16 bg-secondary/50 rounded-xl"> {/* Updated to use new secondary color */}
+      <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft"> {/* Added delay */}
+            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft">
               <Image
                 src="https://placehold.co/600x400.png"
                 alt="Pickleball History"
@@ -112,7 +137,7 @@ export default function HomePage() {
                 className="rounded-lg shadow-lg"
               />
             </AnimatedSection>
-            <AnimatedSection delay={200} animationClass="animate-slideInFromRight"> {/* Added delay */}
+            <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="text-center md:text-left">
               <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.

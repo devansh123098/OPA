@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -29,7 +30,7 @@ export default function HomePage() {
           <AnimatedSection animationClass="animate-fadeInUp">
             <PickleballIcon className="h-16 w-16 text-background mx-auto mb-4" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-background text-shadow">
-              Welcome to Arunachal Pickleball Connect
+              Welcome to Arunachal Pradesh Pickleball Association
             </h1>
           </AnimatedSection>
           <AnimatedSection delay={200} animationClass="animate-fadeInUp">

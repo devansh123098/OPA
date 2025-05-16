@@ -17,7 +17,7 @@ const fontMono = Roboto_Mono({ // Changed to Roboto_Mono
 });
 
 export const metadata: Metadata = {
-  title: 'Arunachal Pickleball Connect',
+  title: 'Arunachal Pradesh Pickleball Association',
   description: 'Official website of the Arunachal Pradesh Pickleball Association.',
 };
 
@@ -39,3 +39,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -20,7 +20,7 @@ const Header = () => {
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
           <LogoIcon className="h-8 w-8 text-primary" />
           <span className="font-bold text-xl text-foreground hover:text-primary transition-colors">
-            Arunachal Pickleball Connect
+            Arunachal Pradesh Pickleball Association
           </span>
         </Link>
 
@@ -55,7 +55,7 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
                         <LogoIcon className="h-7 w-7 text-primary" />
-                        <span className="font-semibold text-lg text-foreground">AP Connect</span>
+                        <span className="font-semibold text-lg text-foreground">APPA</span>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon">

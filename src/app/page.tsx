@@ -30,12 +30,12 @@ export default function HomePage() {
             <div className="md:col-span-3 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-gradientWave">
                   Welcome to Arunachal Pradesh Pickleball Association
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-                <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-muted-foreground">
+                <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-muted-foreground animate-gradientWave">
                   Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
                 </p>
               </AnimatedSection>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            <AnimatedSection delay={300} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-8 md:mt-0 hidden md:block">
+            <AnimatedSection delay={300} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-8 md:mt-0">
               <Image
                 src="/ball.png"
                 alt="Pickleball"
@@ -127,7 +127,7 @@ export default function HomePage() {
       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="text-center md:text-left order-first">
+            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="text-center md:text-left order-first md:order-first">
               <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
@@ -138,7 +138,7 @@ export default function HomePage() {
                 </Link>
               </Button>
             </AnimatedSection>
-            <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="order-last">
+            <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="order-last md:order-last">
               <Image
                 src="https://placehold.co/600x400.png"
                 alt="Pickleball History"

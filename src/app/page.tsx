@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, BarChart, CalendarDays, Users, Sparkles } from 'lucide-react';
+import { ArrowRight, CalendarDays, Users, Sparkles } from 'lucide-react';
 import PickleballIcon from '@/components/icons/pickleball-icon';
 import PaddleIcon from '@/components/icons/paddle-icon';
 
@@ -56,43 +56,47 @@ export default function HomePage() {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-16">
-        <div className="text-center mb-12">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold text-foreground">Discover What We Offer</h2>
-            <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-              Explore key features of the Arunachal Pradesh Pickleball Association.
-            </p>
-          </AnimatedSection>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { title: "Association Info", desc: "Learn about our mission and goals.", href: "/association-info", icon: Users, hint: "community team" },
-            { title: "Events Calendar", desc: "Find upcoming tournaments & workshops.", href: "/events", icon: CalendarDays, hint: "calendar schedule" },
-            { title: "Club Directory", desc: "Connect with local clubs and coaches.", href: "/clubs", icon: PaddleIcon, hint: "sports directory" },
-            { title: "AI Workout", desc: "Get personalized practice routines.", href: "/ai-workout", icon: Sparkles, hint: "fitness training" }
-          ].map((item, index) => (
-            <AnimatedSection key={item.title} delay={index * 100} animationClass="animate-fadeInUp">
-              <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card">
-                <CardHeader className="items-center text-center">
-                  <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
-                    <item.icon className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center flex-grow">
-                  <CardDescription>{item.desc}</CardDescription>
-                </CardContent>
-                <CardFooter className="justify-center">
-                  <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent">
-                    <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+      <AnimatedSection animationClass="animate-fadeIn" delay={600}>
+        <section className="py-16">
+          <div className="text-center mb-12">
+            <AnimatedSection animationClass="animate-fadeInUp">
+              <h2 className="text-3xl font-bold text-foreground">Discover What We Offer</h2>
             </AnimatedSection>
-          ))}
-        </div>
-      </section>
+            <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
+              <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
+                Explore key features of the Arunachal Pradesh Pickleball Association.
+              </p>
+            </AnimatedSection>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Association Info", desc: "Learn about our mission and goals.", href: "/association-info", icon: Users, hint: "community team" },
+              { title: "Events Calendar", desc: "Find upcoming tournaments & workshops.", href: "/events", icon: CalendarDays, hint: "calendar schedule" },
+              { title: "Club Directory", desc: "Connect with local clubs and coaches.", href: "/clubs", icon: PaddleIcon, hint: "sports directory" },
+              { title: "AI Workout", desc: "Get personalized practice routines.", href: "/ai-workout", icon: Sparkles, hint: "fitness training" }
+            ].map((item, index) => (
+              <AnimatedSection key={item.title} delay={index * 150} animationClass="animate-fadeInUp">
+                <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card">
+                  <CardHeader className="items-center text-center">
+                    <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
+                      <item.icon className="h-8 w-8" />
+                    </div>
+                    <CardTitle className="text-xl">{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center flex-grow">
+                    <CardDescription>{item.desc}</CardDescription>
+                  </CardContent>
+                  <CardFooter className="justify-center">
+                    <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent">
+                      <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+        </section>
+      </AnimatedSection>
       
       {/* About Pickleball Teaser */}
       <section className="py-16 bg-secondary/50 rounded-xl">

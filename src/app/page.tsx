@@ -20,7 +20,7 @@ export default function HomePage() {
             alt="Pickleball action background"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-10" 
+            className="opacity-20" 
             priority
           />
         </div>
@@ -153,3 +153,4 @@ export default function HomePage() {
     </PageWrapper>
   );
 }
+

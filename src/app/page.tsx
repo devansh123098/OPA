@@ -21,7 +21,7 @@ export default function HomePage() {
             data-ai-hint="pickleball game professional"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-10" /* Further reduced opacity */
+            className="opacity-20" /* Increased opacity */
             priority
           />
         </div>
@@ -127,17 +127,8 @@ export default function HomePage() {
       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Pickleball History"
-                data-ai-hint="vintage sport history"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </AnimatedSection>
-            <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="text-center md:text-left">
+            {/* Text content now on the left */}
+            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="text-center md:text-left">
               <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
@@ -147,6 +138,17 @@ export default function HomePage() {
                   Read More <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
+            </AnimatedSection>
+            {/* Image now on the right */}
+            <AnimatedSection delay={200} animationClass="animate-slideInFromRight">
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="Pickleball History"
+                data-ai-hint="vintage sport history"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
             </AnimatedSection>
           </div>
         </div>

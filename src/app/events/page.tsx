@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import PageWrapper from '@/components/layout/page-wrapper';
@@ -12,16 +13,30 @@ export default function EventsPage() {
 
   return (
     <PageWrapper>
-      <AnimatedSection animationClass="animate-fadeInUp">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight text-primary">
-            Upcoming Events
-          </h1>
-          <p className="mt-4 text-xl text-muted-foreground">
-            Join us for exciting tournaments, workshops, and training sessions.
-          </p>
+      <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
+        <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
+          <AnimatedSection animationClass="animate-fadeInUp">
+            <h1 className="text-4xl font-bold tracking-tight text-primary">
+              Upcoming Events
+            </h1>
+            <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+              Join us for exciting tournaments, workshops, and training sessions.
+            </p>
+          </AnimatedSection>
         </div>
-      </AnimatedSection>
+        <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
+          <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
+            <Image
+              src="/pickleball ball .webp"
+              alt="Pickleball icon"
+              width={150}
+              height={150}
+              className="animate-float object-contain mx-auto"
+              priority
+            />
+          </AnimatedSection>
+        </div>
+      </div>
 
       {events.length === 0 ? (
         <AnimatedSection>

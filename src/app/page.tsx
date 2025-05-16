@@ -40,8 +40,8 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4">
-          <div className="md:grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left"> {/* Adjusted: Removed md:col-span-2 */}
+          <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
+            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-gradientWave">
@@ -68,12 +68,11 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Image Column */}
-            <div className="hidden md:flex justify-center items-center">
+            <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-12 md:mt-0">
               <AnimatedSection animationClass="animate-slideInFromRight" delay={600}>
                 <Image
-                  src="/pickleball ball .webp" // Using the filename as provided
-                  alt="Pickleball"
+                  src="/pickleball ball .webp"
+                  alt="Pickleball icon"
                   width={150}
                   height={150}
                   className="animate-float object-contain"
@@ -126,18 +125,19 @@ export default function HomePage() {
       {/* Discover Our Initiatives Section */}
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
         <section className="py-16">
-          <div className="md:grid md:grid-cols-2 gap-12 items-center mb-16">
-             <AnimatedSection animationClass="animate-slideInFromLeft" delay={100} className="mb-8 md:mb-0 order-first md:order-first">
-               <Image
-                  src="https://placehold.co/500x350.png"
-                  alt="Pickleball equipment"
-                  data-ai-hint="pickleball equipment gear"
-                  width={500}
-                  height={350}
-                  className="rounded-lg shadow-lg object-cover w-full"
-                />
-            </AnimatedSection>
-            <div className="text-center md:text-left order-last md:order-last">
+          <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
+             <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
+               <AnimatedSection animationClass="animate-slideInFromLeft" delay={100}>
+                 <Image
+                    src="/pickleball ball .webp"
+                    alt="Pickleball icon"
+                    width={150}
+                    height={150}
+                    className="animate-float object-contain mx-auto"
+                  />
+                </AnimatedSection>
+            </div>
+            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-last">
               <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
                 <h2 className="text-3xl font-bold text-foreground">Discover Our Initiatives</h2>
               </AnimatedSection>
@@ -199,7 +199,6 @@ export default function HomePage() {
             </AnimatedSection>
             <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200 animate-pulse">
-                {/* We can update this link later if there's a specific membership page */}
                 <Link href="/association-info#contact"> 
                   Get Involved <Users className="ml-2 h-5 w-5" />
                 </Link>
@@ -212,28 +211,31 @@ export default function HomePage() {
       {/* About Pickleball Teaser */}
       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-             <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="text-center md:text-left order-first md:order-first"> {/* Text first */}
-              <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
-              </p>
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="/about-pickleball">
-                  Read More <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </AnimatedSection>
-             <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="order-last md:order-last"> {/* Image last */}
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Pickleball History"
-                data-ai-hint="vintage sport history"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </AnimatedSection>
+          <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
+             <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-first md:order-first">
+                <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+                    <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
+                    <p className="text-lg text-muted-foreground mb-6">
+                        Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
+                    </p>
+                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                        <Link href="/about-pickleball">
+                        Read More <ArrowRight className="ml-2 h-5 w-5" />
+                        </Link>
+                    </Button>
+                </AnimatedSection>
+            </div>
+             <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center order-last md:order-last mt-8 md:mt-0">
+              <AnimatedSection delay={100} animationClass="animate-slideInFromRight">
+                <Image
+                    src="/pickleball ball .webp"
+                    alt="Pickleball icon"
+                    width={150}
+                    height={150}
+                    className="animate-float object-contain mx-auto"
+                />
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>

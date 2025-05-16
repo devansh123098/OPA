@@ -5,8 +5,8 @@
 @layer base {
   :root {
     /* Light Theme - New Palette */
-    --background: 40 10% 96%; /* Warm Gray */
-    --foreground: 210 20% 25%; /* Dark Cool Gray for text on warm gray */
+    --background: 0 0% 97%; /* Neutral Off-White */
+    --foreground: 210 20% 25%; /* Dark Cool Gray for text */
     
     --card: 0 0% 100%; /* White */
     --card-foreground: 210 20% 25%; /* Dark Cool Gray */

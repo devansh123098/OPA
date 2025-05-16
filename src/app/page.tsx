@@ -1,11 +1,12 @@
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, CalendarDays, Users, Sparkles, Award, Home as HomeIcon, CalendarCheck, BarChartBig, Mail, Phone } from 'lucide-react';
+import { ArrowRight, CalendarDays, Users, Sparkles, Award, Home as HomeIcon, CalendarCheck, BarChartBig, Info } from 'lucide-react';
 import PickleballIcon from '@/components/icons/pickleball-icon';
 import PaddleIcon from '@/components/icons/paddle-icon';
 
@@ -16,6 +17,14 @@ export default function HomePage() {
     { title: "Community Events", description: "Participate in regular tournaments, workshops, and social pickleball events.", icon: CalendarCheck, href: "/events" },
     { title: "Skill Development", description: "Programs designed to help players of all ages improve and enjoy the sport.", icon: BarChartBig, href: "/ai-workout" },
   ];
+
+  const initiatives = [
+    { title: "Association Info", desc: "Learn about our mission and goals.", href: "/association-info", icon: Info, image: "https://placehold.co/500x300.png", imageHint: "community team" },
+    { title: "Events Calendar", desc: "Find upcoming tournaments & workshops.", href: "/events", icon: CalendarDays, image: "https://placehold.co/500x300.png", imageHint: "calendar schedule" },
+    { title: "Club Directory", desc: "Connect with local clubs and coaches.", href: "/clubs", icon: Users, image: "https://placehold.co/500x300.png", imageHint: "sports directory" },
+    { title: "AI Workout", desc: "Get personalized practice routines.", href: "/ai-workout", icon: Sparkles, image: "https://placehold.co/500x300.png", imageHint: "fitness training" }
+  ];
+
 
   return (
     <PageWrapper>
@@ -47,7 +56,7 @@ export default function HomePage() {
               </AnimatedSection>
               <AnimatedSection delay={400} animationClass="animate-fadeInUp">
                 <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200 animate-pulse">
                     <Link href="/events">
                       Explore Events <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
@@ -61,7 +70,7 @@ export default function HomePage() {
               </AnimatedSection>
             </div>
             <AnimatedSection delay={300} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-8 md:mt-0">
-              <Image
+               <Image
                 src="/ball.png"
                 alt="Pickleball"
                 width={500}
@@ -78,7 +87,7 @@ export default function HomePage() {
       <AnimatedSection animationClass="animate-fadeIn" delay={500}>
         <section className="py-16">
           <div className="text-center mb-12">
-            <AnimatedSection animationClass="animate-fadeInUp">
+            <AnimatedSection animationClass="animate-fadeInDown">
               <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
             </AnimatedSection>
             <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
@@ -89,7 +98,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyHighlights.map((highlight, index) => (
-              <AnimatedSection key={highlight.title} delay={index * 150 + 600} animationClass="animate-scaleFadeInUp">
+              <AnimatedSection key={highlight.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
                 <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card text-center">
                   <CardHeader className="items-center">
                     <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
@@ -112,50 +121,55 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
-      {/* Quick Links Section (Existing "Discover What We Offer") */}
-      <AnimatedSection animationClass="animate-fadeIn" delay={600}>
+      {/* Discover Our Initiatives Section */}
+      <AnimatedSection animationClass="animate-fadeIn" delay={300}>
         <section className="py-16">
           <div className="md:grid md:grid-cols-2 gap-12 items-center mb-16">
-             <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0 order-first md:order-first">
+             <AnimatedSection animationClass="animate-slideInFromLeft" delay={100} className="mb-8 md:mb-0 order-first md:order-first">
                <Image
                   src="https://placehold.co/500x350.png"
                   alt="Pickleball equipment"
-                  data-ai-hint="pickleball equipment"
+                  data-ai-hint="pickleball equipment gear"
                   width={500}
                   height={350}
                   className="rounded-lg shadow-lg object-cover w-full"
                 />
             </AnimatedSection>
             <div className="text-center md:text-left order-last md:order-last">
-              <AnimatedSection animationClass="animate-fadeInUp">
+              <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
                 <h2 className="text-3xl font-bold text-foreground">Discover Our Initiatives</h2>
               </AnimatedSection>
-              <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
+              <AnimatedSection animationClass="animate-fadeInUp" delay={300}>
                 <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
                   Explore key features and services of the Arunachal Pradesh Pickleball Association.
                 </p>
               </AnimatedSection>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Association Info", desc: "Learn about our mission and goals.", href: "/association-info", icon: Users, hint: "community team" },
-              { title: "Events Calendar", desc: "Find upcoming tournaments & workshops.", href: "/events", icon: CalendarDays, hint: "calendar schedule" },
-              { title: "Club Directory", desc: "Connect with local clubs and coaches.", href: "/clubs", icon: PaddleIcon, hint: "sports directory" },
-              { title: "AI Workout", desc: "Get personalized practice routines.", href: "/ai-workout", icon: Sparkles, hint: "fitness training" }
-            ].map((item, index) => (
-              <AnimatedSection key={item.title} delay={index * 150 + 700} animationClass="animate-scaleFadeInUp">
-                <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card">
-                  <CardHeader className="items-center text-center">
-                    <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
-                      <item.icon className="h-8 w-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {initiatives.map((item, index) => (
+              <AnimatedSection key={item.title} delay={index * 150 + 400} animationClass="animate-scaleFadeInUp">
+                <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      data-ai-hint={item.imageHint}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      className="transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader className="items-center text-center pt-4">
+                    <div className="p-3 rounded-full bg-primary/10 text-primary mb-2 inline-block">
+                      <item.icon className="h-7 w-7" />
                     </div>
                     <CardTitle className="text-xl">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="text-center flex-grow">
+                  <CardContent className="text-center flex-grow px-4 pb-4">
                     <CardDescription>{item.desc}</CardDescription>
                   </CardContent>
-                  <CardFooter className="justify-center">
+                  <CardFooter className="justify-center pb-6 pt-0">
                     <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent text-foreground">
                       <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                     </Button>
@@ -182,7 +196,7 @@ export default function HomePage() {
               </p>
             </AnimatedSection>
             <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200 animate-pulse">
                 {/* We can update this link later if there's a specific membership page */}
                 <Link href="/association-info#contact"> 
                   Get Involved <Users className="ml-2 h-5 w-5" />
@@ -197,7 +211,18 @@ export default function HomePage() {
       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="text-center md:text-left order-first md:order-last"> {/* Swapped order for alternating layout */}
+             {/* Swapped order for alternating layout */}
+            <AnimatedSection delay={100} animationClass="animate-slideInFromLeft" className="order-last md:order-first">
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="Pickleball History"
+                data-ai-hint="vintage sport history"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </AnimatedSection>
+             <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="text-center md:text-left order-first md:order-last">
               <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Dive into the fascinating history of pickleball, from its humble beginnings to becoming one of the fastest-growing sports worldwide.
@@ -208,19 +233,10 @@ export default function HomePage() {
                 </Link>
               </Button>
             </AnimatedSection>
-            <AnimatedSection delay={200} animationClass="animate-slideInFromRight" className="order-last md:order-first"> {/* Swapped order for alternating layout */}
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Pickleball History"
-                data-ai-hint="vintage sport history"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </AnimatedSection>
           </div>
         </div>
       </section>
     </PageWrapper>
   );
 }
+

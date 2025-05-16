@@ -7,7 +7,7 @@ interface AnimatedSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
   delay?: number; // in ms
-  animationClass?: 'animate-fadeInUp' | 'animate-fadeIn' | 'animate-slideInFromLeft' | 'animate-slideInFromRight' | 'animate-scaleFadeInUp';
+  animationClass?: 'animate-fadeInUp' | 'animate-fadeIn' | 'animate-slideInFromLeft' | 'animate-slideInFromRight' | 'animate-scaleFadeInUp' | 'animate-zoomIn' | 'animate-fadeInDown';
   threshold?: number;
   once?: boolean; // if true, animation only runs once
 }

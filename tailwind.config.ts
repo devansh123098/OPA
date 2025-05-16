@@ -11,8 +11,8 @@ export default {
   theme: {
   	extend: {
       fontFamily: {
-        sans: [`var(--font-geist-sans)`, ...defaultTheme.fontFamily.sans],
-        mono: [`var(--font-geist-mono)`, ...defaultTheme.fontFamily.mono],
+        sans: [`var(--font-sans)`, ...defaultTheme.fontFamily.sans], // Updated to use --font-sans
+        mono: [`var(--font-mono)`, ...defaultTheme.fontFamily.mono],   // Updated to use --font-mono
       },
   		colors: {
   			background: 'hsl(var(--background))',
@@ -67,7 +67,7 @@ export default {
   			}
   		},
   		borderRadius: {
-  			lg: 'var(--radius)',
+  			lg: 'var(--radius)', // Uses CSS variable from globals.css
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},

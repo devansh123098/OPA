@@ -54,7 +54,17 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Image section removed */}
+            {/* Image for Hero Section - right side on larger screens */}
+            <AnimatedSection delay={300} animationClass="animate-slideInFromRight" className="md:col-span-2 mt-8 md:mt-0 hidden md:block">
+              <Image
+                src="/ball.png"
+                alt="Pickleball"
+                width={500}
+                height={500}
+                className="rounded-lg shadow-xl mx-auto object-contain aspect-square"
+                priority
+              />
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -63,7 +73,18 @@ export default function HomePage() {
       <AnimatedSection animationClass="animate-fadeIn" delay={600}>
         <section className="py-16">
           <div className="md:grid md:grid-cols-2 gap-12 items-center mb-16">
-             {/* Text content for "Discover What We Offer" */}
+             {/* Image for "Discover What We Offer" */}
+            <AnimatedSection animationClass="animate-slideInFromLeft" className="mb-8 md:mb-0 order-first md:order-last">
+               <Image
+                  src="https://placehold.co/500x350.png"
+                  alt="Pickleball equipment"
+                  data-ai-hint="pickleball equipment"
+                  width={500}
+                  height={350}
+                  className="rounded-lg shadow-lg object-cover w-full"
+                />
+            </AnimatedSection>
+            {/* Text content for "Discover What We Offer" */}
             <div className="text-center md:text-left order-last md:order-first">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-foreground">Discover What We Offer</h2>
@@ -74,17 +95,6 @@ export default function HomePage() {
                 </p>
               </AnimatedSection>
             </div>
-            {/* Image for "Discover What We Offer" */}
-            <AnimatedSection animationClass="animate-slideInFromRight" className="mb-8 md:mb-0 order-first md:order-last">
-               <Image
-                  src="https://placehold.co/500x350.png"
-                  alt="Pickleball equipment"
-                  data-ai-hint="pickleball equipment"
-                  width={500}
-                  height={350}
-                  className="rounded-lg shadow-lg object-cover w-full"
-                />
-            </AnimatedSection>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[

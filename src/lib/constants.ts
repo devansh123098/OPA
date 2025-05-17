@@ -2,11 +2,11 @@
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/association-info', label: 'About Us' },
-  { href: '/association-info#board-members', label: 'Board Members' },
+  { href: '/board-members', label: 'Board Members' },
   { href: '/events', label: 'Tournaments' },
-  { href: '/clubs#coaches', label: 'Coaching' },
+  { href: '/coaching', label: 'Coaching' },
   { href: '/ranking', label: 'Ranking' },
-  { href: '/association-info#contact', label: 'Contact Us' },
+  { href: '/contact-us', label: 'Contact Us' },
 ];
 
 export interface Event {
@@ -134,4 +134,40 @@ export const placeholderCoaches: Coach[] = [
     image: 'https://placehold.co/300x300.png',
     imageHint: 'sports coach'
   }
+];
+
+export interface NewsArticle {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  imageHint: string;
+  href: string;
+}
+
+export const placeholderNews: NewsArticle[] = [
+  {
+    id: '1',
+    title: 'Exciting Tournament Announced!',
+    description: 'Details about the upcoming state championship scheduled for next month. Registrations open soon!',
+    image: 'https://placehold.co/500x300.png',
+    imageHint: 'trophy award',
+    href: '#',
+  },
+  {
+    id: '2',
+    title: 'New Coaching Clinic Series',
+    description: 'Enroll now for our beginner and intermediate clinics starting in two weeks. Limited spots available.',
+    image: 'https://placehold.co/500x300.png',
+    imageHint: 'coaching session',
+    href: '#',
+  },
+  {
+    id: '3',
+    title: 'OPA Annual Meet & Greet',
+    description: 'Join us for a fun evening of pickleball, networking, and celebrating our community achievements.',
+    image: 'https://placehold.co/500x300.png',
+    imageHint: 'community event',
+    href: '#',
+  },
 ];

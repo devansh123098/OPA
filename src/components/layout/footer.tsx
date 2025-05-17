@@ -1,21 +1,24 @@
 
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Mail, Phone } from 'lucide-react';
-import LogoIcon from '@/components/icons/logo-icon';
+import { Facebook, Instagram, Twitter, Mail, Phone, Youtube } from 'lucide-react'; // Added Youtube
+import LogoIcon from '@/components/icons/logo-icon'; // Assuming this is the small OPA icon
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const quickLinks = [
     { href: '/', label: 'Home' },
-    { href: '/events', label: 'Events' },
-    { href: '/clubs', label: 'Clubs' },
-    { href: '/about-pickleball', label: 'About Pickleball' },
+    { href: '/association-info', label: 'About Us' },
+    { href: '/events', label: 'Tournaments' },
+    { href: '/coaching', label: 'Coaching' },
+    { href: '/ranking', label: 'Ranking' },
+    { href: '/contact-us', label: 'Contact Us' },
   ];
 
   const socialLinks = [
     { href: '#', icon: Facebook, label: 'Facebook' },
     { href: '#', icon: Instagram, label: 'Instagram' },
     { href: '#', icon: Twitter, label: 'Twitter' },
+    { href: '#', icon: Youtube, label: 'YouTube' }, // Added YouTube
   ];
 
   return (
@@ -25,7 +28,7 @@ const Footer = () => {
           {/* About OPA */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <LogoIcon className="h-10 w-10 text-primary" />
+              <LogoIcon className="h-10 w-10 text-primary" /> {/* Using generic LogoIcon, you might want specific OPA logo here if different */}
               <span className="font-semibold text-lg text-white">
                 Odisha Pickleball Association
               </span>
@@ -65,7 +68,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-gray-300">
                 <p>
-                  Bhubaneswar, Odisha, India
+                  Kalinga Stadium, Bhubaneswar, Odisha
                 </p>
               </li>
             </ul>

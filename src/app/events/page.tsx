@@ -17,10 +17,10 @@ export default function EventsPage() {
         <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
           <AnimatedSection animationClass="animate-fadeInUp">
             <h1 className="text-4xl font-bold tracking-tight text-primary">
-              Upcoming Events
+              Tournaments & Events
             </h1>
             <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-              Join us for exciting tournaments, workshops, and training sessions.
+              Discover upcoming pickleball tournaments, workshops, and community events in Odisha.
             </p>
           </AnimatedSection>
         </div>
@@ -95,6 +95,14 @@ export default function EventsPage() {
           ))}
         </div>
       )}
+      <AnimatedSection delay={300} animationClass="animate-fadeInUp">
+        <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
+            <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Event Features Coming Soon!</h2>
+            <p className="text-center text-muted-foreground">
+                We're working on a filterable calendar, list view for upcoming events, and a carousel for past event photos and winners. Stay tuned!
+            </p>
+        </div>
+      </AnimatedSection>
     </PageWrapper>
   );
 }

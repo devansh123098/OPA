@@ -11,9 +11,8 @@ export default function AssociationInfoPage() {
       <section className="relative py-16 md:py-20 rounded-xl overflow-hidden bg-secondary/10 mb-12">
         <div className="absolute inset-0">
           <Image
-            src="https://placehold.co/1200x400.png"
+            src="/bgintop.jpg"
             alt="Arunachal pickleball community"
-            data-ai-hint="community sports team"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-10"

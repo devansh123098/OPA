@@ -186,8 +186,8 @@ export const placeholderBoardMembers: BoardMember[] = [
     id: 'bm1',
     name: 'Ms. Shribani Mohanty',
     role: 'President',
-    image: 'https://placehold.co/300x300.png',
-    imageHint: 'portrait female',
+    image: '/president.jpeg',
+    imageHint: 'president portrait',
     bio: 'Leading the Odisha Pickleball Association with a vision for growth and community engagement.'
   },
   {
@@ -199,3 +199,4 @@ export const placeholderBoardMembers: BoardMember[] = [
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },
 ];
+

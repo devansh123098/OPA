@@ -87,23 +87,44 @@ export default function AssociationInfoPage() {
                 <h2 className="text-4xl font-bold text-foreground">Quick Stats</h2> {/* Increased text size */}
               </div>
               <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-8 text-center"> {/* Increased max-w and gap */}
-                <div className="p-6 bg-card rounded-lg shadow-md"> {/* Increased padding */}
+                <div className="p-6 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"> {/* Increased padding */}
                   <BarChart className="h-12 w-12 text-primary mx-auto mb-3" /> {/* Increased icon size and mb */}
                   <h3 className="text-2xl font-semibold text-foreground">Founded</h3> {/* Increased text size */}
                   <p className="text-4xl font-bold text-accent mt-1">2023</p> {/* Increased text size and mt */}
                   <p className="text-base text-muted-foreground mt-1">(Placeholder)</p> {/* Increased text size and mt */}
+                  <div 
+                    className="absolute top-0 left-[-150%] w-[50%] h-full 
+                               bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                               transform -skew-x-12 
+                               transition-all duration-700 ease-out
+                               group-hover:left-[150%] group-hover:duration-500">
+                  </div>
                 </div>
-                <div className="p-6 bg-card rounded-lg shadow-md"> {/* Increased padding */}
+                <div className="p-6 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"> {/* Increased padding */}
                   <Users className="h-12 w-12 text-primary mx-auto mb-3" /> {/* Increased icon size and mb */}
                   <h3 className="text-2xl font-semibold text-foreground">Members</h3> {/* Increased text size */}
                   <p className="text-4xl font-bold text-accent mt-1">500+</p> {/* Increased text size and mt */}
                   <p className="text-base text-muted-foreground mt-1">(Placeholder)</p> {/* Increased text size and mt */}
+                  <div 
+                    className="absolute top-0 left-[-150%] w-[50%] h-full 
+                               bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                               transform -skew-x-12 
+                               transition-all duration-700 ease-out
+                               group-hover:left-[150%] group-hover:duration-500">
+                  </div>
                 </div>
-                <div className="p-6 bg-card rounded-lg shadow-md"> {/* Increased padding */}
+                <div className="p-6 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"> {/* Increased padding */}
                   <TrendingUp className="h-12 w-12 text-primary mx-auto mb-3" /> {/* Increased icon size and mb */}
                   <h3 className="text-2xl font-semibold text-foreground">Districts</h3> {/* Increased text size */}
                   <p className="text-4xl font-bold text-accent mt-1">10+</p> {/* Increased text size and mt */}
                   <p className="text-base text-muted-foreground mt-1">Covered (Placeholder)</p> {/* Increased text size and mt */}
+                  <div 
+                    className="absolute top-0 left-[-150%] w-[50%] h-full 
+                               bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                               transform -skew-x-12 
+                               transition-all duration-700 ease-out
+                               group-hover:left-[150%] group-hover:duration-500">
+                  </div>
                 </div>
               </div>
             </section>

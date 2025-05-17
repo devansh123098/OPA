@@ -11,30 +11,43 @@ export default function BoardMembersPage() {
 
   return (
     <PageWrapper>
-      <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
-        <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
-          <AnimatedSection animationClass="animate-fadeInUp">
-            <h1 className="text-4xl font-bold tracking-tight text-primary">
-              Board Members
-            </h1>
-            <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-              Meet the dedicated team leading the Odisha Pickleball Association.
-            </p>
-          </AnimatedSection>
+      <section className="relative py-16 md:py-20 rounded-xl overflow-hidden bg-secondary/10 mb-12">
+        <AnimatedSection animationClass="animate-fadeIn">
+          <Image
+            src="https://placehold.co/1200x400.png"
+            alt="Odisha Pickleball Association Board"
+            data-ai-hint="team leadership"
+            fill
+            style={{ objectFit: 'cover' }}
+            className=""
+            priority
+          />
+        </AnimatedSection>
+        <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center container mx-auto px-4">
+          <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
+            <AnimatedSection animationClass="animate-fadeInUp">
+              <h1 className="text-4xl font-bold tracking-tight text-white">
+                Board Members
+              </h1>
+              <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0">
+                Meet the dedicated team leading the Odisha Pickleball Association.
+              </p>
+            </AnimatedSection>
+          </div>
+          <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
+            <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
+              <Image
+                src="/pickleball ball .webp"
+                alt="Pickleball icon"
+                width={150}
+                height={150}
+                className="animate-float object-contain mx-auto"
+                priority
+              />
+            </AnimatedSection>
+          </div>
         </div>
-        <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
-          <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
-            <Image
-              src="/pickleball ball .webp"
-              alt="Pickleball icon"
-              width={150}
-              height={150}
-              className="animate-float object-contain mx-auto"
-              priority
-            />
-          </AnimatedSection>
-        </div>
-      </div>
+      </section>
 
       {boardMembers.length === 0 ? (
         <AnimatedSection delay={100} animationClass="animate-fadeInUp">

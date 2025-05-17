@@ -26,64 +26,62 @@ export default function HomePage() {
 
   return (
     <>
-      <PageWrapper>
-        {/* Hero Section */}
-        <section className="relative py-20 md:py-32 rounded-xl overflow-hidden bg-background">
-          <div className="absolute inset-0">
-            <Image
-              src="/player.jpg"
-              alt="Pickleball action background"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="" 
-              priority
-            />
-          </div>
-          <div className="relative z-10 container mx-auto px-4">
-            <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
-                <AnimatedSection animationClass="animate-fadeInUp">
-                  <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                    Welcome to Arunachal Pradesh Pickleball Association
-                  </h1>
-                </AnimatedSection>
-                <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-                  <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-200">
-                    Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
-                  </p>
-                </AnimatedSection>
-                <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-                  <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-                    <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200 animate-pulse">
-                      <Link href="/events">
-                        Explore Events <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
-                    <Button size="lg" variant="outline" asChild className="text-foreground border-border hover:bg-secondary hover:text-secondary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                      <Link href="/about-pickleball">
-                        What is Pickleball?
-                      </Link>
-                    </Button>
-                  </div>
-                </AnimatedSection>
-              </div>
-              <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-12 md:mt-0">
-                <AnimatedSection animationClass="animate-slideInFromRight" delay={600}>
-                  <Image
-                    src="/pickleball ball .webp"
-                    alt="Floating pickleball icon"
-                    width={150}
-                    height={150}
-                    className="animate-float object-contain"
-                    priority
-                  />
-                </AnimatedSection>
-              </div>
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/player.jpg"
+            alt="Pickleball action background"
+            fill
+            style={{ objectFit: 'cover' }}
+            className="" 
+            priority
+          />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
+            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
+              <AnimatedSection animationClass="animate-fadeInUp">
+                <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                  Welcome to Arunachal Pradesh Pickleball Association
+                </h1>
+              </AnimatedSection>
+              <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+                <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-200">
+                  Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={400} animationClass="animate-fadeInUp">
+                <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200 animate-pulse">
+                    <Link href="/events">
+                      Explore Events <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="text-foreground border-border hover:bg-secondary hover:text-secondary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    <Link href="/about-pickleball">
+                      What is Pickleball?
+                    </Link>
+                  </Button>
+                </div>
+              </AnimatedSection>
+            </div>
+            <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-12 md:mt-0">
+              <AnimatedSection animationClass="animate-slideInFromRight" delay={600}>
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Floating pickleball icon"
+                  width={150}
+                  height={150}
+                  className="animate-float object-contain"
+                  priority
+                />
+              </AnimatedSection>
             </div>
           </div>
-        </section>
-      </PageWrapper>
+        </div>
+      </section>
 
       {/* Key Highlights Section - Now Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn" delay={500}>

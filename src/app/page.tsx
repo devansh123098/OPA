@@ -213,10 +213,10 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
-      <PageWrapper>
-        {/* Join Our Community Section */}
-        <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-          <section className="py-16 text-center bg-accent/20 rounded-xl">
+      {/* Join Our Community Section - Full Width */}
+      <AnimatedSection delay={100} animationClass="animate-fadeInUp">
+        <section className="py-16 text-center bg-accent/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Become a part of the fastest-growing sports community in Odisha. Connect with fellow players, participate in events, and help grow the sport.
@@ -226,12 +226,14 @@ export default function HomePage() {
                 Get Involved <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </section>
-        </AnimatedSection>
-
+          </div>
+        </section>
+      </AnimatedSection>
+      
+      <PageWrapper>
         {/* About Pickleball Teaser Section */}
         <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-          <section className="py-16 bg-accent/30 rounded-xl">
+          <section className="py-16 bg-secondary/50 rounded-xl"> {/* Using secondary for a different tint */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
                 <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
@@ -266,5 +268,3 @@ export default function HomePage() {
     </>
   );
 }
-
-    

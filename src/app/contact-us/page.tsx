@@ -15,7 +15,7 @@ export default function ContactUsPage() {
               Contact Us
             </h1>
             <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-              Get in touch with the Odisha Pickleball Association. We'd love to hear from you!
+              Get in touch with the Odisha Pickleball Association. We&apos;d love to hear from you!
             </p>
           </AnimatedSection>
         </div>
@@ -59,8 +59,17 @@ export default function ContactUsPage() {
                 <Phone className="h-6 w-6 text-primary" />
                 <p className="text-muted-foreground">+91 12345 67890 (Placeholder)</p>
               </div>
-              <div className="mt-6 h-64 bg-secondary/30 rounded-md flex items-center justify-center">
-                 <p className="text-muted-foreground">Embedded Google Map coming soon (Kalinga Stadium, Bhubaneswar)</p>
+              <div className="mt-6 h-80 bg-secondary/30 rounded-md overflow-hidden">
+                 <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.097502763551!2d85.8191678149196!3d20.29089068640914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f0b6088301%3A0x4cb4fd6bd3c6a869!2sKalinga%20Stadium!5e0!3m2!1sen!2sin!4v1625825884271!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Kalinga Stadium Location"
+                  ></iframe>
               </div>
             </CardContent>
           </Card>

@@ -28,7 +28,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
+        <AnimatedSection animationClass="animate-fadeIn" className="absolute inset-0">
           <Image
             src="/player.jpg"
             alt="Pickleball action background"
@@ -37,7 +37,7 @@ export default function HomePage() {
             className="" 
             priority
           />
-        </div>
+        </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4">
           <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
             <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
@@ -69,7 +69,7 @@ export default function HomePage() {
             </div>
             <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-12 md:mt-0">
               <AnimatedSection animationClass="animate-zoomIn" delay={600}>
-                <Image
+                 <Image
                   src="/pickleball ball .webp" 
                   alt="Floating pickleball icon"
                   width={150}
@@ -128,18 +128,19 @@ export default function HomePage() {
         <AnimatedSection animationClass="animate-fadeIn" delay={300}>
           <section className="py-16">
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
-              <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-last">
-                <AnimatedSection animationClass="animate-slideInFromRight" delay={100}>
+              <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
+                 <AnimatedSection animationClass="animate-slideInFromLeft" delay={100}>
                   <Image
                     src="/pickleball ball .webp"
                     alt="Pickleball icon"
+                    data-ai-hint="pickleball equipment"
                     width={150}
                     height={150}
                     className="animate-float object-contain mx-auto"
                   />
                 </AnimatedSection>
               </div>
-              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-first">
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-last">
                 <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
                   <h2 className="text-3xl font-bold text-foreground">Discover Our Initiatives</h2>
                 </AnimatedSection>
@@ -232,6 +233,7 @@ export default function HomePage() {
                   <Image
                       src="/pickleball ball .webp"
                       alt="Pickleball icon"
+                      data-ai-hint="pickleball sport"
                       width={150}
                       height={150}
                       className="animate-float object-contain mx-auto"

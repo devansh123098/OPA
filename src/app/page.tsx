@@ -64,7 +64,7 @@ export default function HomePage() {
             <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                  PLAY. CONNECT. EVOLVE.
+                  Welcome to Odisha Pickleball Association
                 </h1>
                 <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto md:mx-0">
                   Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
@@ -85,18 +85,16 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-10 md:mt-0">
-              <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+            <AnimatedSection animationClass="animate-zoomIn" delay={300} className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-10 md:mt-0">
                 <Image
                   src="/pickleball ball .webp"
-                  alt="Pickleball icon"
+                  alt="Floating pickleball icon"
                   width={150}
                   height={150}
                   className="animate-float object-contain mx-auto"
                   priority
                 />
               </AnimatedSection>
-            </div>
           </div>
         </div>
       </section>
@@ -151,8 +149,7 @@ export default function HomePage() {
         <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-3 lg:col-span-3 hidden md:flex justify-center items-center">
-                <AnimatedSection animationClass="animate-slideInFromLeft" delay={200}>
+              <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
                   <Image
                     src="/pickleball ball .webp"
                     alt="Pickleball icon"
@@ -160,8 +157,7 @@ export default function HomePage() {
                     height={150}
                     className="animate-float object-contain mx-auto"
                   />
-                </AnimatedSection>
-              </div>
+              </AnimatedSection>
               <div className="md:col-span-9 lg:col-span-9 text-center md:text-left">
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
@@ -213,7 +209,7 @@ export default function HomePage() {
       <PageWrapper>
         {/* Join Our Community Section */}
         <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-          <section className="py-16 text-center bg-secondary/30 rounded-xl">
+          <section className="py-16 text-center bg-accent/20 rounded-xl">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Become a part of the fastest-growing sports community in Odisha. Connect with fellow players, participate in events, and help grow the sport.
@@ -228,34 +224,34 @@ export default function HomePage() {
 
         {/* About Pickleball Teaser Section */}
         <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-          <section className="py-16">
-            <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
-                <AnimatedSection animationClass="animate-slideInFromLeft">
-                  <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
-                  <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-                    New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
-                  </p>
-                  <div className="mt-6">
-                    <Button asChild variant="outline" className="hover:bg-accent/10 hover:text-accent text-foreground">
-                      <Link href="/about-pickleball">
-                        Read More <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
+          <section className="py-16 bg-accent/30 rounded-xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+                <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
+                    <AnimatedSection animationClass="animate-slideInFromLeft">
+                    <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
+                    <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+                        New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
+                    </p>
+                    <div className="mt-6">
+                        <Button asChild variant="outline" className="hover:bg-primary/10 hover:text-primary text-foreground">
+                        <Link href="/about-pickleball">
+                            Read More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                        </Button>
+                    </div>
+                    </AnimatedSection>
+                </div>
+                <AnimatedSection animationClass="animate-slideInFromRight" delay={100} className="md:col-span-5 lg:col-span-5 mt-10 md:mt-0 flex justify-center">
+                    <Image
+                        src="/pickleball ball .webp"
+                        alt="Pickleball ball and paddle"
+                        width={150} 
+                        height={150} 
+                        className="rounded-lg object-contain animate-float"
+                    />
                 </AnimatedSection>
-              </div>
-              <div className="md:col-span-5 lg:col-span-5 mt-10 md:mt-0 flex justify-center">
-                <AnimatedSection animationClass="animate-slideInFromRight" delay={100}>
-                  <Image
-                    src="/pickleball ball .webp"
-                    alt="Pickleball ball and paddle"
-                    width={200} // Adjusted size
-                    height={200} // Adjusted size
-                    className="rounded-lg shadow-xl object-contain animate-float"
-                  />
-                </AnimatedSection>
-              </div>
+                </div>
             </div>
           </section>
         </AnimatedSection>

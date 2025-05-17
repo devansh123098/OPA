@@ -88,15 +88,15 @@ export default function ContactUsPage() {
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground">Full Name</label>
-                  <input type="text" name="name" id="name" className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="Your Name" disabled />
+                  <input type="text" name="name" id="name" className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="Your Name" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground">Email</label>
-                  <input type="email" name="email" id="email" className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="you@example.com" disabled />
+                  <input type="email" name="email" id="email" className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="you@example.com" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground">Message</label>
-                  <textarea id="message" name="message" rows={4} className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="Your message..." disabled></textarea>
+                  <textarea id="message" name="message" rows={4} className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="Your message..."></textarea>
                 </div>
                 <button type="submit" className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 disabled:opacity-50" disabled>
                   Send Message (Coming Soon)

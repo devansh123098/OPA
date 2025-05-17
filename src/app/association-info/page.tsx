@@ -82,28 +82,28 @@ export default function AssociationInfoPage() {
           </div>
         
           <AnimatedSection delay={300} animationClass="animate-fadeInUp">
-            <section className="py-10 bg-secondary/30 rounded-lg mb-12">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-foreground">Quick Stats</h2>
+            <section className="py-12 bg-secondary/30 rounded-lg mb-12"> {/* Increased py */}
+              <div className="text-center mb-10"> {/* Increased mb */}
+                <h2 className="text-4xl font-bold text-foreground">Quick Stats</h2> {/* Increased text size */}
               </div>
-              <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6 text-center">
-                <div className="p-4 bg-card rounded-lg shadow-md">
-                  <BarChart className="h-10 w-10 text-primary mx-auto mb-2" />
-                  <h3 className="text-xl font-semibold text-foreground">Founded</h3>
-                  <p className="text-2xl font-bold text-accent">2023</p>
-                  <p className="text-sm text-muted-foreground">(Placeholder)</p>
+              <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-8 text-center"> {/* Increased max-w and gap */}
+                <div className="p-6 bg-card rounded-lg shadow-md"> {/* Increased padding */}
+                  <BarChart className="h-12 w-12 text-primary mx-auto mb-3" /> {/* Increased icon size and mb */}
+                  <h3 className="text-2xl font-semibold text-foreground">Founded</h3> {/* Increased text size */}
+                  <p className="text-4xl font-bold text-accent mt-1">2023</p> {/* Increased text size and mt */}
+                  <p className="text-base text-muted-foreground mt-1">(Placeholder)</p> {/* Increased text size and mt */}
                 </div>
-                <div className="p-4 bg-card rounded-lg shadow-md">
-                  <Users className="h-10 w-10 text-primary mx-auto mb-2" />
-                  <h3 className="text-xl font-semibold text-foreground">Members</h3>
-                  <p className="text-2xl font-bold text-accent">500+</p>
-                  <p className="text-sm text-muted-foreground">(Placeholder)</p>
+                <div className="p-6 bg-card rounded-lg shadow-md"> {/* Increased padding */}
+                  <Users className="h-12 w-12 text-primary mx-auto mb-3" /> {/* Increased icon size and mb */}
+                  <h3 className="text-2xl font-semibold text-foreground">Members</h3> {/* Increased text size */}
+                  <p className="text-4xl font-bold text-accent mt-1">500+</p> {/* Increased text size and mt */}
+                  <p className="text-base text-muted-foreground mt-1">(Placeholder)</p> {/* Increased text size and mt */}
                 </div>
-                <div className="p-4 bg-card rounded-lg shadow-md">
-                  <TrendingUp className="h-10 w-10 text-primary mx-auto mb-2" />
-                  <h3 className="text-xl font-semibold text-foreground">Districts</h3>
-                  <p className="text-2xl font-bold text-accent">10+</p>
-                  <p className="text-sm text-muted-foreground">Covered (Placeholder)</p>
+                <div className="p-6 bg-card rounded-lg shadow-md"> {/* Increased padding */}
+                  <TrendingUp className="h-12 w-12 text-primary mx-auto mb-3" /> {/* Increased icon size and mb */}
+                  <h3 className="text-2xl font-semibold text-foreground">Districts</h3> {/* Increased text size */}
+                  <p className="text-4xl font-bold text-accent mt-1">10+</p> {/* Increased text size and mt */}
+                  <p className="text-base text-muted-foreground mt-1">Covered (Placeholder)</p> {/* Increased text size and mt */}
                 </div>
               </div>
             </section>

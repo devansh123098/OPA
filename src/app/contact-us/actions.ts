@@ -2,8 +2,9 @@
 'use server';
 
 import { z } from 'zod';
+import nodemailer from 'nodemailer';
 
-// Define the schema for contact form data (can be the same as client-side)
+// Define the schema for contact form data
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }).max(50),
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -31,67 +32,47 @@ export async function sendContactMessage(
 
   const { name, email, message } = validationResult.data;
 
-  console.log('Received contact form submission on server:');
-  console.log('Name:', name);
-  console.log('Email:', email);
-  console.log('Message:', message);
-
-  // **IMPORTANT: Email Sending Logic (Placeholder)**
-  // Here, you would integrate an email sending service like Nodemailer, SendGrid, Resend, etc.
-  // Example using placeholders for environment variables:
-  // const emailTo = process.env.EMAIL_TO_ADDRESS;
-  // const emailFrom = process.env.EMAIL_FROM_ADDRESS;
-  // const smtpUser = process.env.EMAIL_SMTP_USER;
-  // const smtpPassword = process.env.EMAIL_SMTP_PASSWORD;
-  // const smtpHost = process.env.EMAIL_SMTP_HOST;
-  // const smtpPort = process.env.EMAIL_SMTP_PORT;
-
-  // Example with Nodemailer (you'd need to install nodemailer: npm install nodemailer)
-  /*
-  const nodemailer = require('nodemailer');
-
+  // Nodemailer transporter setup
   const transporter = nodemailer.createTransport({
-    host: smtpHost,
-    port: parseInt(smtpPort || '587'), // or 465 for SSL
-    secure: parseInt(smtpPort || '587') === 465, // true for 465, false for other ports
+    host: process.env.EMAIL_SMTP_HOST,
+    port: parseInt(process.env.EMAIL_SMTP_PORT || '587'),
+    secure: parseInt(process.env.EMAIL_SMTP_PORT || '587') === 465, // true for 465, false for other ports
     auth: {
-      user: smtpUser,
-      pass: smtpPassword,
+      user: process.env.EMAIL_SMTP_USER,
+      pass: process.env.EMAIL_SMTP_PASSWORD,
     },
   });
 
-  try {
-    await transporter.sendMail({
-      from: `"${name}" <${emailFrom}>`, // sender address
-      to: emailTo, // list of receivers
-      replyTo: email, // user's email for reply
-      subject: `New Contact Message from ${name} via OPA Website`, // Subject line
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // plain text body
-      html: `<p><strong>Name:</strong> ${name}</p>
-             <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-             <p><strong>Message:</strong></p>
-             <p>${message.replace(/\n/g, '<br>')}</p>`, // html body
-    });
+  const mailOptions = {
+    from: `"${name}" <${process.env.EMAIL_FROM_ADDRESS}>`, // Use a generic from address you control
+    to: process.env.EMAIL_TO_ADDRESS, // Your association's email address
+    replyTo: email, // The user's email address for easy replies
+    subject: `New Contact Message from ${name} via OPA Website`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage:\n\n${message}`,
+    html: `<p><strong>Name:</strong> ${name}</p>
+           <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+           <p><strong>Message:</strong></p>
+           <p>${message.replace(/\n/g, '<br>')}</p>`,
+  };
 
-    console.log('Email sent successfully (simulated)');
+  try {
+    // Verify connection configuration (optional, but good for debugging)
+    // await transporter.verify(); 
+    // console.log("Nodemailer server is ready to take messages");
+
+    await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully via Nodemailer');
     return {
       success: true,
-      message: 'Your message has been sent successfully!',
+      message: 'Your message has been sent successfully! We will get back to you soon.',
     };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending email with Nodemailer:', error);
+    // It's good practice to not expose detailed error messages to the client
+    // For debugging, you can check the server logs for the `error` object
     return {
       success: false,
-      message: 'There was an error sending your message. Please try again later.',
+      message: 'There was an error sending your message. Please try again later or contact us directly.',
     };
   }
-  */
-
-  // For now, we'll just simulate success
-  await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
-
-  return {
-    success: true,
-    message: 'Your message has been received (simulated)! We will get back to you soon.',
-  };
 }

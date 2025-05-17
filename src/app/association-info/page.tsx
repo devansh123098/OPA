@@ -52,12 +52,12 @@ export default function AssociationInfoPage() {
           <div className="mb-12">
             <AnimatedSection delay={100} animationClass="animate-fadeInUp">
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader className="flex flex-row items-center gap-3">
-                  <Briefcase className="h-8 w-8 text-primary" />
-                  <CardTitle className="text-2xl">Our Mission</CardTitle>
+                <CardHeader className="flex flex-row items-center gap-3 p-8"> {/* Increased padding */}
+                  <Briefcase className="h-10 w-10 text-primary" /> {/* Slightly larger icon */}
+                  <CardTitle className="text-3xl">Our Mission</CardTitle> {/* Slightly larger title */}
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-lg">
+                <CardContent className="p-8 pt-0"> {/* Increased padding */}
+                  <p className="text-muted-foreground text-xl"> {/* Increased text size */}
                     To promote and develop the sport of pickleball across Odisha, fostering a vibrant community of players of all ages and skill levels. We aim to provide resources, organize events, and create opportunities for growth and enjoyment in the sport.
                   </p>
                 </CardContent>
@@ -68,12 +68,12 @@ export default function AssociationInfoPage() {
           <div className="mb-12">
             <AnimatedSection delay={200} animationClass="animate-fadeInUp">
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardHeader className="flex flex-row items-center gap-3">
-                  <Target className="h-8 w-8 text-primary" />
-                  <CardTitle className="text-2xl">Our Vision</CardTitle>
+                <CardHeader className="flex flex-row items-center gap-3 p-8"> {/* Increased padding */}
+                  <Target className="h-10 w-10 text-primary" /> {/* Slightly larger icon */}
+                  <CardTitle className="text-3xl">Our Vision</CardTitle> {/* Slightly larger title */}
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-lg">
+                <CardContent className="p-8 pt-0"> {/* Increased padding */}
+                  <p className="text-muted-foreground text-xl"> {/* Increased text size */}
                     To establish Odisha as a premier destination for pickleball, recognized for its excellent facilities, competitive spirit, and inclusive community. We aspire to see pickleball become a widely played sport contributing to health, wellness, and camaraderie throughout the state.
                   </p>
                 </CardContent>

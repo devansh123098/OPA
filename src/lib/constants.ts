@@ -145,7 +145,6 @@ export interface NewsArticle {
   href: string;
 }
 
-// Placeholder for news articles, will be used in a later step if we implement news fully
 export const placeholderNews: NewsArticle[] = [
   {
     id: '1',
@@ -173,4 +172,30 @@ export const placeholderNews: NewsArticle[] = [
   },
 ];
 
-    
+export interface BoardMember {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  imageHint: string;
+  bio?: string; // Optional for now, as per brief
+}
+
+export const placeholderBoardMembers: BoardMember[] = [
+  {
+    id: 'bm1',
+    name: 'Mr. Subodh Kumar',
+    role: 'President',
+    image: 'https://placehold.co/300x300.png',
+    imageHint: 'portrait male',
+    bio: 'Leading the Odisha Pickleball Association with a vision for growth and community engagement.'
+  },
+  {
+    id: 'bm2',
+    name: 'Ms. Archana Devi',
+    role: 'Secretary General',
+    image: 'https://placehold.co/300x300.png',
+    imageHint: 'portrait female',
+    bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
+  },
+];

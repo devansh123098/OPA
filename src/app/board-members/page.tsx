@@ -2,10 +2,13 @@
 import Image from 'next/image';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { placeholderBoardMembers, type BoardMember } from '@/lib/constants';
+import { UserCircle } from 'lucide-react';
 
 export default function BoardMembersPage() {
+  const boardMembers: BoardMember[] = placeholderBoardMembers;
+
   return (
     <PageWrapper>
       <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
@@ -33,30 +36,70 @@ export default function BoardMembersPage() {
         </div>
       </div>
 
-      <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-        <Card className="shadow-lg">
-          <CardHeader className="flex flex-row items-center gap-3">
-            <Users className="h-8 w-8 text-primary" />
-            <CardTitle className="text-2xl">Our Team</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground text-lg">
-              Detailed profiles of our board members, including executive, technical, and advisory roles, will be available here soon. 
-              We are committed to transparency and introducing the passionate individuals driving pickleball forward in Odisha.
+      {boardMembers.length === 0 ? (
+        <AnimatedSection delay={100} animationClass="animate-fadeInUp">
+          <Card className="shadow-lg">
+            <CardHeader className="flex flex-row items-center gap-3">
+              <UserCircle className="h-8 w-8 text-primary" />
+              <CardTitle className="text-2xl">Our Team</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground text-lg">
+                Detailed profiles of our board members will be available here soon.
+                We are committed to transparency and introducing the passionate individuals driving pickleball forward in Odisha.
+              </p>
+              <div className="mt-8 flex justify-center">
+                <Image
+                  src="https://placehold.co/600x400.png"
+                  alt="Team placeholder"
+                  data-ai-hint="team photo group"
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-md object-cover"
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </AnimatedSection>
+      ) : (
+        <div className="grid md:grid-cols-2 gap-8">
+          {boardMembers.map((member, index) => (
+            <AnimatedSection key={member.id} delay={index * 100 + 100} animationClass="animate-fadeInUp">
+              <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    data-ai-hint={member.imageHint}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <CardHeader className="text-center">
+                  <CardTitle className="text-xl text-foreground">{member.name}</CardTitle>
+                  <CardDescription className="text-primary font-semibold">{member.role}</CardDescription>
+                </CardHeader>
+                {member.bio && (
+                  <CardContent className="text-sm text-muted-foreground text-center">
+                    <p>{member.bio}</p>
+                  </CardContent>
+                )}
+              </Card>
+            </AnimatedSection>
+          ))}
+        </div>
+      )}
+      
+      <AnimatedSection delay={boardMembers.length > 0 ? (boardMembers.length * 100 + 200) : 200} animationClass="animate-fadeInUp">
+         <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
+            <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Information Coming Soon</h2>
+            <p className="text-center text-muted-foreground">
+                We will be adding more board member profiles, including executive, technical, and advisory roles, as well as filter options.
             </p>
-            <div className="mt-8 flex justify-center">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Team placeholder"
-                data-ai-hint="team photo group"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-md object-cover"
-              />
-            </div>
-          </CardContent>
-        </Card>
+        </div>
       </AnimatedSection>
+
     </PageWrapper>
   );
 }

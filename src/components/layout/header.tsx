@@ -2,9 +2,9 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image'; // Import next/image
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // Added useEffect
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -14,9 +14,14 @@ import { cn } from '@/lib/utils';
 const Header = () => {
   const pathname = usePathname();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md rounded-lg"> {/* Changed rounded-b-lg to rounded-lg */}
+    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md rounded-lg">
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
           <Image 
@@ -38,7 +43,7 @@ const Header = () => {
               asChild
               className={cn(
                 "text-sm font-medium transition-colors",
-                pathname === link.href 
+                mounted && pathname === link.href 
                   ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
                   : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
               )}
@@ -85,7 +90,7 @@ const Header = () => {
                       asChild
                       className={cn(
                         "justify-start text-base font-medium transition-colors",
-                        pathname === link.href 
+                        mounted && pathname === link.href 
                           ? "bg-sidebar-accent text-sidebar-accent-foreground"
                           : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       )}

@@ -28,7 +28,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <AnimatedSection animationClass="animate-fadeIn" className="absolute inset-0">
+        <AnimatedSection animationClass="animate-fadeIn">
           <Image
             src="/player.jpg"
             alt="Pickleball action background"
@@ -123,10 +123,10 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
-      <PageWrapper>
-        {/* Discover Our Initiatives Section */}
-        <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-          <section className="py-16">
+      {/* Discover Our Initiatives Section - Full Width Background */}
+      <AnimatedSection animationClass="animate-fadeIn" delay={300}>
+        <section className="py-16 bg-secondary/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Inner container for content alignment */}
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
               <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
                  <AnimatedSection animationClass="animate-slideInFromLeft" delay={100}>
@@ -183,9 +183,11 @@ export default function HomePage() {
                 </AnimatedSection>
               ))}
             </div>
-          </section>
-        </AnimatedSection>
-
+          </div>
+        </section>
+      </AnimatedSection>
+      
+      <PageWrapper>
         {/* Join Our Community CTA Section */}
         <AnimatedSection animationClass="animate-fadeInUp" delay={300}>
           <section className="py-16 bg-secondary/30 rounded-xl my-12">

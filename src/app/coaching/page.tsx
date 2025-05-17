@@ -1,9 +1,11 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GraduationCap } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { GraduationCap, Edit } from 'lucide-react';
 
 export default function CoachingPage() {
   return (
@@ -44,6 +46,14 @@ export default function CoachingPage() {
               Information about our coaching pathways, certification prerequisites, fees, syllabus, and application process will be detailed here soon. 
               We are dedicated to fostering high-quality coaching talent in Odisha.
             </p>
+            <div className="mt-6 flex justify-center">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Link href="#">
+                  <Edit className="mr-2 h-5 w-5" />
+                  Register Now
+                </Link>
+              </Button>
+            </div>
             <div className="mt-8 flex justify-center">
               <Image
                 src="https://placehold.co/600x400.png"

@@ -68,9 +68,9 @@ export default function HomePage() {
               </AnimatedSection>
             </div>
             <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-12 md:mt-0">
-              <AnimatedSection animationClass="animate-slideInFromRight" delay={600}>
+              <AnimatedSection animationClass="animate-zoomIn" delay={600}>
                 <Image
-                  src="/pickleball ball .webp"
+                  src="/pickleball ball .webp" 
                   alt="Floating pickleball icon"
                   width={150}
                   height={150}
@@ -129,7 +129,7 @@ export default function HomePage() {
           <section className="py-16">
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
               <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-last">
-                <AnimatedSection animationClass="animate-slideInFromLeft" delay={100}>
+                <AnimatedSection animationClass="animate-slideInFromRight" delay={100}>
                   <Image
                     src="/pickleball ball .webp"
                     alt="Pickleball icon"
@@ -214,7 +214,7 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/50 rounded-xl">
           <div className="container mx-auto px-4">
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
-              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-first md:order-first">
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-first md:order-last"> 
                   <AnimatedSection delay={200} animationClass="animate-fadeInUp">
                       <h2 className="text-3xl font-bold text-foreground mb-4">The Story of Pickleball</h2>
                       <p className="text-lg text-muted-foreground mb-6">
@@ -227,7 +227,7 @@ export default function HomePage() {
                       </Button>
                   </AnimatedSection>
               </div>
-              <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center order-last md:order-last mt-8 md:mt-0">
+              <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center order-last md:order-first mt-8 md:mt-0"> 
                 <AnimatedSection delay={100} animationClass="animate-slideInFromLeft">
                   <Image
                       src="/pickleball ball .webp"

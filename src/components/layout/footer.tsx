@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Mail, Phone, Youtube } from 'lucide-react'; // Added Youtube
-import LogoIcon from '@/components/icons/logo-icon'; // Assuming this is the small OPA icon
+import { Facebook, Instagram, Twitter, Mail, Phone, Youtube } from 'lucide-react';
+import Image from 'next/image'; // Changed from LogoIcon to Image for the logo
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,17 +18,23 @@ const Footer = () => {
     { href: '#', icon: Facebook, label: 'Facebook' },
     { href: '#', icon: Instagram, label: 'Instagram' },
     { href: '#', icon: Twitter, label: 'Twitter' },
-    { href: '#', icon: Youtube, label: 'YouTube' }, // Added YouTube
+    { href: '#', icon: Youtube, label: 'YouTube' },
   ];
 
   return (
-    <footer className="border-t border-border/40 bg-background text-muted-foreground">
+    <footer className="border-t border-gray-800 bg-black text-gray-400"> {/* Changed background and text color, adjusted border */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 bg-black p-6 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 p-6 rounded-lg"> {/* Removed bg-black as it's on parent */}
           {/* About OPA */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <LogoIcon className="h-10 w-10 text-primary" /> {/* Using generic LogoIcon, you might want specific OPA logo here if different */}
+              <Image 
+                src="/logo.png" 
+                alt="OPA Logo in Footer" 
+                width={40} // Example size, adjust as needed
+                height={40} 
+                className="h-10 w-10 object-contain" 
+              />
               <span className="font-semibold text-lg text-white">
                 Odisha Pickleball Association
               </span>
@@ -67,6 +73,7 @@ const Footer = () => {
                 <span>+91 12345 67890 (Placeholder)</span>
               </li>
               <li className="flex items-start gap-2 text-gray-300">
+                {/* Intentionally simple text to avoid complex layout issues */}
                 <p>
                   Kalinga Stadium, Bhubaneswar, Odisha
                 </p>
@@ -90,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border/40 pt-8 text-center text-sm">
+        <div className="border-t border-gray-700 pt-8 text-center text-sm"> {/* Adjusted border color */}
           <p>
             &copy; {currentYear} Odisha Pickleball Association. All rights reserved.
           </p>

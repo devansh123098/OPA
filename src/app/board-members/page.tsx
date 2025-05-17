@@ -11,10 +11,10 @@ export default function BoardMembersPage() {
 
   return (
     <>
-      <section className="relative py-16 md:py-20 overflow-hidden bg-secondary/10">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="https://placehold.co/1200x400.png"
+            src="/bgintop.jpg" // Changed from placeholder to bgintop.jpg
             alt="Odisha Pickleball Association Board"
             data-ai-hint="team leadership"
             fill

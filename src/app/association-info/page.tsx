@@ -3,7 +3,7 @@ import Image from 'next/image';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, Target, Mail, Phone, MapPin } from 'lucide-react';
+import { Briefcase, Target, Mail, Phone, MapPin, Users } from 'lucide-react';
 
 export default function AssociationInfoPage() {
   return (
@@ -21,7 +21,7 @@ export default function AssociationInfoPage() {
             />
           </div>
         </AnimatedSection>
-        <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center container mx-auto px-4"> {/* Added container for content alignment */}
+        <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center container mx-auto px-4">
           <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
             <AnimatedSection animationClass="animate-fadeInUp">
               <h1 className="text-4xl font-bold tracking-tight text-white"> 
@@ -75,6 +75,21 @@ export default function AssociationInfoPage() {
           </AnimatedSection>
 
           <AnimatedSection delay={300} animationClass="animate-slideInFromRight">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300" id="board-members">
+              <CardHeader className="flex flex-row items-center gap-3">
+                <Users className="h-8 w-8 text-primary" />
+                <CardTitle className="text-2xl">Board Members & Team</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Our association is led by a dedicated team of passionate individuals committed to the growth of pickleball in Odisha. Information about our board members and key team personnel will be updated here soon.
+                </p>
+                {/* Placeholder for board member list or details */}
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
+          <AnimatedSection delay={400} animationClass="animate-slideInFromRight">
             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="flex flex-row items-center gap-3">
                 <Target className="h-8 w-8 text-primary" />
@@ -94,8 +109,8 @@ export default function AssociationInfoPage() {
         </div>
       </div>
 
-      <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-        <section className="mt-16 py-12 bg-secondary/30 rounded-lg">
+      <AnimatedSection delay={500} animationClass="animate-fadeInUp">
+        <section className="mt-16 py-12 bg-secondary/30 rounded-lg" id="contact">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-foreground">Get In Touch</h2>
             <p className="mt-2 text-lg text-muted-foreground">We'd love to hear from you!</p>

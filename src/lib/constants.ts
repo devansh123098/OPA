@@ -1,10 +1,12 @@
+
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/association-info', label: 'Association Info' },
-  { href: '/events', label: 'Events' },
-  { href: '/clubs', label: 'Clubs Directory' },
-  { href: '/ai-workout', label: 'AI Workout' },
-  { href: '/about-pickleball', label: 'About Pickleball' },
+  { href: '/association-info', label: 'About Us' },
+  { href: '/association-info#board-members', label: 'Board Members' },
+  { href: '/events', label: 'Tournaments' },
+  { href: '/clubs#coaches', label: 'Coaching' },
+  { href: '/ranking', label: 'Ranking' },
+  { href: '/association-info#contact', label: 'Contact Us' },
 ];
 
 export interface Event {
@@ -118,7 +120,7 @@ export const placeholderCoaches: Coach[] = [
     location: 'Bhubaneswar',
     specialization: 'Beginner & Intermediate Training',
     experience: '5+ years',
-    email: 'rohan.patnaik@email.com',
+    email: 'rohan.patnaik@pickleballodisha.org',
     image: 'https://placehold.co/300x300.png',
     imageHint: 'coach portrait'
   },

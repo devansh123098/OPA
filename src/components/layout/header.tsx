@@ -22,14 +22,12 @@ const Header = () => {
           <Image 
             src="/logo.png" 
             alt="Odisha Pickleball Association Logo" 
-            width={32} 
-            height={32} 
-            className="h-8 w-8 object-contain" 
+            width={40} 
+            height={40} 
+            className="h-10 w-10 object-contain" 
             priority 
           />
-          <span className="font-bold text-xl text-sidebar-foreground hover:opacity-90 transition-opacity">
-            Odisha Pickleball Association
-          </span>
+          {/* Removed association name text */}
         </Link>
 
         {/* Desktop Navigation */}
@@ -67,12 +65,12 @@ const Header = () => {
                         <Image 
                           src="/logo.png" 
                           alt="OPA Logo" 
-                          width={28} 
-                          height={28} 
-                          className="h-7 w-7 object-contain" 
+                          width={32} 
+                          height={32} 
+                          className="h-8 w-8 object-contain" 
                           priority 
                         />
-                        <span className="font-semibold text-lg text-sidebar-foreground">OPA</span>
+                        {/* Removed association name text for mobile */}
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">

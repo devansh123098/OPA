@@ -17,17 +17,16 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8"> {/* Increased header height */}
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
           <Image 
             src="/logo.png" 
             alt="Odisha Pickleball Association Logo" 
-            width={40} 
-            height={40} 
-            className="h-10 w-10 object-contain" 
+            width={365} // Enlarged logo width
+            height={80} // Enlarged logo height
+            className="object-contain" // Removed h-10 w-10, kept object-contain
             priority 
           />
-          {/* Removed association name text */}
         </Link>
 
         {/* Desktop Navigation */}
@@ -65,12 +64,11 @@ const Header = () => {
                         <Image 
                           src="/logo.png" 
                           alt="OPA Logo" 
-                          width={32} 
-                          height={32} 
-                          className="h-8 w-8 object-contain" 
+                          width={365} // Enlarged mobile logo width
+                          height={80} // Enlarged mobile logo height
+                          className="object-contain" // Removed h-8 w-8, kept object-contain
                           priority 
                         />
-                        {/* Removed association name text for mobile */}
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">

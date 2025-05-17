@@ -20,7 +20,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain,
+      icon: Brain, // Assuming Brain icon represents learning/youth development
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -28,7 +28,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell,
+      icon: Dumbbell, // Dumbbell for training/clinics
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -36,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, 
+      icon: Palette, // Palette for 'Championship' assuming it has a creative/festive aspect or using it as a trophy/award placeholder
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -77,7 +77,7 @@ export default function HomePage() {
                       Join OPA <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="text-white border-white hover:bg-white hover:text-primary shadow-lg transform hover:scale-105 transition-transform duration-200">
+                  <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
                     <Link href="/events">
                       Upcoming Events
                     </Link>

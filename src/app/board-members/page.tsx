@@ -19,32 +19,34 @@ export default function BoardMembersPage() {
             data-ai-hint="team leadership"
             fill
             style={{ objectFit: 'cover' }}
-            className=""
+            className="opacity-100"
             priority
           />
         </AnimatedSection>
-        <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
-            <AnimatedSection animationClass="animate-fadeInUp">
-              <h1 className="text-4xl font-bold tracking-tight text-white">
-                Board Members
-              </h1>
-              <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0">
-                Meet the dedicated team leading the Odisha Pickleball Association.
-              </p>
-            </AnimatedSection>
-          </div>
-          <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
-            <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
-              <Image
-                src="/pickleball ball .webp"
-                alt="Pickleball icon"
-                width={150}
-                height={150}
-                className="animate-float object-contain mx-auto"
-                priority
-              />
-            </AnimatedSection>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+            <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
+              <AnimatedSection animationClass="animate-fadeInUp">
+                <h1 className="text-4xl font-bold tracking-tight text-white">
+                  Board Members
+                </h1>
+                <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0">
+                  Meet the dedicated team leading the Odisha Pickleball Association.
+                </p>
+              </AnimatedSection>
+            </div>
+            <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
+              <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Pickleball icon"
+                  width={150}
+                  height={150}
+                  className="animate-float object-contain mx-auto"
+                  priority
+                />
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
@@ -79,7 +81,7 @@ export default function BoardMembersPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {boardMembers.map((member, index) => (
               <AnimatedSection key={member.id} delay={index * 100 + 100} animationClass="animate-fadeInUp">
-                <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                <Card className="h-full flex flex-col overflow-hidden shadow-lg bg-card group relative transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                   <div className="relative aspect-[4/3] w-full">
                     <Image
                       src={member.image}
@@ -87,7 +89,7 @@ export default function BoardMembersPage() {
                       data-ai-hint={member.imageHint}
                       fill
                       style={{ objectFit: 'cover' }}
-                      className="transition-transform duration-300 group-hover:scale-105"
+                      className="transition-transform duration-300"
                     />
                   </div>
                   <CardHeader className="text-center">
@@ -99,6 +101,12 @@ export default function BoardMembersPage() {
                       <p>{member.bio}</p>
                     </CardContent>
                   )}
+                   {/* Shine Element */}
+                  <div className="absolute top-0 left-[-150%] w-[50%] h-full 
+                                  bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                                  transform -skew-x-12 
+                                  transition-all duration-700 ease-out
+                                  group-hover:left-[150%] group-hover:duration-500"></div>
                 </Card>
               </AnimatedSection>
             ))}

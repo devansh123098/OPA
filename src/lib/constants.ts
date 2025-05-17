@@ -178,16 +178,16 @@ export interface BoardMember {
   role: string;
   image: string;
   imageHint: string;
-  bio?: string; // Optional for now, as per brief
+  bio?: string; 
 }
 
 export const placeholderBoardMembers: BoardMember[] = [
   {
     id: 'bm1',
-    name: 'Mr. Subodh Kumar',
+    name: 'Ms. Shribani Mohanty',
     role: 'President',
     image: 'https://placehold.co/300x300.png',
-    imageHint: 'portrait male',
+    imageHint: 'portrait female',
     bio: 'Leading the Odisha Pickleball Association with a vision for growth and community engagement.'
   },
   {

@@ -15,7 +15,7 @@ export default function HomePage() {
       icon: Users,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'community sports',
-      href: '/events', // Updated href
+      href: '/events',
     },
     {
       title: 'Youth Programs',
@@ -23,7 +23,7 @@ export default function HomePage() {
       icon: Brain,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
-      href: '/coaching', // Updated href
+      href: '/coaching',
     },
     {
       title: 'Coaching Clinics',
@@ -31,15 +31,15 @@ export default function HomePage() {
       icon: Dumbbell,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
-      href: '/coaching', // Updated href
+      href: '/coaching',
     },
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, // Using Palette as a placeholder, consider Trophy or Award
+      icon: Palette, 
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
-      href: '/events', // Updated href
+      href: '/events',
     },
   ];
 
@@ -214,7 +214,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Join Our Community Section - Full Width */}
-      <AnimatedSection delay={100} animationClass="animate-fadeInUp">
+      <AnimatedSection delay={100} animationClass="animate-zoomIn">
         <section className="py-16 text-center bg-accent/20">
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
@@ -231,8 +231,8 @@ export default function HomePage() {
       </AnimatedSection>
       
       {/* About Pickleball Teaser Section - Full Width */}
-      <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-        <section className="py-16 bg-secondary/50"> {/* Removed rounded-xl */}
+      <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
+        <section className="py-16 bg-secondary/50"> 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
               <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">

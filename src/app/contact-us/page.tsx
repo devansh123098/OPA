@@ -1,11 +1,56 @@
 
+'use client';
+
 import Image from 'next/image';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Loader2 } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }).max(50, { message: "Name must not exceed 50 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }).max(500, { message: "Message must not exceed 500 characters." }),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactUsPage() {
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+  });
+
+  async function onSubmit(data: ContactFormValues) {
+    setIsLoading(true);
+    console.log('Contact form submitted:', data);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    toast({
+      title: "Message Sent!",
+      description: "Thank you for contacting us. We'll get back to you soon.",
+    });
+    form.reset();
+    setIsLoading(false);
+  }
+
   return (
     <PageWrapper>
       <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
@@ -81,27 +126,62 @@ export default function ContactUsPage() {
               <CardTitle className="text-2xl text-foreground">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">
-                Contact form with reCAPTCHA will be available here soon.
-              </p>
-              {/* Placeholder for form */}
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground">Full Name</label>
-                  <input type="text" name="name" id="name" className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="Your Name" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground">Email</label>
-                  <input type="email" name="email" id="email" className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="you@example.com" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground">Message</label>
-                  <textarea id="message" name="message" rows={4} className="mt-1 block w-full p-2 border border-input rounded-md shadow-sm bg-background text-foreground" placeholder="Your message..."></textarea>
-                </div>
-                <button type="submit" className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 disabled:opacity-50" disabled>
-                  Send Message (Coming Soon)
-                </button>
-              </div>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Full Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your Name" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="you@example.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Message</FormLabel>
+                        <FormControl>
+                          <Textarea placeholder="Your message..." rows={4} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={isLoading}>
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2 h-4 w-4" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </Form>
             </CardContent>
           </Card>
         </AnimatedSection>
@@ -109,3 +189,4 @@ export default function ContactUsPage() {
     </PageWrapper>
   );
 }
+

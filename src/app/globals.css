@@ -42,13 +42,13 @@
     --chart-5: 0 0% 50%;      /* Medium Gray */
 
     /* Sidebar/Header Specific (Coastal Energy Light) */
-    --sidebar-background: 199 100% 40%; /* Aqua Blue (#0099cc) */
+    --sidebar-background: 29 100% 50%; /* Sunrise Orange (#ff7a00) */
     --sidebar-foreground: 0 0% 100%;    /* White */
-    --sidebar-primary: 29 100% 50%;      /* Sunrise Orange */
+    --sidebar-primary: 29 100% 50%;      /* Sunrise Orange (can be same as bg or different for specific elements if needed) */
     --sidebar-primary-foreground: 0 0% 100%; /* White */
-    --sidebar-accent: 29 100% 50%;      /* Sunrise Orange (for active/hover links in sidebar) */
+    --sidebar-accent: 199 100% 40%;      /* Aqua Blue (#0099cc) (for active/hover links in sidebar) */
     --sidebar-accent-foreground: 0 0% 100%; /* White */
-    --sidebar-border: 199 100% 30%;      /* Darker Aqua Blue */
+    --sidebar-border: 29 100% 40%;      /* Darker Sunrise Orange */
     --sidebar-ring: 29 100% 65%;        /* Lighter Sunrise Orange */
   }
 
@@ -83,13 +83,13 @@
     --ring: 29 100% 65%; /* Lighter Sunrise Orange */
 
     /* Sidebar/Header Specific - Dark Mode (Coastal Energy Inspired) */
-    --sidebar-background: 199 100% 35%; /* Darker Aqua Blue */
+    --sidebar-background: 29 100% 45%; /* Slightly darker/richer Sunrise Orange */
     --sidebar-foreground: 0 0% 100%;    /* White */
     --sidebar-primary: 29 100% 55%;      /* Brighter Sunrise Orange */
     --sidebar-primary-foreground: 0 0% 15%; /* Dark text */
-    --sidebar-accent: 29 100% 60%;      /* Lighter Sunrise Orange */
-    --sidebar-accent-foreground: 0 0% 15%; /* Dark text */
-    --sidebar-border: 199 100% 25%;      /* Even Darker Aqua Blue */
+    --sidebar-accent: 199 100% 50%;      /* Brighter Aqua Blue */
+    --sidebar-accent-foreground: 0 0% 100%; /* White */
+    --sidebar-border: 29 100% 35%;      /* Even Darker Sunrise Orange */
     --sidebar-ring: 29 100% 65%;
   }
 }

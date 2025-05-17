@@ -15,17 +15,17 @@ export default function AssociationInfoPage() {
             alt="Arunachal pickleball community"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-10"
+            className="" // Removed opacity-10
             priority
           />
         </div>
         <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center">
           <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
             <AnimatedSection animationClass="animate-fadeInUp">
-              <h1 className="text-4xl font-bold tracking-tight text-primary">
+              <h1 className="text-4xl font-bold tracking-tight text-white"> {/* Changed from text-primary */}
                 About Us
               </h1>
-              <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+              <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0"> {/* Changed from text-muted-foreground */}
                 Learn more about the Arunachal Pradesh Pickleball Association.
               </p>
             </AnimatedSection>

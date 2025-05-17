@@ -34,7 +34,7 @@ export default function HomePage() {
             alt="Pickleball action background"
             fill
             style={{ objectFit: 'cover' }}
-            className="" // Removed opacity-20
+            className="" 
             priority
           />
         </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
 
       {/* Key Highlights Section */}
       <AnimatedSection animationClass="animate-fadeIn" delay={500}>
-        <section className="py-16">
+        <section className="py-16 bg-primary/20 rounded-xl">
           <div className="text-center mb-12">
             <AnimatedSection animationClass="animate-fadeInDown">
               <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>

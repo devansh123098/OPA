@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -15,6 +14,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { sendContactMessage, type SendContactMessageResponse } from './actions'; // Import the server action
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }).max(50, { message: "Name must not exceed 50 characters." }),
@@ -39,16 +39,37 @@ export default function ContactUsPage() {
 
   async function onSubmit(data: ContactFormValues) {
     setIsLoading(true);
-    console.log('Contact form submitted:', data);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
-    form.reset();
-    setIsLoading(false);
+    try {
+      const response: SendContactMessageResponse = await sendContactMessage(data);
+      if (response.success) {
+        toast({
+          title: "Message Sent!",
+          description: response.message,
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error",
+          description: response.message || "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
+        // Optionally, set form errors if response.errors is populated
+        if (response.errors) {
+          response.errors.forEach(err => {
+            form.setError(err.path as keyof ContactFormValues, { message: err.message });
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -112,7 +133,7 @@ export default function ContactUsPage() {
                     style={{ border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-downgrade"
                     title="Kalinga Stadium Location"
                   ></iframe>
               </div>
@@ -189,4 +210,3 @@ export default function ContactUsPage() {
     </PageWrapper>
   );
 }
-

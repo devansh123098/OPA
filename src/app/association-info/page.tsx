@@ -8,14 +8,14 @@ import { Briefcase, Target, TrendingUp, Users, BarChart } from 'lucide-react';
 export default function AssociationInfoPage() {
   return (
     <>
-      <section className="relative py-16 md:py-20 rounded-xl overflow-hidden mb-12">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
             src="/bgintop.jpg"
             alt="Odisha pickleball community"
             fill
             style={{ objectFit: 'cover' }}
-            className="" 
+            className="opacity-100" 
             priority
           />
         </AnimatedSection>
@@ -47,67 +47,69 @@ export default function AssociationInfoPage() {
         </div>
       </section>
 
-      <PageWrapper className="bg-accent/10 p-6 md:p-8 rounded-xl">
-        <div className="mb-12">
-          <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="flex flex-row items-center gap-3">
-                <Briefcase className="h-8 w-8 text-primary" />
-                <CardTitle className="text-2xl">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-lg">
-                  To promote and develop the sport of pickleball across Odisha, fostering a vibrant community of players of all ages and skill levels. We aim to provide resources, organize events, and create opportunities for growth and enjoyment in the sport.
-                </p>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
-        </div>
+      <section style={{ backgroundColor: '#f4f0fb' }} className="py-8 md:py-12">
+        <PageWrapper className="py-0"> {/* PageWrapper now only handles container and horizontal padding */}
+          <div className="mb-12">
+            <AnimatedSection delay={100} animationClass="animate-fadeInUp">
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader className="flex flex-row items-center gap-3">
+                  <Briefcase className="h-8 w-8 text-primary" />
+                  <CardTitle className="text-2xl">Our Mission</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-lg">
+                    To promote and develop the sport of pickleball across Odisha, fostering a vibrant community of players of all ages and skill levels. We aim to provide resources, organize events, and create opportunities for growth and enjoyment in the sport.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
 
-        <div className="mb-12">
-          <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="flex flex-row items-center gap-3">
-                <Target className="h-8 w-8 text-primary" />
-                <CardTitle className="text-2xl">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-lg">
-                  To establish Odisha as a premier destination for pickleball, recognized for its excellent facilities, competitive spirit, and inclusive community. We aspire to see pickleball become a widely played sport contributing to health, wellness, and camaraderie throughout the state.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="mb-12">
+            <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <CardHeader className="flex flex-row items-center gap-3">
+                  <Target className="h-8 w-8 text-primary" />
+                  <CardTitle className="text-2xl">Our Vision</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-lg">
+                    To establish Odisha as a premier destination for pickleball, recognized for its excellent facilities, competitive spirit, and inclusive community. We aspire to see pickleball become a widely played sport contributing to health, wellness, and camaraderie throughout the state.
+                  </p>
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+        
+          <AnimatedSection delay={300} animationClass="animate-fadeInUp">
+            <section className="py-10 bg-secondary/30 rounded-lg mb-12">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-foreground">Quick Stats</h2>
+              </div>
+              <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6 text-center">
+                <div className="p-4 bg-card rounded-lg shadow-md">
+                  <BarChart className="h-10 w-10 text-primary mx-auto mb-2" />
+                  <h3 className="text-xl font-semibold text-foreground">Founded</h3>
+                  <p className="text-2xl font-bold text-accent">2023</p>
+                  <p className="text-sm text-muted-foreground">(Placeholder)</p>
+                </div>
+                <div className="p-4 bg-card rounded-lg shadow-md">
+                  <Users className="h-10 w-10 text-primary mx-auto mb-2" />
+                  <h3 className="text-xl font-semibold text-foreground">Members</h3>
+                  <p className="text-2xl font-bold text-accent">500+</p>
+                  <p className="text-sm text-muted-foreground">(Placeholder)</p>
+                </div>
+                <div className="p-4 bg-card rounded-lg shadow-md">
+                  <TrendingUp className="h-10 w-10 text-primary mx-auto mb-2" />
+                  <h3 className="text-xl font-semibold text-foreground">Districts</h3>
+                  <p className="text-2xl font-bold text-accent">10+</p>
+                  <p className="text-sm text-muted-foreground">Covered (Placeholder)</p>
+                </div>
+              </div>
+            </section>
           </AnimatedSection>
-        </div>
-      
-        <AnimatedSection delay={300} animationClass="animate-fadeInUp">
-          <section className="py-10 bg-secondary/30 rounded-lg mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-foreground">Quick Stats</h2>
-            </div>
-            <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-6 text-center">
-              <div className="p-4 bg-card rounded-lg shadow-md">
-                <BarChart className="h-10 w-10 text-primary mx-auto mb-2" />
-                <h3 className="text-xl font-semibold text-foreground">Founded</h3>
-                <p className="text-2xl font-bold text-accent">2023</p>
-                <p className="text-sm text-muted-foreground">(Placeholder)</p>
-              </div>
-              <div className="p-4 bg-card rounded-lg shadow-md">
-                <Users className="h-10 w-10 text-primary mx-auto mb-2" />
-                <h3 className="text-xl font-semibold text-foreground">Members</h3>
-                <p className="text-2xl font-bold text-accent">500+</p>
-                <p className="text-sm text-muted-foreground">(Placeholder)</p>
-              </div>
-              <div className="p-4 bg-card rounded-lg shadow-md">
-                <TrendingUp className="h-10 w-10 text-primary mx-auto mb-2" />
-                <h3 className="text-xl font-semibold text-foreground">Districts</h3>
-                <p className="text-2xl font-bold text-accent">10+</p>
-                <p className="text-sm text-muted-foreground">Covered (Placeholder)</p>
-              </div>
-            </div>
-          </section>
-        </AnimatedSection>
-      </PageWrapper>
+        </PageWrapper>
+      </section>
     </>
   );
 }

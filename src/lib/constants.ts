@@ -187,15 +187,15 @@ export const placeholderBoardMembers: BoardMember[] = [
     name: 'Ms. Shribani Mohanty',
     role: 'President',
     image: '/president.jpeg',
-    imageHint: 'president portrait',
+    imageHint: 'portrait female',
     bio: 'Leading the Odisha Pickleball Association with a vision for growth and community engagement.'
   },
   {
     id: 'bm2',
-    name: 'Ms. Archana Devi',
+    name: 'Mr. Ajay Kumar Nishank',
     role: 'Secretary General',
     image: 'https://placehold.co/300x300.png',
-    imageHint: 'portrait female',
+    imageHint: 'portrait male',
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },
 ];

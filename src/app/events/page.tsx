@@ -12,97 +12,114 @@ export default function EventsPage() {
   const events: Event[] = placeholderEvents;
 
   return (
-    <PageWrapper>
-      <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
-        <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
-          <AnimatedSection animationClass="animate-fadeInUp">
-            <h1 className="text-4xl font-bold tracking-tight text-primary">
-              Tournaments & Events
-            </h1>
-            <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-              Discover upcoming pickleball tournaments, workshops, and community events in Odisha.
-            </p>
-          </AnimatedSection>
-        </div>
-        <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
-          <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
-            <Image
-              src="/pickleball ball .webp"
-              alt="Pickleball icon"
-              width={150}
-              height={150}
-              className="animate-float object-contain mx-auto"
-              priority
-            />
-          </AnimatedSection>
-        </div>
-      </div>
-
-      {events.length === 0 ? (
-        <AnimatedSection>
-          <p className="text-center text-muted-foreground text-lg">
-            No upcoming events scheduled at the moment. Please check back soon!
-          </p>
+    <>
+      <section className="relative py-16 md:py-20 overflow-hidden">
+        <AnimatedSection animationClass="animate-fadeIn">
+          <Image
+            src="/bgintop.jpg" 
+            alt="Odisha Pickleball Events"
+            data-ai-hint="sports event crowd"
+            fill
+            style={{ objectFit: 'cover' }}
+            className="opacity-100"
+            priority
+          />
         </AnimatedSection>
-      ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {events.map((event, index) => (
-            <AnimatedSection key={event.id} delay={index * 100} animationClass="animate-fadeInUp">
-              <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-                <div className="relative h-56 w-full">
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    data-ai-hint={event.imageHint}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl text-foreground">{event.title}</CardTitle>
-                  <div className="flex items-center text-sm text-muted-foreground pt-1">
-                    <CalendarDays className="h-4 w-4 mr-2 text-primary" />
-                    {event.date}
-                  </div>
-                  {event.time && (
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Clock className="h-4 w-4 mr-2 text-primary" />
-                      {event.time}
-                    </div>
-                  )}
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <div className="flex items-start text-sm text-muted-foreground mb-3">
-                    <MapPin className="h-4 w-4 mr-2 mt-0.5 shrink-0 text-primary" />
-                    <span>{event.location}</span>
-                  </div>
-                  <CardDescription className="text-base">{event.description}</CardDescription>
-                </CardContent>
-                <CardFooter>
-                  {event.registrationLink ? (
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                      <Link href={event.registrationLink}>
-                        <Ticket className="h-4 w-4 mr-2" /> Register Now
-                      </Link>
-                    </Button>
-                  ) : (
-                    <Button variant="outline" disabled className="w-full">Registration Closed/Details Soon</Button>
-                  )}
-                </CardFooter>
-              </Card>
-            </AnimatedSection>
-          ))}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+            <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
+              <AnimatedSection animationClass="animate-fadeInUp">
+                <h1 className="text-4xl font-bold tracking-tight text-white">
+                  Tournaments & Events
+                </h1>
+                <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0">
+                  Discover upcoming pickleball tournaments, workshops, and community events in Odisha.
+                </p>
+              </AnimatedSection>
+            </div>
+            <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
+              <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Pickleball icon"
+                  width={150}
+                  height={150}
+                  className="animate-float object-contain mx-auto"
+                  priority
+                />
+              </AnimatedSection>
+            </div>
+          </div>
         </div>
-      )}
-      <AnimatedSection delay={300} animationClass="animate-fadeInUp">
-        <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
-            <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Event Features Coming Soon!</h2>
-            <p className="text-center text-muted-foreground">
-                We're working on a filterable calendar, list view for upcoming events, and a carousel for past event photos and winners. Stay tuned!
+      </section>
+
+      <PageWrapper>
+        {events.length === 0 ? (
+          <AnimatedSection>
+            <p className="text-center text-muted-foreground text-lg">
+              No upcoming events scheduled at the moment. Please check back soon!
             </p>
-        </div>
-      </AnimatedSection>
-    </PageWrapper>
+          </AnimatedSection>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {events.map((event, index) => (
+              <AnimatedSection key={event.id} delay={index * 100} animationClass="animate-fadeInUp">
+                <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                  <div className="relative h-56 w-full">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      data-ai-hint={event.imageHint}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      className="transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-foreground">{event.title}</CardTitle>
+                    <div className="flex items-center text-sm text-muted-foreground pt-1">
+                      <CalendarDays className="h-4 w-4 mr-2 text-primary" />
+                      {event.date}
+                    </div>
+                    {event.time && (
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Clock className="h-4 w-4 mr-2 text-primary" />
+                        {event.time}
+                      </div>
+                    )}
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <div className="flex items-start text-sm text-muted-foreground mb-3">
+                      <MapPin className="h-4 w-4 mr-2 mt-0.5 shrink-0 text-primary" />
+                      <span>{event.location}</span>
+                    </div>
+                    <CardDescription className="text-base">{event.description}</CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    {event.registrationLink ? (
+                      <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                        <Link href={event.registrationLink}>
+                          <Ticket className="h-4 w-4 mr-2" /> Register Now
+                        </Link>
+                      </Button>
+                    ) : (
+                      <Button variant="outline" disabled className="w-full">Registration Closed/Details Soon</Button>
+                    )}
+                  </CardFooter>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+        )}
+        <AnimatedSection delay={300} animationClass="animate-fadeInUp">
+          <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
+              <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Event Features Coming Soon!</h2>
+              <p className="text-center text-muted-foreground">
+                  We're working on a filterable calendar, list view for upcoming events, and a carousel for past event photos and winners. Stay tuned!
+              </p>
+          </div>
+        </AnimatedSection>
+      </PageWrapper>
+    </>
   );
 }

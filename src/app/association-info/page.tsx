@@ -12,21 +12,21 @@ export default function AssociationInfoPage() {
         <div className="absolute inset-0">
           <Image
             src="/bgintop.jpg"
-            alt="Arunachal pickleball community"
+            alt="Odisha pickleball community"
             fill
             style={{ objectFit: 'cover' }}
-            className="" // Removed opacity-10
+            className="" 
             priority
           />
         </div>
         <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center">
           <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
             <AnimatedSection animationClass="animate-fadeInUp">
-              <h1 className="text-4xl font-bold tracking-tight text-white"> {/* Changed from text-primary */}
+              <h1 className="text-4xl font-bold tracking-tight text-white"> 
                 About Us
               </h1>
-              <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0"> {/* Changed from text-muted-foreground */}
-                Learn more about the Arunachal Pradesh Pickleball Association.
+              <p className="mt-4 text-xl text-gray-100 max-w-2xl mx-auto md:mx-0"> 
+                Learn more about the Odisha Pickleball Association.
               </p>
             </AnimatedSection>
           </div>
@@ -66,7 +66,7 @@ export default function AssociationInfoPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  To promote and develop the sport of pickleball across Arunachal Pradesh, fostering a vibrant community of players of all ages and skill levels. We aim to provide resources, organize events, and create opportunities for growth and enjoyment in the sport.
+                  To promote and develop the sport of pickleball across Odisha, fostering a vibrant community of players of all ages and skill levels. We aim to provide resources, organize events, and create opportunities for growth and enjoyment in the sport.
                 </p>
               </CardContent>
             </Card>
@@ -106,8 +106,8 @@ export default function AssociationInfoPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <a href="mailto:contact@pickleballarunachal.org" className="text-primary hover:underline">
-                  contact@pickleballarunachal.org
+                <a href="mailto:contact@pickleballodisha.org" className="text-primary hover:underline">
+                  contact@pickleballodisha.org
                 </a>
               </CardContent>
             </Card>
@@ -129,10 +129,10 @@ export default function AssociationInfoPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Arunachal Pradesh Pickleball Association<br />
+                  Odisha Pickleball Association<br />
                   C/O State Olympic Association Office<br />
-                  Near Rajiv Gandhi Stadium, Sector C<br />
-                  Naharlagun, Arunachal Pradesh - 791110
+                  Near Kalinga Stadium, Nayapalli<br />
+                  Bhubaneswar, Odisha - 751012 
                 </p>
               </CardContent>
             </Card>

@@ -22,16 +22,16 @@ const Footer = () => {
     <footer className="border-t border-border/40 bg-background text-muted-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 bg-black p-6 rounded-lg">
-          {/* About APPA */}
+          {/* About OPA */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <LogoIcon className="h-10 w-10 text-primary" />
               <span className="font-semibold text-lg text-white">
-                Arunachal Pradesh Pickleball Association
+                Odisha Pickleball Association
               </span>
             </Link>
             <p className="text-sm text-gray-300">
-              Promoting and developing the sport of pickleball across Arunachal Pradesh.
+              Promoting and developing the sport of pickleball across Odisha.
             </p>
           </div>
 
@@ -55,8 +55,8 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 text-gray-300">
                 <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:contact@pickleballarunachal.org" className="text-gray-300 hover:text-primary transition-colors">
-                  contact@pickleballarunachal.org
+                <a href="mailto:contact@pickleballodisha.org" className="text-gray-300 hover:text-primary transition-colors">
+                  contact@pickleballodisha.org
                 </a>
               </li>
               <li className="flex items-center gap-2 text-gray-300">
@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-gray-300">
                 <p>
-                  Naharlagun, Arunachal Pradesh, India
+                  Bhubaneswar, Odisha, India
                 </p>
               </li>
             </ul>
@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="border-t border-border/40 pt-8 text-center text-sm">
           <p>
-            &copy; {currentYear} Arunachal Pradesh Pickleball Association. All rights reserved.
+            &copy; {currentYear} Odisha Pickleball Association. All rights reserved.
           </p>
           <p className="mt-1">
             Designed with <span className="text-primary">&hearts;</span> for the love of Pickleball.

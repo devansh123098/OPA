@@ -11,7 +11,7 @@ import PickleballIcon from '@/components/icons/pickleball-icon';
 export default function HomePage() {
   const keyHighlights = [
     { title: "Expert Coaching", description: "Learn from certified coaches to elevate your game, regardless of your skill level.", icon: Award, href: "/clubs#coaches" },
-    { title: "Quality Facilities", description: "Access well-maintained courts and facilities across Arunachal Pradesh.", icon: HomeIcon, href: "/clubs" },
+    { title: "Quality Facilities", description: "Access well-maintained courts and facilities across Odisha.", icon: HomeIcon, href: "/clubs" },
     { title: "Community Events", description: "Participate in regular tournaments, workshops, and social pickleball events.", icon: CalendarCheck, href: "/events" },
     { title: "Skill Development", description: "Programs designed to help players of all ages improve and enjoy the sport.", icon: BarChartBig, href: "/ai-workout" },
   ];
@@ -46,12 +46,12 @@ export default function HomePage() {
               <AnimatedSection animationClass="animate-fadeInUp">
                 <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                  Welcome to Arunachal Pradesh Pickleball Association
+                  Welcome to Odisha Pickleball Association
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={200} animationClass="animate-fadeInUp">
                 <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-200">
-                  Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
+                  Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={400} animationClass="animate-fadeInUp">
@@ -95,7 +95,7 @@ export default function HomePage() {
               </AnimatedSection>
               <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
                 <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Discover what makes the Arunachal Pradesh Pickleball Association special.
+                  Discover what makes the Odisha Pickleball Association special.
                 </p>
               </AnimatedSection>
             </div>
@@ -127,7 +127,7 @@ export default function HomePage() {
 
       {/* Discover Our Initiatives Section - Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67]">
+        <section className="py-16 bg-secondary">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Inner container for content alignment */}
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
               <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
@@ -148,7 +148,7 @@ export default function HomePage() {
                 </AnimatedSection>
                 <AnimatedSection animationClass="animate-fadeInUp" delay={300}>
                   <p className="mt-3 text-lg text-gray-200 max-w-xl mx-auto md:mx-0">
-                    Explore key features and services of the Arunachal Pradesh Pickleball Association.
+                    Explore key features and services of the Odisha Pickleball Association.
                   </p>
                 </AnimatedSection>
               </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
               </AnimatedSection>
               <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-                  Become a part of Arunachal Pradesh's growing pickleball family. Connect with players, participate in events, and help grow the sport!
+                  Become a part of Odisha's growing pickleball family. Connect with players, participate in events, and help grow the sport!
                 </p>
               </AnimatedSection>
               <AnimatedSection animationClass="animate-fadeInUp" delay={200}>

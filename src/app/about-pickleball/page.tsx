@@ -112,7 +112,7 @@ export default function AboutPickleballPage() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground">Pickleball Today</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Today, pickleball is enjoyed by millions of people of all ages and athletic abilities. Its simple rules, low-impact nature, and social aspect make it an appealing sport for everyone. The Arunachal Pradesh Pickleball Association is proud to be part of this growing global community!
+              Today, pickleball is enjoyed by millions of people of all ages and athletic abilities. Its simple rules, low-impact nature, and social aspect make it an appealing sport for everyone. The Odisha Pickleball Association is proud to be part of this growing global community!
             </p>
              <div className="mt-8">
                 <Image

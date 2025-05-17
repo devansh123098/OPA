@@ -17,8 +17,8 @@ const fontMono = Roboto_Mono({ // Changed to Roboto_Mono
 });
 
 export const metadata: Metadata = {
-  title: 'Arunachal Pradesh Pickleball Association',
-  description: 'Official website of the Arunachal Pradesh Pickleball Association.',
+  title: 'Odisha Pickleball Association',
+  description: 'Official website of the Odisha Pickleball Association.',
 };
 
 export default function RootLayout({

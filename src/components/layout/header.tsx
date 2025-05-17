@@ -20,7 +20,7 @@ const Header = () => {
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
           <LogoIcon className="h-8 w-8" /> {/* text-primary removed as SVG has its own colors */}
           <span className="font-bold text-xl text-sidebar-foreground hover:opacity-90 transition-opacity">
-            Arunachal Pradesh Pickleball Association
+            Odisha Pickleball Association
           </span>
         </Link>
 
@@ -34,8 +34,8 @@ const Header = () => {
               className={cn(
                 "text-sm font-medium transition-colors",
                 pathname === link.href 
-                  ? "bg-accent text-accent-foreground font-semibold" // Active: Sky Blue BG, White Text
-                  : "text-sidebar-foreground hover:bg-accent hover:text-accent-foreground" // Inactive: White text, Sky Blue BG on hover
+                  ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
+                  : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
               )}
             >
               <Link href={link.href}>{link.label}</Link>
@@ -57,7 +57,7 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
                         <LogoIcon className="h-7 w-7" />
-                        <span className="font-semibold text-lg text-sidebar-foreground">APPA</span>
+                        <span className="font-semibold text-lg text-sidebar-foreground">OPA</span>
                     </Link>
                     <SheetClose asChild>
                         <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
@@ -75,8 +75,8 @@ const Header = () => {
                       className={cn(
                         "justify-start text-base font-medium transition-colors",
                         pathname === link.href 
-                          ? "bg-accent text-accent-foreground" // Active: Sky Blue BG, White text
-                          : "text-sidebar-foreground hover:bg-accent hover:text-accent-foreground" // Inactive: White text, Sky Blue BG on hover
+                          ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                          : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       )}
                       onClick={() => setIsSheetOpen(false)}
                     >

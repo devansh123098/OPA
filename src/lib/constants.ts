@@ -1,12 +1,11 @@
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/association-info', label: 'About Us' },
-  { href: '/board-members', label: 'Board Members' },
-  { href: '/events', label: 'Tournaments' },
-  { href: '/coaching', label: 'Coaching' },
-  { href: '/ranking', label: 'Ranking' },
-  { href: '/contact-us', label: 'Contact Us' },
+  { href: '/association-info', label: 'Association Info' },
+  { href: '/events', label: 'Events' },
+  { href: '/clubs', label: 'Clubs Directory' },
+  { href: '/ai-workout', label: 'AI Workout' },
+  { href: '/about-pickleball', label: 'About Pickleball' },
 ];
 
 export interface Event {
@@ -145,29 +144,32 @@ export interface NewsArticle {
   href: string;
 }
 
+// Placeholder for news articles, will be used in a later step if we implement news fully
 export const placeholderNews: NewsArticle[] = [
   {
     id: '1',
-    title: 'Exciting Tournament Announced!',
-    description: 'Details about the upcoming state championship scheduled for next month. Registrations open soon!',
+    title: 'OPA State Championship Announced!',
+    description: 'Get ready for the most exciting pickleball event of the year. Dates and venue details inside.',
     image: 'https://placehold.co/500x300.png',
     imageHint: 'trophy award',
-    href: '#',
+    href: '/events',
   },
   {
     id: '2',
-    title: 'New Coaching Clinic Series',
-    description: 'Enroll now for our beginner and intermediate clinics starting in two weeks. Limited spots available.',
+    title: 'New Coaching Clinics for All Levels',
+    description: 'Our certified coaches are starting new batches for beginners, intermediate, and advanced players.',
     image: 'https://placehold.co/500x300.png',
     imageHint: 'coaching session',
-    href: '#',
+    href: '/coaching',
   },
   {
     id: '3',
-    title: 'OPA Annual Meet & Greet',
-    description: 'Join us for a fun evening of pickleball, networking, and celebrating our community achievements.',
+    title: 'Community Day: Play & Connect',
+    description: 'Join us for a fun-filled day of pickleball, food, and making new friends in the community.',
     image: 'https://placehold.co/500x300.png',
     imageHint: 'community event',
-    href: '#',
+    href: '/events',
   },
 ];
+
+    

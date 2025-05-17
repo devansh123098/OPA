@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Zap, Users, CalendarDays, Newspaper, Palette, Brain, Dumbbell } from 'lucide-react';
+import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react'; // Added Palette, Brain, Dumbbell, Newspaper
 
 export default function HomePage() {
   const initiatives = [
@@ -15,7 +15,7 @@ export default function HomePage() {
       icon: Users,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'community sports',
-      href: '#',
+      href: '/events', // Updated href
     },
     {
       title: 'Youth Programs',
@@ -23,7 +23,7 @@ export default function HomePage() {
       icon: Brain,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
-      href: '#',
+      href: '/coaching', // Updated href
     },
     {
       title: 'Coaching Clinics',
@@ -31,7 +31,7 @@ export default function HomePage() {
       icon: Dumbbell,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
-      href: '#',
+      href: '/coaching', // Updated href
     },
     {
       title: 'Annual Championship',
@@ -39,7 +39,7 @@ export default function HomePage() {
       icon: Palette, // Using Palette as a placeholder, consider Trophy or Award
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
-      href: '#',
+      href: '/events', // Updated href
     },
   ];
 
@@ -118,7 +118,7 @@ export default function HomePage() {
                 { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
                 { title: 'Quality Facilities', description: 'Access well-maintained courts and facilities across Odisha.', icon: Zap, href: '/clubs' },
                 { title: 'Community Events', description: 'Participate in regular tournaments, workshops, and social pickleball events.', icon: Users, href: '/events' },
-                { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: CalendarDays, href: '/coaching' },
+                { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Dumbbell, href: '/coaching' },
               ].map((item, index) => (
                 <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
                   <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group">
@@ -216,7 +216,7 @@ export default function HomePage() {
       {/* Join Our Community Section - Full Width */}
       <AnimatedSection delay={100} animationClass="animate-fadeInUp">
         <section className="py-16 text-center bg-accent/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Become a part of the fastest-growing sports community in Odisha. Connect with fellow players, participate in events, and help grow the sport.
@@ -230,41 +230,39 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
       
-      <PageWrapper>
-        {/* About Pickleball Teaser Section */}
-        <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-          <section className="py-16 bg-secondary/50 rounded-xl"> {/* Using secondary for a different tint */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-                <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
-                    <AnimatedSection animationClass="animate-slideInFromLeft">
-                    <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
-                    <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-                        New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
-                    </p>
-                    <div className="mt-6">
-                        <Button asChild variant="outline" className="hover:bg-primary/10 hover:text-primary text-foreground">
-                        <Link href="/about-pickleball">
-                            Read More <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                        </Button>
-                    </div>
-                    </AnimatedSection>
-                </div>
-                <AnimatedSection animationClass="animate-slideInFromRight" delay={100} className="md:col-span-5 lg:col-span-5 mt-10 md:mt-0 flex justify-center">
-                    <Image
-                        src="/pickleball ball .webp"
-                        alt="Pickleball ball and paddle"
-                        width={150} 
-                        height={150} 
-                        className="rounded-lg object-contain animate-float"
-                    />
-                </AnimatedSection>
-                </div>
-            </div>
-          </section>
-        </AnimatedSection>
-      </PageWrapper>
+      {/* About Pickleball Teaser Section - Full Width */}
+      <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+        <section className="py-16 bg-secondary/50"> {/* Removed rounded-xl */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+              <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
+                  <AnimatedSection animationClass="animate-slideInFromLeft">
+                  <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
+                  <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
+                      New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
+                  </p>
+                  <div className="mt-6">
+                      <Button asChild variant="outline" className="hover:bg-primary/10 hover:text-primary text-foreground">
+                      <Link href="/about-pickleball">
+                          Read More <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                      </Button>
+                  </div>
+                  </AnimatedSection>
+              </div>
+              <AnimatedSection animationClass="animate-slideInFromRight" delay={100} className="md:col-span-5 lg:col-span-5 mt-10 md:mt-0 flex justify-center">
+                  <Image
+                      src="/pickleball ball .webp"
+                      alt="Pickleball ball and paddle"
+                      width={150} 
+                      height={150} 
+                      className="rounded-lg object-contain animate-float"
+                  />
+              </AnimatedSection>
+              </div>
+          </div>
+        </section>
+      </AnimatedSection>
     </>
   );
 }

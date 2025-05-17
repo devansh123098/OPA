@@ -7,7 +7,6 @@ import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, CalendarDays, Users, Sparkles, Award, Home as HomeIcon, CalendarCheck, BarChartBig, Info } from 'lucide-react';
 import PickleballIcon from '@/components/icons/pickleball-icon';
-import PaddleIcon from '@/components/icons/paddle-icon';
 
 export default function HomePage() {
   const keyHighlights = [
@@ -35,7 +34,7 @@ export default function HomePage() {
             alt="Pickleball action background"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-20"
+            className="" // Removed opacity-20
             priority
           />
         </div>
@@ -44,12 +43,12 @@ export default function HomePage() {
             <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <PickleballIcon className="h-16 w-16 text-primary mx-auto md:mx-0 mb-6" />
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-gradientWave">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                   Welcome to Arunachal Pradesh Pickleball Association
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-                <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 animate-gradientWave">
+                <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-200">
                   Your official hub for everything pickleball in Arunachal Pradesh. Discover events, clubs, and connect with the community.
                 </p>
               </AnimatedSection>
@@ -72,7 +71,7 @@ export default function HomePage() {
               <AnimatedSection animationClass="animate-slideInFromRight" delay={600}>
                 <Image
                   src="/pickleball ball .webp"
-                  alt="Pickleball icon"
+                  alt="Floating pickleball icon"
                   width={150}
                   height={150}
                   className="animate-float object-contain"
@@ -126,7 +125,7 @@ export default function HomePage() {
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
         <section className="py-16">
           <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
-             <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
+             <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-last">
                <AnimatedSection animationClass="animate-slideInFromLeft" delay={100}>
                  <Image
                     src="/pickleball ball .webp"
@@ -137,7 +136,7 @@ export default function HomePage() {
                   />
                 </AnimatedSection>
             </div>
-            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-last">
+            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-first">
               <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
                 <h2 className="text-3xl font-bold text-foreground">Discover Our Initiatives</h2>
               </AnimatedSection>
@@ -209,7 +208,7 @@ export default function HomePage() {
       </AnimatedSection>
       
       {/* About Pickleball Teaser */}
-      <section className="py-16 bg-secondary/50 rounded-xl">
+       <section className="py-16 bg-secondary/50 rounded-xl">
         <div className="container mx-auto px-4">
           <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-first md:order-first">
@@ -226,7 +225,7 @@ export default function HomePage() {
                 </AnimatedSection>
             </div>
              <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center order-last md:order-last mt-8 md:mt-0">
-              <AnimatedSection delay={100} animationClass="animate-slideInFromRight">
+              <AnimatedSection delay={100} animationClass="animate-slideInFromLeft">
                 <Image
                     src="/pickleball ball .webp"
                     alt="Pickleball icon"

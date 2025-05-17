@@ -1,12 +1,13 @@
+
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image'; // Import next/image
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import LogoIcon from '@/components/icons/logo-icon';
 import { NAV_LINKS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
@@ -18,7 +19,14 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
-          <LogoIcon className="h-8 w-8" /> {/* text-primary removed as SVG has its own colors */}
+          <Image 
+            src="/logo.png" 
+            alt="Odisha Pickleball Association Logo" 
+            width={32} 
+            height={32} 
+            className="h-8 w-8 object-contain" 
+            priority 
+          />
           <span className="font-bold text-xl text-sidebar-foreground hover:opacity-90 transition-opacity">
             Odisha Pickleball Association
           </span>
@@ -56,7 +64,14 @@ const Header = () => {
               <div className="flex flex-col space-y-6">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
-                        <LogoIcon className="h-7 w-7" />
+                        <Image 
+                          src="/logo.png" 
+                          alt="OPA Logo" 
+                          width={28} 
+                          height={28} 
+                          className="h-7 w-7 object-contain" 
+                          priority 
+                        />
                         <span className="font-semibold text-lg text-sidebar-foreground">OPA</span>
                     </Link>
                     <SheetClose asChild>

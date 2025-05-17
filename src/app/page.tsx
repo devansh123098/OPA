@@ -29,14 +29,16 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
-          <Image
-            src="/player.jpg"
-            alt="Pickleball action background"
-            fill
-            style={{ objectFit: 'cover' }}
-            className="" 
-            priority
-          />
+          <div className="absolute inset-0">
+            <Image
+              src="/player.jpg"
+              alt="Pickleball action background"
+              fill
+              style={{ objectFit: 'cover' }}
+              className="" 
+              priority
+            />
+          </div>
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4">
           <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
@@ -125,7 +127,7 @@ export default function HomePage() {
 
       {/* Discover Our Initiatives Section - Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-secondary/30">
+        <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Inner container for content alignment */}
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
               <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
@@ -142,10 +144,10 @@ export default function HomePage() {
               </div>
               <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-last">
                 <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
-                  <h2 className="text-3xl font-bold text-foreground">Discover Our Initiatives</h2>
+                  <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                 </AnimatedSection>
                 <AnimatedSection animationClass="animate-fadeInUp" delay={300}>
-                  <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
+                  <p className="mt-3 text-lg text-gray-200 max-w-xl mx-auto md:mx-0">
                     Explore key features and services of the Arunachal Pradesh Pickleball Association.
                   </p>
                 </AnimatedSection>

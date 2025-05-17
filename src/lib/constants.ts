@@ -22,11 +22,11 @@ export interface Event {
 export const placeholderEvents: Event[] = [
   {
     id: '1',
-    title: 'Arunachal State Open Pickleball Championship',
+    title: 'Odisha State Open Pickleball Championship',
     date: 'October 26-28, 2024',
     time: '9:00 AM - 5:00 PM',
-    location: 'Rajiv Gandhi Stadium, Naharlagun',
-    description: 'Join us for the biggest pickleball tournament in Arunachal Pradesh! Categories for all skill levels.',
+    location: 'Kalinga Stadium, Bhubaneswar',
+    description: 'Join us for the biggest pickleball tournament in Odisha! Categories for all skill levels.',
     registrationLink: '#',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'pickleball tournament'
@@ -36,7 +36,7 @@ export const placeholderEvents: Event[] = [
     title: 'Beginner Pickleball Workshop',
     date: 'November 12, 2024',
     time: '10:00 AM - 1:00 PM',
-    location: 'Itanagar Sports Complex',
+    location: 'Bhubaneswar Sports Complex',
     description: 'Learn the basics of pickleball from certified coaches. Paddles and balls provided.',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'pickleball workshop'
@@ -46,7 +46,7 @@ export const placeholderEvents: Event[] = [
     title: 'Advanced Dinking Clinic',
     date: 'December 3, 2024',
     time: '2:00 PM - 4:00 PM',
-    location: 'Pasighat Indoor Stadium',
+    location: 'Cuttack Indoor Stadium',
     description: 'Sharpen your dinking skills and strategy with advanced drills and coaching.',
     registrationLink: '#',
     image: 'https://placehold.co/600x400.png',
@@ -69,31 +69,31 @@ export interface Club {
 export const placeholderClubs: Club[] = [
   {
     id: '1',
-    name: 'Itanagar Pickleball Club',
-    location: 'Itanagar, Arunachal Pradesh',
-    contactPerson: 'Mr. Tamo Tagar',
+    name: 'Bhubaneswar Pickleball Club',
+    location: 'Bhubaneswar, Odisha',
+    contactPerson: 'Mr. Ashok Das',
     phone: '+91 98765 43210',
-    email: 'itanagarclub@pickleballarunachal.org',
+    email: 'bhubaneswarclub@pickleballodisha.org',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'sports club'
   },
   {
     id: '2',
-    name: 'Naharlagun Smashers',
-    location: 'Naharlagun, Arunachal Pradesh',
-    contactPerson: 'Ms. Pema Dorjee',
+    name: 'Cuttack Smashers',
+    location: 'Cuttack, Odisha',
+    contactPerson: 'Ms. Priya Mohanty',
     phone: '+91 91234 56789',
-    email: 'naharlagunsmashers@pickleballarunachal.org',
+    email: 'cuttacksmashers@pickleballodisha.org',
     website: '#',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'team sport'
   },
   {
     id: '3',
-    name: 'Pasighat Paddlers',
-    location: 'Pasighat, Arunachal Pradesh',
-    contactPerson: 'Mr. Karma Leta',
-    email: 'pasighatpaddlers@pickleballarunachal.org',
+    name: 'Puri Paddlers',
+    location: 'Puri, Odisha',
+    contactPerson: 'Mr. Surya Behera',
+    email: 'puripaddlers@pickleballodisha.org',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'community group'
   },
@@ -114,18 +114,18 @@ export interface Coach {
 export const placeholderCoaches: Coach[] = [
  {
     id: 'c1',
-    name: 'Coach Ankit Sharma',
-    location: 'Itanagar',
+    name: 'Coach Rohan Patnaik',
+    location: 'Bhubaneswar',
     specialization: 'Beginner & Intermediate Training',
     experience: '5+ years',
-    email: 'ankit.sharma@email.com',
+    email: 'rohan.patnaik@email.com',
     image: 'https://placehold.co/300x300.png',
     imageHint: 'coach portrait'
   },
   {
     id: 'c2',
-    name: 'Coach Priya Singh',
-    location: 'Naharlagun',
+    name: 'Coach Anita Sahoo',
+    location: 'Cuttack',
     specialization: 'Advanced Strategy & Doubles Play',
     experience: '8+ years, Level 2 Certified',
     phone: '+91 99887 76655',

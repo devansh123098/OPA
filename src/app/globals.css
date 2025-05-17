@@ -4,93 +4,93 @@
 
 @layer base {
   :root {
-    /* Light Theme - Odisha Inspired Palette */
-    --background: 39 71% 86%; /* Sandstone Beige */
-    --foreground: 0 0% 20%; /* Charcoal Gray */
+    /* Light Theme - Coastal Energy */
+    --background: 0 0% 100%; /* White (#ffffff) */
+    --foreground: 0 0% 20%; /* Charcoal Gray (#333333) */
     
-    --card: 39 70% 92%; /* Lighter Sandstone Beige */
+    --card: 206 25% 96%; /* Light Slate (#f2f5f7) */
     --card-foreground: 0 0% 20%; /* Charcoal Gray */
     
-    --popover: 39 70% 92%; /* Lighter Sandstone Beige */
+    --popover: 206 25% 96%; /* Light Slate (#f2f5f7) */
     --popover-foreground: 0 0% 20%; /* Charcoal Gray */
     
-    --primary: 43 100% 48%; /* Golden Yellow */
-    --primary-foreground: 0 0% 10%; /* Dark Charcoal for text on Golden Yellow */
+    --primary: 29 100% 50%; /* Sunrise Orange (#ff7a00) */
+    --primary-foreground: 0 0% 100%; /* White */
     
-    --secondary: 172 58% 39%; /* Coastal Teal */
-    --secondary-foreground: 0 0% 100%; /* White */
+    --secondary: 210 16% 93%; /* Lighter neutral gray (#e9ecef) */
+    --secondary-foreground: 0 0% 20%; /* Charcoal Gray */
     
-    --muted: 39 40% 75%; /* Muted Beige */
-    --muted-foreground: 0 0% 30%; /* Darker Charcoal Gray */
+    --muted: 210 14% 83%; /* Medium gray (#ced4da) */
+    --muted-foreground: 208 7% 46%; /* Darker gray (#6c757d) */
     
-    --accent: 19 89% 40%; /* Terracotta Red */
+    --accent: 199 100% 40%; /* Aqua Blue (#0099cc) */
     --accent-foreground: 0 0% 100%; /* White */
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 39 60% 70%; /* Darker Beige for borders */
-    --input: 39 70% 95%; /* Very light Beige for input background */
-    --ring: 43 100% 60%; /* Lighter Golden Yellow for rings */
+    --border: 210 14% 83%; /* Medium gray (#ced4da) */
+    --input: 206 25% 98%; /* Very Light Slate (#f8f9fa) */
+    --ring: 29 100% 65%; /* Lighter Sunrise Orange for focus rings */
     
     --radius: 0.5rem;
 
-    --chart-1: 43 100% 48%; /* Golden Yellow */
-    --chart-2: 19 89% 40%;  /* Terracotta Red */
-    --chart-3: 172 58% 45%; /* Brighter Coastal Teal */
-    --chart-4: 30 80% 60%;  /* An orange, can be adjusted */
-    --chart-5: 0 0% 50%;    /* Medium Gray */
+    --chart-1: 29 100% 50%;   /* Sunrise Orange */
+    --chart-2: 199 100% 40%;  /* Aqua Blue */
+    --chart-3: 29 100% 70%;   /* Lighter Orange */
+    --chart-4: 199 100% 60%;  /* Lighter Aqua */
+    --chart-5: 0 0% 50%;      /* Medium Gray */
 
-    /* Sidebar/Header Specific */
-    --sidebar-background: 172 58% 39%; /* Coastal Teal */
+    /* Sidebar/Header Specific (Coastal Energy Light) */
+    --sidebar-background: 199 100% 40%; /* Aqua Blue (#0099cc) */
     --sidebar-foreground: 0 0% 100%;    /* White */
-    --sidebar-primary: 43 100% 48%;      /* Golden Yellow */
-    --sidebar-primary-foreground: 0 0% 10%; /* Dark Charcoal */
-    --sidebar-accent: 19 89% 40%;      /* Terracotta Red */
+    --sidebar-primary: 29 100% 50%;      /* Sunrise Orange */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 29 100% 50%;      /* Sunrise Orange (for active/hover links in sidebar) */
     --sidebar-accent-foreground: 0 0% 100%; /* White */
-    --sidebar-border: 172 58% 30%;      /* Darker Coastal Teal for internal borders */
-    --sidebar-ring: 43 100% 60%;        /* Lighter Golden Yellow */
+    --sidebar-border: 199 100% 30%;      /* Darker Aqua Blue */
+    --sidebar-ring: 29 100% 65%;        /* Lighter Sunrise Orange */
   }
 
   .dark {
-    /* Dark Theme - Odisha Inspired Palette */
-    --background: 172 20% 10%; /* Very Dark Desaturated Teal */
-    --foreground: 39 71% 80%; /* Light Sandstone Beige */
+    /* Dark Theme - Coastal Energy Inspired */
+    --background: 210 100% 12%; /* Midnight Navy (#001f3f) */
+    --foreground: 210 17% 88%; /* Light Gray (#dee2e6) */
     
-    --card: 172 20% 15%; /* Darker Desaturated Teal for cards */
-    --card-foreground: 39 71% 80%; /* Light Sandstone Beige */
+    --card: 210 100% 16%; /* Darker Navy (#002a53) */
+    --card-foreground: 210 17% 88%; /* Light Gray */
     
-    --popover: 172 20% 12%; /* Darker Popover */
-    --popover-foreground: 39 71% 80%; /* Light Sandstone Beige */
+    --popover: 210 100% 16%; /* Darker Navy */
+    --popover-foreground: 210 17% 88%; /* Light Gray */
     
-    --primary: 43 100% 55%; /* Brighter Golden Yellow */
-    --primary-foreground: 0 0% 10%; /* Dark Charcoal */
+    --primary: 29 100% 55%; /* Brighter Sunrise Orange */
+    --primary-foreground: 0 0% 15%; /* Dark text for bright orange button */
     
-    --secondary: 172 58% 50%; /* Lighter/Vibrant Coastal Teal */
+    --secondary: 199 100% 50%; /* Brighter Aqua Blue */
     --secondary-foreground: 0 0% 100%; /* White */
     
-    --muted: 0 0% 25%; /* Dark Gray Muted */
-    --muted-foreground: 0 0% 60%; /* Medium-Light Gray */
+    --muted: 210 7% 31%; /* Medium Dark Gray (#495057) */
+    --muted-foreground: 210 9% 71%; /* Lighter Gray (#adb5bd) */
     
-    --accent: 19 89% 50%; /* Brighter Terracotta Red */
+    --accent: 199 100% 55%; /* Brighter Aqua Blue */
     --accent-foreground: 0 0% 100%; /* White */
     
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 0 0% 30%; /* Medium Dark Gray border */
-    --input: 172 20% 18%; /* Dark Teal Input background */
-    --ring: 43 100% 65%; /* Brighter Golden Yellow for rings */
-    
-    /* Sidebar/Header Specific - Dark Mode */
-    --sidebar-background: 172 58% 25%; /* Dark Coastal Teal */
-    --sidebar-foreground: 39 71% 80%;    /* Light Sandstone Beige */
-    --sidebar-primary: 43 100% 55%;      /* Brighter Golden Yellow */
-    --sidebar-primary-foreground: 0 0% 10%; /* Dark Charcoal */
-    --sidebar-accent: 19 89% 50%;      /* Brighter Terracotta Red */
-    --sidebar-accent-foreground: 0 0% 100%; /* White */
-    --sidebar-border: 172 58% 20%;      /* Darker shade of sidebar background */
-    --sidebar-ring: 43 100% 65%;
+    --border: 210 7% 25%; /* Darker Gray for borders (#343a40) */
+    --input: 210 100% 18%; /* Slightly lighter than bg, for input fields */
+    --ring: 29 100% 65%; /* Lighter Sunrise Orange */
+
+    /* Sidebar/Header Specific - Dark Mode (Coastal Energy Inspired) */
+    --sidebar-background: 199 100% 35%; /* Darker Aqua Blue */
+    --sidebar-foreground: 0 0% 100%;    /* White */
+    --sidebar-primary: 29 100% 55%;      /* Brighter Sunrise Orange */
+    --sidebar-primary-foreground: 0 0% 15%; /* Dark text */
+    --sidebar-accent: 29 100% 60%;      /* Lighter Sunrise Orange */
+    --sidebar-accent-foreground: 0 0% 15%; /* Dark text */
+    --sidebar-border: 199 100% 25%;      /* Even Darker Aqua Blue */
+    --sidebar-ring: 29 100% 65%;
   }
 }
 

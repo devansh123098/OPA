@@ -9,17 +9,19 @@ export default function AssociationInfoPage() {
   return (
     <PageWrapper>
       <section className="relative py-16 md:py-20 rounded-xl overflow-hidden bg-secondary/10 mb-12">
-        <div className="absolute inset-0">
-          <Image
-            src="/bgintop.jpg"
-            alt="Odisha pickleball community"
-            fill
-            style={{ objectFit: 'cover' }}
-            className="" 
-            priority
-          />
-        </div>
-        <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center">
+        <AnimatedSection animationClass="animate-fadeIn">
+          <div className="absolute inset-0">
+            <Image
+              src="/bgintop.jpg"
+              alt="Odisha pickleball community"
+              fill
+              style={{ objectFit: 'cover' }}
+              className="" 
+              priority
+            />
+          </div>
+        </AnimatedSection>
+        <div className="relative z-10 md:grid md:grid-cols-12 md:gap-8 md:items-center container mx-auto px-4"> {/* Added container for content alignment */}
           <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
             <AnimatedSection animationClass="animate-fadeInUp">
               <h1 className="text-4xl font-bold tracking-tight text-white"> 

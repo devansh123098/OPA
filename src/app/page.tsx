@@ -85,10 +85,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Key Highlights Section - Now Full Width Background */}
+      {/* Key Highlights Section - Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn" delay={500}>
-        <section className="py-16 bg-primary/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Inner container for content alignment */}
+        <section className="py-16 bg-primary/20"> {/* Uses new primary (Sunrise Orange tint) */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <AnimatedSection animationClass="animate-fadeInDown">
                 <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
@@ -104,7 +104,7 @@ export default function HomePage() {
                 <AnimatedSection key={highlight.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
                   <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card text-center">
                     <CardHeader className="items-center">
-                      <div className="p-3 rounded-full bg-primary/10 text-primary mb-3">
+                      <div className="p-3 rounded-full bg-primary/10 text-primary mb-3"> {/* Icon bg uses primary tint */}
                         <highlight.icon className="h-8 w-8" />
                       </div>
                       <CardTitle className="text-xl">{highlight.title}</CardTitle>
@@ -127,15 +127,14 @@ export default function HomePage() {
 
       {/* Discover Our Initiatives Section - Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-secondary">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Inner container for content alignment */}
+        <section className="py-16 bg-accent/10"> {/* Uses new accent (Aqua Blue tint) */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8"> 
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center mb-16">
               <div className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mb-8 md:mb-0 order-first md:order-first">
                  <AnimatedSection animationClass="animate-slideInFromLeft" delay={100}>
                   <Image
                     src="/pickleball ball .webp"
                     alt="Pickleball icon"
-                    data-ai-hint="pickleball equipment"
                     width={150}
                     height={150}
                     className="animate-float object-contain mx-auto"
@@ -144,10 +143,11 @@ export default function HomePage() {
               </div>
               <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-last md:order-last">
                 <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
-                  <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
+                  {/* Text color updated for readability on light aqua tint */}
+                  <h2 className="text-3xl font-bold text-foreground">Discover Our Initiatives</h2>
                 </AnimatedSection>
                 <AnimatedSection animationClass="animate-fadeInUp" delay={300}>
-                  <p className="mt-3 text-lg text-gray-200 max-w-xl mx-auto md:mx-0">
+                  <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
                     Explore key features and services of the Odisha Pickleball Association.
                   </p>
                 </AnimatedSection>
@@ -192,7 +192,7 @@ export default function HomePage() {
       <PageWrapper>
         {/* Join Our Community CTA Section */}
         <AnimatedSection animationClass="animate-fadeInUp" delay={300}>
-          <section className="py-16 bg-secondary/30 rounded-xl my-12">
+          <section className="py-16 bg-accent/20 rounded-xl my-12"> {/* Uses new accent (Aqua Blue tint) */}
             <div className="container mx-auto px-4 text-center">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -216,7 +216,7 @@ export default function HomePage() {
         </AnimatedSection>
         
         {/* About Pickleball Teaser */}
-        <section className="py-16 bg-secondary/50 rounded-xl">
+        <section className="py-16 bg-accent/30 rounded-xl"> {/* Uses new accent (Aqua Blue tint) */}
           <div className="container mx-auto px-4">
             <div className="md:grid md:grid-cols-12 md:gap-8 items-center">
               <div className="md:col-span-7 lg:col-span-8 text-center md:text-left order-first md:order-last"> 
@@ -237,7 +237,6 @@ export default function HomePage() {
                   <Image
                       src="/pickleball ball .webp"
                       alt="Pickleball icon"
-                      data-ai-hint="pickleball sport"
                       width={150}
                       height={150}
                       className="animate-float object-contain mx-auto"

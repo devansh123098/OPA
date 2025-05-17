@@ -20,7 +20,7 @@ export default function ClubsPage() {
               Club & Coach Directory
             </h1>
             <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-              Find registered pickleball clubs and certified coaches in Arunachal Pradesh.
+              Find registered pickleball clubs and certified coaches in Odisha.
             </p>
           </AnimatedSection>
         </div>

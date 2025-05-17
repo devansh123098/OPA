@@ -194,7 +194,7 @@ export const placeholderBoardMembers: BoardMember[] = [
     id: 'bm2',
     name: 'Mr. Ajay Kumar Nishank',
     role: 'Secretary General',
-    image: 'https://placehold.co/300x300.png',
+    image: '/ajaysir.jpg',
     imageHint: 'portrait male',
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },

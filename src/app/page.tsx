@@ -72,7 +72,7 @@ export default function HomePage() {
               </AnimatedSection>
               <AnimatedSection delay={400} animationClass="animate-fadeInUp">
                 <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200 animate-pulse">
+                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
                     <Link href="/contact-us">
                       Join OPA <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
@@ -171,7 +171,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {initiatives.map((item, index) => (
                 <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-scaleFadeInUp">
-                  <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group">
+                  <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group relative hover:scale-105">
                     <div className="relative h-48 w-full">
                       <Image
                         src={item.image}
@@ -179,7 +179,7 @@ export default function HomePage() {
                         data-ai-hint={item.imageHint}
                         fill
                         style={{ objectFit: 'cover' }}
-                        className="transition-transform duration-300 group-hover:scale-105"
+                        className="transition-transform duration-300"
                       />
                     </div>
                     <CardHeader>
@@ -198,6 +198,13 @@ export default function HomePage() {
                         <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                       </Button>
                     </CardFooter>
+                    <div 
+                      className="absolute top-0 left-[-150%] w-[50%] h-full 
+                                 bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                                 transform -skew-x-12 
+                                 transition-all duration-700 ease-out
+                                 group-hover:left-[150%] group-hover:duration-500">
+                    </div>
                   </Card>
                 </AnimatedSection>
               ))}

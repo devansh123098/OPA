@@ -58,7 +58,7 @@ export default function HomePage() {
       description: 'The objective of the meeting was to outline IPA’s strategic roadmap for the development and promotion of pickleball across India.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball coaching session',
-      href: '/coaching', // This link might need to be updated to a relevant news article
+      href: 'https://www.timesnownews.com/sports/pickleball/ipa-hosts-special-meeting-in-new-delhi-to-mark-official-recognition-as-national-sports-federation-article-151596188',
     },
     {
       id: 'news3',
@@ -322,7 +322,7 @@ export default function HomePage() {
 
       {/* About Pickleball Teaser Section - Full Width Background */}
       <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
-        <section className="py-16 bg-accent/30">
+        <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
                {/* Small pickleball icon removed */}
@@ -348,3 +348,5 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
+
+    

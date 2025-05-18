@@ -31,9 +31,9 @@ export default function AssociationInfoPage() {
           <div className="mb-12">
             <AnimatedSection delay={100} animationClass="animate-fadeInUp">
               <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out">
-                <CardHeader className="flex flex-row items-center gap-3 p-8">
-                  <Briefcase className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-3xl">Our Mission</CardTitle>
+                <CardHeader className="flex flex-row items-center gap-4 p-8">
+                  <Briefcase className="h-12 w-12 text-primary" />
+                  <CardTitle className="text-4xl">Our Mission</CardTitle>
                 </CardHeader>
                 <CardContent className="p-8 pt-0">
                   <p className="text-muted-foreground text-xl">
@@ -54,9 +54,9 @@ export default function AssociationInfoPage() {
           <div className="mb-12">
             <AnimatedSection delay={200} animationClass="animate-fadeInUp">
               <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out">
-                <CardHeader className="flex flex-row items-center gap-3 p-8">
-                  <Target className="h-10 w-10 text-primary" />
-                  <CardTitle className="text-3xl">Our Vision</CardTitle>
+                <CardHeader className="flex flex-row items-center gap-4 p-8">
+                  <Target className="h-12 w-12 text-primary" />
+                  <CardTitle className="text-4xl">Our Vision</CardTitle>
                 </CardHeader>
                 <CardContent className="p-8 pt-0">
                   <p className="text-muted-foreground text-xl">
@@ -79,12 +79,12 @@ export default function AssociationInfoPage() {
               <div className="text-center mb-10">
                 <h2 className="text-4xl font-bold text-foreground">Quick Stats</h2>
               </div>
-              <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-8 text-center">
-                <div className="p-6 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
-                  <BarChart className="h-12 w-12 text-primary mx-auto mb-3" />
+              <div className="max-w-4xl mx-auto grid sm:grid-cols-3 gap-12 text-center"> {/* Increased gap */}
+                <div className="p-8 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"> {/* Increased padding */}
+                  <BarChart className="h-16 w-16 text-primary mx-auto mb-4" /> {/* Increased icon size */}
                   <h3 className="text-2xl font-semibold text-foreground">Founded</h3>
-                  <p className="text-4xl font-bold text-accent mt-1">2023</p>
-                  <p className="text-base text-muted-foreground mt-1">(Placeholder)</p>
+                  <p className="text-5xl font-bold text-accent mt-2">2023</p> {/* Increased stat value size */}
+                  <p className="text-base text-muted-foreground mt-1"></p> {/* Placeholder removed */}
                   <div
                     className="absolute top-0 left-[-150%] w-[50%] h-full
                                bg-gradient-to-r from-transparent via-white/10 to-transparent
@@ -93,11 +93,11 @@ export default function AssociationInfoPage() {
                                group-hover:left-[150%] group-hover:duration-500">
                   </div>
                 </div>
-                <div className="p-6 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
-                  <Users className="h-12 w-12 text-primary mx-auto mb-3" />
+                <div className="p-8 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"> {/* Increased padding */}
+                  <Users className="h-16 w-16 text-primary mx-auto mb-4" /> {/* Increased icon size */}
                   <h3 className="text-2xl font-semibold text-foreground">Members</h3>
-                  <p className="text-4xl font-bold text-accent mt-1">500+</p>
-                  <p className="text-base text-muted-foreground mt-1">(Placeholder)</p>
+                  <p className="text-5xl font-bold text-accent mt-2">500+</p> {/* Increased stat value size */}
+                  <p className="text-base text-muted-foreground mt-1"></p> {/* Placeholder removed */}
                   <div
                     className="absolute top-0 left-[-150%] w-[50%] h-full
                                bg-gradient-to-r from-transparent via-white/10 to-transparent
@@ -106,11 +106,11 @@ export default function AssociationInfoPage() {
                                group-hover:left-[150%] group-hover:duration-500">
                   </div>
                 </div>
-                <div className="p-6 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
-                  <TrendingUp className="h-12 w-12 text-primary mx-auto mb-3" />
+                <div className="p-8 bg-card rounded-lg shadow-md group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"> {/* Increased padding */}
+                  <TrendingUp className="h-16 w-16 text-primary mx-auto mb-4" /> {/* Increased icon size */}
                   <h3 className="text-2xl font-semibold text-foreground">Districts</h3>
-                  <p className="text-4xl font-bold text-accent mt-1">10+</p>
-                  <p className="text-base text-muted-foreground mt-1">Covered (Placeholder)</p>
+                  <p className="text-5xl font-bold text-accent mt-2">10+</p> {/* Increased stat value size */}
+                  <p className="text-base text-muted-foreground mt-1">Covered</p> {/* Placeholder text removed */}
                   <div
                     className="absolute top-0 left-[-150%] w-[50%] h-full
                                bg-gradient-to-r from-transparent via-white/10 to-transparent

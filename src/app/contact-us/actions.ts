@@ -1,3 +1,4 @@
+
 // src/app/contact-us/actions.ts
 'use server';
 
@@ -33,6 +34,7 @@ export async function sendContactMessage(
   const { name, email, message } = validationResult.data;
 
   // Nodemailer transporter setup
+  // Ensure your .env file has the correct SMTP configuration
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_SMTP_HOST,
     port: parseInt(process.env.EMAIL_SMTP_PORT || '587'),
@@ -41,11 +43,15 @@ export async function sendContactMessage(
       user: process.env.EMAIL_SMTP_USER,
       pass: process.env.EMAIL_SMTP_PASSWORD,
     },
+    // Optional: add connection timeout if needed
+    // connectionTimeout: 5000, // 5 seconds
+    // greetingTimeout: 5000, // 5 seconds
+    // socketTimeout: 5000, // 5 seconds
   });
 
   const mailOptions = {
-    from: `"${name}" <${process.env.EMAIL_FROM_ADDRESS}>`, // Use a generic from address you control
-    to: process.env.EMAIL_TO_ADDRESS, // Your association's email address
+    from: `"${name}" <${process.env.EMAIL_FROM_ADDRESS}>`, // Use a generic from address you control or the SMTP user
+    to: process.env.EMAIL_TO_ADDRESS || "associationodishapickleball@gmail.com", // Your association's email address
     replyTo: email, // The user's email address for easy replies
     subject: `New Contact Message from ${name} via OPA Website`,
     text: `Name: ${name}\nEmail: ${email}\nMessage:\n\n${message}`,
@@ -56,7 +62,7 @@ export async function sendContactMessage(
   };
 
   try {
-    // Verify connection configuration (optional, but good for debugging)
+    // Optional: Verify connection configuration (can be helpful for debugging)
     // await transporter.verify(); 
     // console.log("Nodemailer server is ready to take messages");
 
@@ -70,6 +76,7 @@ export async function sendContactMessage(
     console.error('Error sending email with Nodemailer:', error);
     // It's good practice to not expose detailed error messages to the client
     // For debugging, you can check the server logs for the `error` object
+    // Common errors: authentication issues (check EMAIL_SMTP_USER/PASSWORD), incorrect host/port, rate limits, firewall.
     return {
       success: false,
       message: 'There was an error sending your message. Please try again later or contact us directly.',

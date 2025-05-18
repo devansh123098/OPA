@@ -75,7 +75,7 @@ export const placeholderClubs: Club[] = [
     location: 'Bhubaneswar, Odisha',
     contactPerson: 'Mr. Ashok Das',
     phone: '+91 98765 43210',
-    email: 'bhubaneswarclub@pickleballodisha.org',
+    email: 'bhubaneswarclub.opa@example.com', // Placeholder
     image: 'https://placehold.co/400x300.png',
     imageHint: 'sports club'
   },
@@ -85,7 +85,7 @@ export const placeholderClubs: Club[] = [
     location: 'Cuttack, Odisha',
     contactPerson: 'Ms. Priya Mohanty',
     phone: '+91 91234 56789',
-    email: 'cuttacksmashers@pickleballodisha.org',
+    email: 'cuttacksmashers.opa@example.com', // Placeholder
     website: '#',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'team sport'
@@ -95,7 +95,7 @@ export const placeholderClubs: Club[] = [
     name: 'Puri Paddlers',
     location: 'Puri, Odisha',
     contactPerson: 'Mr. Surya Behera',
-    email: 'puripaddlers@pickleballodisha.org',
+    email: 'puripaddlers.opa@example.com', // Placeholder
     image: 'https://placehold.co/400x300.png',
     imageHint: 'community group'
   },
@@ -120,7 +120,7 @@ export const placeholderCoaches: Coach[] = [
     location: 'Bhubaneswar',
     specialization: 'Beginner & Intermediate Training',
     experience: '5+ years',
-    email: 'rohan.patnaik@pickleballodisha.org',
+    email: 'rohan.patnaik.coach@example.com', // Placeholder
     image: 'https://placehold.co/300x300.png',
     imageHint: 'coach portrait'
   },

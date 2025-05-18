@@ -116,8 +116,8 @@ export default function ContactUsPage() {
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <Mail className="h-6 w-6 text-primary" />
-                <a href="mailto:contact@pickleballodisha.org" className="text-accent hover:underline">
-                  contact@pickleballodisha.org
+                <a href="mailto:associationodishapickleball@gmail.com" className="text-accent hover:underline">
+                  associationodishapickleball@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">

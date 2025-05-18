@@ -103,7 +103,7 @@ export default function HomePage() {
                 Join OPA <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+            <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-200">
               <Link href="/events">
                 Upcoming Events
               </Link>
@@ -113,7 +113,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Key Highlights Section - Full Width Background */}
-      <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
         <section className="py-16 bg-primary/20 relative">
             <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
               <Image
@@ -349,5 +349,3 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
-
-    

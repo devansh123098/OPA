@@ -333,9 +333,9 @@ export default function HomePage() {
               <div className="md:col-span-5 lg:col-span-4 mt-8 md:mt-0">
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <Image
-                    src="https://placehold.co/500x500.png"
-                    alt="Pickleball player"
-                    data-ai-hint="pickleball player pose"
+                    src="/pickleballball.webp"
+                    alt="Pickleball ball and paddle"
+                    data-ai-hint="pickleball equipment"
                     width={500}
                     height={500}
                     className="rounded-lg shadow-xl mx-auto object-cover aspect-square"

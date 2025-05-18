@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
@@ -62,7 +63,7 @@ export default function HomePage() {
     {
       id: 'news3',
       title: 'Indian Pickleball Association Receives Official Recognition From The Sports Ministry As The National Federation For Pickleball In India',
-      description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
+      description: 'Following the recognition, the IPA - announced that India will host the Pickleball Asia Cup 2025 later this year.',
       image: 'https://www.kashmirnewsobserver.com/userfiles/image/s_638817728915951067_JKPA_gets.jpg',
       imageHint: 'JKPA IPA affiliation',
       href: '#', 
@@ -82,7 +83,7 @@ export default function HomePage() {
               data-ai-hint="pickleball game"
               fill
               style={{ objectFit: 'cover' }}
-              className="opacity-100" 
+              className="" 
               priority
             />
           </div>
@@ -113,24 +114,23 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Small pickleball icon div removed */}
           </div>
         </div>
       </section>
 
       {/* Key Highlights Section - Full Width Background */}
-       <section className="py-16 bg-primary/20 relative">
-          <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
-            <Image
-              src="/konarkandball.png"
-              alt="Spinning Konark Wheel with Pickleball"
-              width={150}
-              height={150}
-              className="animate-spin-slow object-contain"
-            />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+        <section className="py-16 bg-primary/20 relative">
+            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
+              <Image
+                src="/konarkandball.png"
+                alt="Spinning Konark Wheel with Pickleball"
+                width={150}
+                height={150}
+                className="animate-spin-slow object-contain"
+              />
+            </div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
                   <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
@@ -175,16 +175,16 @@ export default function HomePage() {
                   </AnimatedSection>
                 ))}
               </div>
-            </AnimatedSection>
-          </div>
-        </section>
+            </div>
+          </section>
+        </AnimatedSection>
       
       {/* Discover Our Initiatives Section - Full Width Background */}
-      <section className="py-16 bg-[#4B5D67]">
-         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection animationClass="animate-fadeIn">
+      <AnimatedSection animationClass="animate-fadeIn">
+        <section className="py-16 bg-[#4B5D67]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> 
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
@@ -192,7 +192,17 @@ export default function HomePage() {
                   </p>
                 </AnimatedSection>
               </div>
-              {/* Small pickleball icon div removed */}
+              <div className="hidden md:flex md:col-span-5 lg:col-span-4 justify-center md:justify-end items-center">
+                <AnimatedSection animationClass="animate-slideInFromRight" delay={150}>
+                  <Image
+                    src="/pickleball ball .webp"
+                    alt="Pickleball"
+                    width={150}
+                    height={150}
+                    className="animate-float object-contain"
+                  />
+                </AnimatedSection>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -236,9 +246,9 @@ export default function HomePage() {
                 </AnimatedSection>
               ))}
             </div>
-          </AnimatedSection>
           </div>
         </section>
+      </AnimatedSection>
       
       {/* Latest News Section - Full Width Background */}
       <section className="py-16 bg-secondary/30 relative"> 
@@ -324,7 +334,7 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-7 text-center md:text-left"> 
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromRight">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
@@ -339,7 +349,17 @@ export default function HomePage() {
                   </div>
                 </AnimatedSection>
               </div>
-              {/* Small pickleball icon div removed */}
+               <div className="hidden md:flex md:col-span-5 lg:col-span-4 justify-center md:justify-end items-center mt-8 md:mt-0">
+                <AnimatedSection animationClass="animate-slideInFromLeft" delay={150}>
+                  <Image
+                    src="/pickleball ball .webp"
+                    alt="Pickleball"
+                    width={150}
+                    height={150}
+                    className="animate-float object-contain"
+                  />
+                </AnimatedSection>
+              </div>
             </div>
           </div>
         </section>

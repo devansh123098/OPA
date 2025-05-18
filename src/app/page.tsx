@@ -5,9 +5,6 @@ import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
-// Removed PageWrapper as sections are now full-width with inner containers
-// import PageWrapper from '@/components/layout/page-wrapper';
-
 
 export default function HomePage() {
   const initiatives = [
@@ -22,7 +19,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain, // Consider Users2 or Child icon
+      icon: Brain,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -30,7 +27,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell, // Consider GraduationCap or Briefcase icon
+      icon: Dumbbell,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -38,7 +35,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, // Consider Trophy icon if available or more appropriate
+      icon: Palette,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -52,7 +49,7 @@ export default function HomePage() {
       description: 'Mark your calendars for the biggest pickleball event in Odisha this year. Details inside.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball tournament trophy',
-      href: '/events',
+      href: 'https://www.timesnownews.com/sports/pickleball/ipa-to-lead-national-expansion-and-global-strategy-article-151547725',
     },
     {
       id: 'news2',
@@ -68,7 +65,7 @@ export default function HomePage() {
       description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball players group',
-      href: '#', // Link to a news article page when available
+      href: '#', 
     },
   ];
 
@@ -183,7 +180,7 @@ export default function HomePage() {
       
       <AnimatedSection animationClass="animate-fadeIn">
         <section className="py-16 bg-[#4B5D67]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
@@ -277,7 +274,13 @@ export default function HomePage() {
                     </CardContent>
                     <CardFooter>
                       <Button variant="outline" asChild className="hover:bg-primary/10 hover:text-primary text-foreground w-full">
-                        <Link href={news.href}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                        <Link 
+                          href={news.href}
+                          target={news.href.startsWith('http') ? '_blank' : undefined}
+                          rel={news.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        >
+                          Read More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
                       </Button>
                     </CardFooter>
                      <div

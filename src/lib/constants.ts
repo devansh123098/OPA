@@ -139,7 +139,7 @@ export const placeholderCoaches: Coach[] = [
   }
 ];
 
-export interface NewsArticle { // This is used in the old page structure, keeping it for now
+export interface NewsArticle {
   id: string;
   title: string;
   description: string;
@@ -148,32 +148,33 @@ export interface NewsArticle { // This is used in the old page structure, keepin
   href: string;
 }
 
-export const placeholderNews: NewsArticle[] = [
+export const placeholderNews: NewsArticle[] = [ // This is used in the old page structure, keeping it for now.
   {
-    id: '1',
-    title: 'OPA State Championship Announced!',
-    description: 'Get ready for the most exciting pickleball event of the year. Dates and venue details inside.',
-    image: 'https://placehold.co/500x300.png',
-    imageHint: 'trophy award',
-    href: '/events',
+    id: 'news1',
+    title: 'The Indian Pickleball Association (IPA) - now officially recognised by the Ministry of Youth Affairs and Sports, Government of India',
+    description: 'With systematic and painstaking groundwork laid by the members in IPA and a fast-growing community behind it, IPA is ready to drive the next chapter: building a nationwide ecosystem of access, excellence, and opportunity.',
+    image: '/news1.webp',
+    imageHint: 'IPA recognition sports ministry',
+    href: 'https://www.timesnownews.com/sports/pickleball/ipa-to-lead-national-expansion-and-global-strategy-article-151547725',
   },
   {
-    id: '2',
-    title: 'New Coaching Clinics for All Levels',
-    description: 'Our certified coaches are starting new batches for beginners, intermediate, and advanced players.',
-    image: 'https://placehold.co/500x300.png',
-    imageHint: 'coaching session',
-    href: '/coaching',
+    id: 'news2',
+    title: 'IPA Hosts Special Meeting In New Delhi To Mark Official Recognition As National Sports Federation',
+    description: 'The objective of the meeting was to outline IPA’s strategic roadmap for the development and promotion of pickleball across India.',
+    image: 'https://images.timesnownews.com/thumb/msid-151596199,width-1280,height-720,resizemode-75/151596199.jpg',
+    imageHint: 'pickleball meeting',
+    href: 'https://www.timesnownews.com/sports/pickleball/ipa-hosts-special-meeting-in-new-delhi-to-mark-official-recognition-as-national-sports-federation-article-151596188',
   },
   {
-    id: '3',
-    title: 'Community Day: Play & Connect',
-    description: 'Join us for a fun-filled day of pickleball, food, and making new friends in the community.',
-    image: 'https://placehold.co/500x300.png',
-    imageHint: 'community event',
-    href: '/events',
+    id: 'news3',
+    title: 'Indian Pickleball Association Receives Official Recognition From The Sports Ministry As The National Federation For Pickleball In India',
+    description: 'Following the recognition, the IPA - announced that India will host the Pickleball Asia Cup 2025 later this year.',
+    image: '/newsthree.jpg',
+    imageHint: 'news article image',
+    href: 'https://www.timesnownews.com/sports/pickleball/indian-pickleball-association-gets-official-recognition-from-sports-ministry-approval-as-the-national-federation-for-pickleball-in-india-article-151539176',
   },
 ];
+
 
 export interface BoardMember {
   id: string;

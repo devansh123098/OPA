@@ -20,7 +20,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain, // Assuming Brain icon represents learning/youth development
+      icon: Brain, 
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -28,7 +28,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell, // Dumbbell for training/clinics
+      icon: Dumbbell, 
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -36,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, // Palette for 'Championship' assuming it has a creative/festive aspect or using it as a trophy/award placeholder
+      icon: Palette, 
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -85,16 +85,7 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            <AnimatedSection animationClass="animate-zoomIn" delay={300} className="hidden md:col-span-5 lg:col-span-4 md:flex justify-center items-center mt-10 md:mt-0">
-                <Image
-                  src="/pickleball ball .webp"
-                  alt="Floating pickleball icon"
-                  width={150}
-                  height={150}
-                  className="animate-float object-contain mx-auto"
-                  priority
-                />
-              </AnimatedSection>
+            {/* Small floating pickleball icon removed from here */}
           </div>
         </div>
       </section>
@@ -145,8 +136,8 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Discover Our Initiatives - Full Width Background */}
-      <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67]"> {/* Updated background color */}
+       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
+        <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
@@ -160,8 +151,8 @@ export default function HomePage() {
               </AnimatedSection>
               <div className="md:col-span-9 lg:col-span-9 text-center md:text-left">
                 <AnimatedSection animationClass="animate-fadeInUp">
-                  <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2> {/* Updated text color */}
-                  <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0"> {/* Updated text color */}
+                  <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
+                  <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
                     Explore key features and programs offered by the Odisha Pickleball Association.
                   </p>
                 </AnimatedSection>

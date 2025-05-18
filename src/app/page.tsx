@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
+import PageWrapper from '@/components/layout/page-wrapper'; // Added for consistency
 
 export default function HomePage() {
   const initiatives = [
@@ -35,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette,
+      icon: Palette, // Consider changing to a trophy or medal icon if available
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -45,7 +46,7 @@ export default function HomePage() {
   const newsItems = [
     {
       id: 'news1',
-      title: 'State Championship Dates Announced!',
+      title: 'The Indian Pickleball Association (IPA) - now officially recognised by the Ministry of Youth Affairs and Sports, Government of India',
       description: 'Mark your calendars for the biggest pickleball event in Odisha this year. Details inside.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball tournament trophy',
@@ -72,6 +73,7 @@ export default function HomePage() {
 
   return (
     <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
+      {/* Hero Section - Full Width */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn" delay={100}>
           <div className="absolute inset-0">
@@ -81,7 +83,7 @@ export default function HomePage() {
               data-ai-hint="pickleball game"
               fill
               style={{ objectFit: 'cover' }}
-              className="" 
+              className="opacity-100" 
               priority
             />
           </div>
@@ -116,6 +118,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Key Highlights Section - Full Width Background */}
       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
         <section className="py-16 bg-primary/20 relative">
           <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
@@ -178,6 +181,7 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
       
+      {/* Discover Our Initiatives Section - Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn">
         <section className="py-16 bg-[#4B5D67]">
            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,6 +241,7 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
       
+      {/* Latest News Section - Full Width Background */}
       <section className="py-16 bg-secondary/30 relative"> 
           <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
@@ -298,6 +303,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Join Our Community Section - Full Width Background */}
       <AnimatedSection delay={100} animationClass="animate-zoomIn">
         <section className="py-16 text-center bg-accent/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,11 +320,12 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
+      {/* About Pickleball Teaser Section - Full Width Background */}
       <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> 
+              <div className="md:col-span-7 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
@@ -331,6 +338,18 @@ export default function HomePage() {
                       </Link>
                     </Button>
                   </div>
+                </AnimatedSection>
+              </div>
+              <div className="md:col-span-5 mt-10 md:mt-0">
+                <AnimatedSection animationClass="animate-slideInFromRight">
+                  <Image
+                    src="https://placehold.co/500x500.png"
+                    alt="Pickleball player"
+                    data-ai-hint="pickleball player pose"
+                    width={500}
+                    height={500}
+                    className="rounded-lg shadow-xl mx-auto object-cover aspect-square"
+                  />
                 </AnimatedSection>
               </div>
             </div>

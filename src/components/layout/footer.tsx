@@ -21,12 +21,12 @@ const Footer = () => {
   return (
     <footer className="border-t border-gray-800 bg-black text-gray-400">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 bg-black p-6 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 p-6 rounded-lg">
           {/* About OPA */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image 
-                src="/logo.png" 
+                src="/opalogo.png" 
                 alt="OPA Logo in Footer" 
                 width={40}
                 height={40} 

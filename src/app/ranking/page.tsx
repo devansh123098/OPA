@@ -47,9 +47,9 @@ export default function RankingPage() {
                   src="/pwr.jpeg"
                   alt="PWR - Pickleball World Rankings"
                   data-ai-hint="rankings logo"
-                  width={600}
-                  height={300} // Adjusted height for a typical logo banner aspect ratio
-                  className="rounded-lg shadow-md object-contain mx-auto" // Changed to object-contain
+                  width={200} // Changed from 600
+                  height={200} // Changed from 300
+                  className="rounded-lg shadow-md object-contain mx-auto" 
                 />
               </div>
               <div className="mt-6 flex justify-center">

@@ -36,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette,
+      icon: Palette, // Consider Medal or Trophy if more appropriate
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -73,56 +73,47 @@ export default function HomePage() {
 
   return (
     <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
-      {/* Hero Section - Full Width */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      {/* Hero Section - Image Banner */}
+      <section className="relative overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn" delay={100}>
-          <div className="absolute inset-0">
+          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
             <Image
               src="/mainimage.JPG"
               alt="Pickleball action background"
-              data-ai-hint="pickleball game"
               fill
               style={{ objectFit: 'cover' }}
-              className="" 
               priority
             />
           </div>
         </AnimatedSection>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-6 text-center md:text-left"> 
-              <AnimatedSection animationClass="animate-fadeInUp">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                  Welcome to Odisha Pickleball Association
-                </h1>
-                <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto md:mx-0">
-                  Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
-                </p>
-              </AnimatedSection>
-              <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-                <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                    <Link href="/contact-us">
-                      Join OPA <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                    <Link href="/events">
-                      Upcoming Events
-                    </Link>
-                  </Button>
-                </div>
-              </AnimatedSection>
-            </div>
-            <div className="md:col-span-6">
-              {/* This div is intentionally left empty to push text content to the left and manage space */}
-            </div>
-          </div>
-        </div>
       </section>
 
+      {/* Hero Section - Text Content Below Image */}
+      <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-gradientWave">
+            Welcome to Odisha Pickleball Association
+          </h1>
+          <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
+            Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+              <Link href="/contact-us">
+                Join OPA <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+              <Link href="/events">
+                Upcoming Events
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </AnimatedSection>
+
       {/* Key Highlights Section - Full Width Background */}
-       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+      <AnimatedSection animationClass="animate-zoomIn" delay={300}>
         <section className="py-16 bg-primary/20 relative">
             <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
               <Image
@@ -134,16 +125,14 @@ export default function HomePage() {
               />
             </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <AnimatedSection animationClass="animate-fadeInDown">
-                  <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
-                </AnimatedSection>
-                <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
+              <AnimatedSection animationClass="animate-fadeInDown">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
                   <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                     Discover what makes the Odisha Pickleball Association special.
                   </p>
-                </AnimatedSection>
-              </div>
+                </div>
+              </AnimatedSection>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
@@ -341,7 +330,6 @@ export default function HomePage() {
                   </div>
                 </AnimatedSection>
               </div>
-              {/* Image Column */}
               <div className="md:col-span-5 lg:col-span-4 mt-8 md:mt-0">
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <Image
@@ -361,3 +349,5 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
+
+    

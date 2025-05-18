@@ -20,24 +20,34 @@ const Header = () => {
     setMounted(true);
   }, []);
 
-  // const isHomePage = pathname === '/'; // No longer needed for desktop layout order
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md"> {/* Removed rounded-lg from previous step if it was there */}
+    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md">
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Desktop Logo (Always Left) */}
+        {/* Desktop Logo (Left) */}
         <Link href="/" className="hidden md:flex items-center" onClick={() => setIsSheetOpen(false)}>
-          <Image 
-            src="/logo.png" 
-            alt="Odisha Pickleball Association Logo" 
-            width={365} 
-            height={80} 
-            className="object-contain" 
-            priority 
+          <Image
+            src="/logo.png"
+            alt="Odisha Pickleball Association Logo"
+            width={365}
+            height={80}
+            className="object-contain"
+            priority
           />
         </Link>
 
-        {/* Desktop Navigation (Always Right) */}
+        {/* Mobile Logo (Left - visible in header bar) */}
+        <Link href="/" className="block md:hidden" onClick={() => setIsSheetOpen(false)}>
+          <Image
+            src="/logo.png"
+            alt="OPA Logo"
+            width={200} // Adjusted size for mobile header bar
+            height={50}  // Adjusted size for mobile header bar
+            className="object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Desktop Navigation (Right) */}
         <nav className="hidden md:flex items-center space-x-1">
           {NAV_LINKS.map((link) => (
             <Button
@@ -46,8 +56,8 @@ const Header = () => {
               asChild
               className={cn(
                 "text-sm font-medium transition-colors",
-                mounted && pathname === link.href 
-                  ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
+                mounted && pathname === link.href
+                  ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold"
                   : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
               )}
             >
@@ -56,7 +66,7 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile Navigation Trigger */}
+        {/* Mobile Navigation Trigger (Right) */}
          <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
@@ -69,13 +79,13 @@ const Header = () => {
               <div className="flex flex-col space-y-6">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
-                        <Image 
-                          src="/logo.png" 
-                          alt="OPA Logo" 
-                          width={365} 
-                          height={80} 
-                          className="object-contain" 
-                          priority 
+                        <Image
+                          src="/logo.png"
+                          alt="OPA Logo"
+                          width={365} // Logo inside sheet can be larger
+                          height={80}
+                          className="object-contain"
+                          priority
                         />
                     </Link>
                     <SheetClose asChild>
@@ -93,7 +103,7 @@ const Header = () => {
                       asChild
                       className={cn(
                         "justify-start text-base font-medium transition-colors",
-                        mounted && pathname === link.href 
+                        mounted && pathname === link.href
                           ? "bg-sidebar-accent text-sidebar-accent-foreground"
                           : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       )}

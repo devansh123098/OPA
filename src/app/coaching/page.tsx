@@ -10,8 +10,7 @@ import { GraduationCap, Edit } from 'lucide-react';
 export default function CoachingPage() {
   return (
     <>
-      <section className="relative py-16 md:py-20 overflow-hidden bg-black"> {/* Added bg-black */}
-        {/* Image component for ppr.jpeg removed */}
+      <section className="relative py-16 md:py-20 overflow-hidden bg-black">
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
             <div className="md:col-span-12 text-center md:text-left">
@@ -42,7 +41,7 @@ export default function CoachingPage() {
               </p>
               <div className="mt-6 flex justify-center">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="#">
+                  <Link href="https://pprpickleball.org/" target="_blank" rel="noopener noreferrer">
                     <Edit className="mr-2 h-5 w-5" />
                     Register Now
                   </Link>

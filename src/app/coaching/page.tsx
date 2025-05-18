@@ -13,9 +13,9 @@ export default function CoachingPage() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="/board.jpeg"
+            src="/coaching.jpeg"
             alt="Odisha Pickleball Coaching"
-            data-ai-hint="pickleball action"
+            data-ai-hint="pickleball training class"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-100"
@@ -24,7 +24,7 @@ export default function CoachingPage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center md:text-left"> {/* Adjusted to full width */}
+            <div className="md:col-span-12 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl font-bold tracking-tight text-white">
                   Coaching Programs
@@ -34,7 +34,6 @@ export default function CoachingPage() {
                 </p>
               </AnimatedSection>
             </div>
-            {/* Removed small pickleball icon div */}
           </div>
         </div>
       </section>
@@ -59,7 +58,6 @@ export default function CoachingPage() {
                   </Link>
                 </Button>
               </div>
-              {/* Image section removed from here */}
             </CardContent>
             <div
               className="absolute top-0 left-[-150%] w-[50%] h-full

@@ -8,21 +8,11 @@ import { Briefcase, Target, TrendingUp, Users, BarChart } from 'lucide-react';
 export default function AssociationInfoPage() {
   return (
     <>
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        <AnimatedSection animationClass="animate-fadeIn">
-          <Image
-            src="/board.jpeg"
-            alt="Odisha pickleball community"
-            data-ai-hint="pickleball action"
-            fill
-            style={{ objectFit: 'cover' }}
-            className="opacity-100"
-            priority
-          />
-        </AnimatedSection>
+      <section className="relative py-16 md:py-20 overflow-hidden bg-black">
+        {/* Background Image Removed */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center md:text-left"> {/* Adjusted to full width */}
+            <div className="md:col-span-12 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl font-bold tracking-tight text-white">
                   About Us
@@ -32,7 +22,6 @@ export default function AssociationInfoPage() {
                 </p>
               </AnimatedSection>
             </div>
-            {/* Removed small pickleball icon div */}
           </div>
         </div>
       </section>

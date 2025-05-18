@@ -11,21 +11,11 @@ export default function BoardMembersPage() {
 
   return (
     <>
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        <AnimatedSection animationClass="animate-fadeIn">
-          <Image
-            src="/board.jpeg" 
-            alt="Odisha Pickleball Association Board"
-            data-ai-hint="pickleball action"
-            fill
-            style={{ objectFit: 'cover' }}
-            className="opacity-100"
-            priority
-          />
-        </AnimatedSection>
+      <section className="relative py-16 md:py-20 overflow-hidden bg-black">
+        {/* Background Image Removed */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center md:text-left"> {/* Adjusted to full width */}
+            <div className="md:col-span-12 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl font-bold tracking-tight text-white">
                   Board Members
@@ -35,7 +25,6 @@ export default function BoardMembersPage() {
                 </p>
               </AnimatedSection>
             </div>
-            {/* Removed small pickleball icon div */}
           </div>
         </div>
       </section>
@@ -43,7 +32,7 @@ export default function BoardMembersPage() {
       <PageWrapper>
         {boardMembers.length === 0 ? (
           <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
               <CardHeader className="flex flex-row items-center gap-3">
                 <UserCircle className="h-8 w-8 text-primary" />
                 <CardTitle className="text-2xl">Our Team</CardTitle>
@@ -64,6 +53,13 @@ export default function BoardMembersPage() {
                   />
                 </div>
               </CardContent>
+              <div
+                className="absolute top-0 left-[-150%] w-[50%] h-full
+                           bg-gradient-to-r from-transparent via-white/10 to-transparent
+                           transform -skew-x-12
+                           transition-all duration-700 ease-out
+                           group-hover:left-[150%] group-hover:duration-500">
+              </div>
             </Card>
           </AnimatedSection>
         ) : (
@@ -78,7 +74,6 @@ export default function BoardMembersPage() {
                       data-ai-hint={member.imageHint}
                       fill
                       style={{ objectFit: 'cover' }}
-                      className="transition-transform duration-300"
                     />
                   </div>
                   <CardHeader className="text-center">
@@ -90,7 +85,6 @@ export default function BoardMembersPage() {
                       <p>{member.bio}</p>
                     </CardContent>
                   )}
-                   {/* Shine Element */}
                   <div className="absolute top-0 left-[-150%] w-[50%] h-full 
                                   bg-gradient-to-r from-transparent via-white/10 to-transparent 
                                   transform -skew-x-12 

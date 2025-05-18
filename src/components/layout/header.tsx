@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { NAV_LINKS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import AnimatedSection from '@/components/animated-section'; // Added for the new icon
 
 const Header = () => {
   const pathname = usePathname();
@@ -46,22 +47,33 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Logo (Right on Homepage) */}
-            <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
-              <Image 
-                src="/logo.png" 
-                alt="Odisha Pickleball Association Logo" 
-                width={365} 
-                height={80} 
-                className="object-contain" 
-                priority 
-              />
-            </Link>
+            {/* Logo and Decorative Ball (Right on Homepage) */}
+            <div className="hidden md:flex items-center gap-x-3">
+              <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Decorative pickleball icon"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain animate-float"
+                />
+              </AnimatedSection>
+              <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
+                <Image 
+                  src="/logo.png" 
+                  alt="Odisha Pickleball Association Logo" 
+                  width={365} 
+                  height={80} 
+                  className="object-contain" 
+                  priority 
+                />
+              </Link>
+            </div>
           </>
         ) : (
           <>
             {/* Logo (Left on Other Pages) */}
-            <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
+            <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
               <Image 
                 src="/logo.png" 
                 alt="Odisha Pickleball Association Logo" 
@@ -72,38 +84,40 @@ const Header = () => {
               />
             </Link>
 
-            {/* Desktop Navigation (Right on Other Pages) */}
-            <nav className="hidden md:flex items-center space-x-1">
-              {NAV_LINKS.map((link) => (
-                <Button
-                  key={link.href}
-                  variant="ghost"
-                  asChild
-                  className={cn(
-                    "text-sm font-medium transition-colors",
-                    mounted && pathname === link.href 
-                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
-                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                  )}
-                >
-                  <Link href={link.href}>{link.label}</Link>
-                </Button>
-              ))}
-            </nav>
+            {/* Desktop Navigation and Decorative Ball (Right on Other Pages) */}
+            <div className="hidden md:flex items-center gap-x-3">
+              <nav className="flex items-center space-x-1">
+                {NAV_LINKS.map((link) => (
+                  <Button
+                    key={link.href}
+                    variant="ghost"
+                    asChild
+                    className={cn(
+                      "text-sm font-medium transition-colors",
+                      mounted && pathname === link.href 
+                        ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
+                        : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                    )}
+                  >
+                    <Link href={link.href}>{link.label}</Link>
+                  </Button>
+                ))}
+              </nav>
+              <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Decorative pickleball icon"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain animate-float"
+                />
+              </AnimatedSection>
+            </div>
           </>
         )}
 
-        {/* Mobile Navigation Trigger (Always on the far right for mobile) */}
-        {/* For mobile, the above conditional rendering for desktop nav doesn't apply due to "hidden md:flex" */}
-        {/* So, for mobile, the Logo Link (if rendered first in non-homepage or by the structure below) and this trigger will be spaced by justify-between */}
-        {/* To ensure mobile always has Logo on left and Burger on right, we might need to ensure the logo is *always* rendered outside the conditional for desktop nav logic if `md:hidden` is the only thing separating them */}
-        
-        {/* Simplified structure for mobile: Logo on left, Burger on right */}
-        {/* The conditional re-ordering is primarily for desktop view. Mobile view implicitly handles this by hiding desktop nav. */}
-        {/* Let's ensure the logo for mobile context (when nav is hidden) is consistent */}
-         <div className="md:hidden"> {/* This div itself pushes to the right due to justify-between with the logo on non-homepages or nav on homepages */}
-           {/* Mobile Logo - Rendered inside the sheet, but the trigger needs to be positioned */}
-           {/* The first Link component outside this "md:hidden" div serves as the mobile logo */}
+        {/* Mobile Navigation Trigger */}
+         <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
@@ -114,7 +128,7 @@ const Header = () => {
             <SheetContent side="right" className="w-full max-w-xs bg-sidebar text-sidebar-foreground p-6">
               <div className="flex flex-col space-y-6">
                 <div className="flex justify-between items-center">
-                    <Link href="/" className="flex items-center gap-2" onClick={() => setIsSheetOpen(false)}>
+                    <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
                         <Image 
                           src="/logo.png" 
                           alt="OPA Logo" 

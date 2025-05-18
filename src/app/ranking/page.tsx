@@ -36,12 +36,6 @@ export default function RankingPage() {
               <CardTitle className="text-2xl">Live Leaderboards Coming Soon!</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground text-lg">
-                We are currently working on integrating live leaderboards fed by our rankings collection.
-                Soon you&apos;ll be able to see rankings via a tabbed interface for Men’s Singles, Women’s Singles, Doubles, and Junior categories.
-                A &quot;How ranking works&quot; section linking to our policy PDF will also be available.
-                Please check back soon!
-              </p>
               <p className="text-muted-foreground text-lg mt-4">
                 Want to see your name on the leaderboard? Participate in OPA-approved tournaments and register with our ranking system.
               </p>
@@ -77,3 +71,4 @@ export default function RankingPage() {
     </>
   );
 }
+

@@ -329,7 +329,7 @@ export default function HomePage() {
               <div className="md:col-span-5 lg:col-span-4 mt-8 md:mt-0">
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <Image
-                    src="/pickleballball .webp"
+                    src="/pickleball-ball.webp"
                     alt="Pickleball ball"
                     data-ai-hint="pickleball ball"
                     width={500}

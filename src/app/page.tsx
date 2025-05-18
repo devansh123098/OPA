@@ -62,7 +62,7 @@ export default function HomePage() {
     },
     {
       id: 'news3',
-      title: 'OPA Community Day Success!',
+      title: 'JKPA gets IPA affiliation, gains national recognition',
       description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball players group',

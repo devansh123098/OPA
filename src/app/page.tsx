@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import PageWrapper from '@/components/layout/page-wrapper';
+// PageWrapper is not used for full-width sections directly on homepage
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react'; // Added Palette, Brain, Dumbbell, Newspaper
@@ -20,7 +20,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain, 
+      icon: Brain,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -28,7 +28,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell, 
+      icon: Dumbbell,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -36,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, 
+      icon: Palette,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -50,11 +50,11 @@ export default function HomePage() {
         <AnimatedSection animationClass="animate-fadeIn" delay={100}>
           <div className="absolute inset-0">
             <Image
-              src="/playing.JPG" 
+              src="/playing.JPG"
               alt="Pickleball action background"
               fill
               style={{ objectFit: 'cover' }}
-              className="" 
+              className=""
               priority
             />
           </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Small floating pickleball icon removed from here */}
+            {/* Small floating pickleball icon was removed from here earlier */}
           </div>
         </div>
       </section>
@@ -93,43 +93,54 @@ export default function HomePage() {
       {/* Key Highlights Section - Full Width Background */}
       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
         <section className="py-16 bg-primary/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <AnimatedSection animationClass="animate-fadeInDown">
-                <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
-              </AnimatedSection>
-              <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
-                <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Discover what makes the Odisha Pickleball Association special.
-                </p>
-              </AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+            <div className="hidden md:flex items-center justify-center mr-8 shrink-0"> {/* Added shrink-0 to prevent image from shrinking flex item */}
+              <Image
+                src="/konark.png"
+                alt="Spinning Konark Wheel"
+                width={100}
+                height={100}
+                className="animate-spin object-contain"
+              />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
-                { title: 'Quality Facilities', description: 'Access well-maintained courts and facilities across Odisha.', icon: Zap, href: '/clubs' },
-                { title: 'Community Events', description: 'Participate in regular tournaments, workshops, and social pickleball events.', icon: Users, href: '/events' },
-                { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Dumbbell, href: '/coaching' },
-              ].map((item, index) => (
-                <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
-                  <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group">
-                    <CardHeader className="items-center text-center">
-                      <div className="p-3 rounded-full bg-primary/10 text-primary mb-3 inline-block">
-                        <item.icon className="h-8 w-8" />
-                      </div>
-                      <CardTitle className="text-xl">{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-center flex-grow">
-                      <p className="text-muted-foreground">{item.description}</p>
-                    </CardContent>
-                    <CardFooter className="justify-center">
-                       <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent text-foreground">
-                        <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
+            <div className="flex-grow"> {/* Added flex-grow to allow content to take remaining space */}
+              <div className="text-center mb-12">
+                <AnimatedSection animationClass="animate-fadeInDown">
+                  <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
                 </AnimatedSection>
-              ))}
+                <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
+                  <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Discover what makes the Odisha Pickleball Association special.
+                  </p>
+                </AnimatedSection>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                  { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
+                  { title: 'Quality Facilities', description: 'Access well-maintained courts and facilities across Odisha.', icon: Zap, href: '/clubs' },
+                  { title: 'Community Events', description: 'Participate in regular tournaments, workshops, and social pickleball events.', icon: Users, href: '/events' },
+                  { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Dumbbell, href: '/coaching' },
+                ].map((item, index) => (
+                  <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
+                    <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group">
+                      <CardHeader className="items-center text-center">
+                        <div className="p-3 rounded-full bg-primary/10 text-primary mb-3 inline-block">
+                          <item.icon className="h-8 w-8" />
+                        </div>
+                        <CardTitle className="text-xl">{item.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="text-center flex-grow">
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </CardContent>
+                      <CardFooter className="justify-center">
+                        <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent text-foreground">
+                          <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </AnimatedSection>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -137,7 +148,7 @@ export default function HomePage() {
 
       {/* Discover Our Initiatives - Full Width Background */}
        <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67]">
+        <section className="py-16 bg-[#4B5D67]"> {/* Keep this specific background color */}
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
@@ -189,10 +200,10 @@ export default function HomePage() {
                         <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                       </Button>
                     </CardFooter>
-                    <div 
-                      className="absolute top-0 left-[-150%] w-[50%] h-full 
-                                 bg-gradient-to-r from-transparent via-white/10 to-transparent 
-                                 transform -skew-x-12 
+                    <div
+                      className="absolute top-0 left-[-150%] w-[50%] h-full
+                                 bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                 transform -skew-x-12
                                  transition-all duration-700 ease-out
                                  group-hover:left-[150%] group-hover:duration-500">
                     </div>
@@ -220,10 +231,10 @@ export default function HomePage() {
           </div>
         </section>
       </AnimatedSection>
-      
+
       {/* About Pickleball Teaser Section - Full Width */}
       <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
-        <section className="py-16 bg-secondary/50"> 
+        <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
               <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
@@ -245,8 +256,8 @@ export default function HomePage() {
                   <Image
                       src="/pickleball ball .webp"
                       alt="Pickleball ball and paddle"
-                      width={150} 
-                      height={150} 
+                      width={150}
+                      height={150}
                       className="rounded-lg object-contain animate-float"
                   />
               </AnimatedSection>

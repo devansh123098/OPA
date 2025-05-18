@@ -42,23 +42,23 @@ export default function RankingPage() {
                 A &quot;How ranking works&quot; section linking to our policy PDF will also be available.
                 Please check back soon!
               </p>
+              <div className="mt-8 mb-8 flex justify-center">
+                <Image
+                  src="/pwr.jpeg"
+                  alt="PWR - Pickleball World Rankings"
+                  data-ai-hint="rankings logo"
+                  width={600}
+                  height={300} // Adjusted height for a typical logo banner aspect ratio
+                  className="rounded-lg shadow-md object-contain mx-auto" // Changed to object-contain
+                />
+              </div>
               <div className="mt-6 flex justify-center">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" href="https://rankings.pwr.global/" target="_blank" rel="noopener noreferrer">
                   <Link href="https://rankings.pwr.global/" target="_blank" rel="noopener noreferrer">
                     <Search className="mr-2 h-5 w-5" />
                     See your Rankings
                   </Link>
                 </Button>
-              </div>
-              <div className="mt-8 flex justify-center">
-                <Image
-                  src="https://placehold.co/600x400.png"
-                  alt="Ranking chart placeholder"
-                  data-ai-hint="data chart graph"
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-md object-cover"
-                />
               </div>
             </CardContent>
             <div

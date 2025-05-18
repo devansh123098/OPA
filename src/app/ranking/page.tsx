@@ -1,9 +1,11 @@
 
 import Image from 'next/image';
+import Link from 'next/link';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChartHorizontal } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { BarChartHorizontal, Search } from 'lucide-react';
 
 export default function RankingPage() {
   return (
@@ -62,6 +64,14 @@ export default function RankingPage() {
                 A &quot;How ranking works&quot; section linking to our policy PDF will also be available.
                 Please check back soon!
               </p>
+              <div className="mt-6 flex justify-center">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Link href="#">
+                    <Search className="mr-2 h-5 w-5" />
+                    See your Rankings
+                  </Link>
+                </Button>
+              </div>
               <div className="mt-8 flex justify-center">
                 <Image
                   src="https://placehold.co/600x400.png"

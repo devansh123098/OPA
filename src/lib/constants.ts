@@ -74,8 +74,8 @@ export const placeholderClubs: Club[] = [
     name: 'Bhubaneswar Pickleball Club',
     location: 'Bhubaneswar, Odisha',
     contactPerson: 'Mr. Ashok Das',
-    phone: '+91 98765 43210',
-    email: 'bhubaneswarclub.opa@example.com', // Placeholder
+    phone: '+91 99370 23493',
+    email: 'associationodishapickleball@gmail.com', 
     image: 'https://placehold.co/400x300.png',
     imageHint: 'sports club'
   },
@@ -85,7 +85,7 @@ export const placeholderClubs: Club[] = [
     location: 'Cuttack, Odisha',
     contactPerson: 'Ms. Priya Mohanty',
     phone: '+91 91234 56789',
-    email: 'cuttacksmashers.opa@example.com', // Placeholder
+    email: 'associationodishapickleball@gmail.com', 
     website: '#',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'team sport'
@@ -95,7 +95,7 @@ export const placeholderClubs: Club[] = [
     name: 'Puri Paddlers',
     location: 'Puri, Odisha',
     contactPerson: 'Mr. Surya Behera',
-    email: 'puripaddlers.opa@example.com', // Placeholder
+    email: 'associationodishapickleball@gmail.com', 
     image: 'https://placehold.co/400x300.png',
     imageHint: 'community group'
   },
@@ -120,7 +120,7 @@ export const placeholderCoaches: Coach[] = [
     location: 'Bhubaneswar',
     specialization: 'Beginner & Intermediate Training',
     experience: '5+ years',
-    email: 'rohan.patnaik.coach@example.com', // Placeholder
+    email: 'associationodishapickleball@gmail.com', 
     image: 'https://placehold.co/300x300.png',
     imageHint: 'coach portrait'
   },
@@ -186,7 +186,7 @@ export const placeholderBoardMembers: BoardMember[] = [
     id: 'bm1',
     name: 'Ms. Shribani Mohanty',
     role: 'President',
-    image: '/president.jpeg',
+    image: '/shribani.jpg', // Updated image
     imageHint: 'portrait female',
     bio: 'Leading the Odisha Pickleball Association with a vision for growth and community engagement.'
   },

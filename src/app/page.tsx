@@ -50,7 +50,7 @@ export default function HomePage() {
         <AnimatedSection animationClass="animate-fadeIn" delay={100}>
           <div className="absolute inset-0">
             <Image
-              src="/player.jpg"
+              src="/playing.JPG" 
               alt="Pickleball action background"
               fill
               style={{ objectFit: 'cover' }}
@@ -100,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* Key Highlights Section - Full Width Background */}
-       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+      <AnimatedSection animationClass="animate-zoomIn" delay={300}>
         <section className="py-16 bg-primary/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -146,7 +146,7 @@ export default function HomePage() {
 
       {/* Discover Our Initiatives - Full Width Background */}
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67]">
+        <section className="py-16 bg-[#4B5D67]"> {/* Updated background color */}
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
@@ -160,8 +160,8 @@ export default function HomePage() {
               </AnimatedSection>
               <div className="md:col-span-9 lg:col-span-9 text-center md:text-left">
                 <AnimatedSection animationClass="animate-fadeInUp">
-                  <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
-                  <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
+                  <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2> {/* Updated text color */}
+                  <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0"> {/* Updated text color */}
                     Explore key features and programs offered by the Odisha Pickleball Association.
                   </p>
                 </AnimatedSection>

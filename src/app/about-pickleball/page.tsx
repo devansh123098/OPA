@@ -55,17 +55,20 @@ export default function AboutPickleballPage() {
           <AnimatedSection delay={200} animationClass="animate-fadeInUp">
             <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">Evolution of the Game</CardTitle>
+                <CardTitle className="text-2xl text-foreground">Rules of the Game</CardTitle>
               </CardHeader>
               <CardContent className="prose max-w-none text-muted-foreground text-lg">
                 <p>
-                  Initially, they placed the net at badminton height of 60 inches and volleyed the ball over the net. As the weekend progressed, players found that the Wiffle ball bounced well on the asphalt surface, so they lowered the net to 36 inches.
+                  Pickleball is played on a badminton-sized court with a net lowered to 36 inches at the sidelines and 34 inches in the center. Games are typically played in doubles, though singles is also common. The game begins with an underhand serve that must be hit diagonally into the opponent’s service area, clearing the non-volley zone, also known as the "kitchen."
                 </p>
                 <p>
-                  Soon, Barney McCallum was introduced to the game. He helped to formalize the rules, drawing inspiration from badminton. A key rule, the "non-volley zone" (or "kitchen"), was established to prevent players from smashing the ball at the net. They also established the double-bounce rule, where each team must play their first shot off the bounce.
+                  A key rule is the double-bounce rule—each team must let the ball bounce once on their side before hitting it. That means the receiving team must let the serve bounce, and the serving team must let the return bounce. After that, volleys are allowed, but not while standing inside the kitchen or touching its line. This rule prevents aggressive smashes too close to the net.
                 </p>
                 <p>
-                  The name "Pickleball" has a couple of origin stories. According to Joel Pritchard's wife, Joan, she started calling the game pickleball because "the combination of different sports reminded me of the pickle boat in crew where oarsmen were chosen from the leftovers of other boats." Another account is that the game was named after the Pritchards' family dog, Pickles, who would chase stray balls and run off with them. Both stories are popular, adding to the sport's quirky charm.
+                  Scoring happens only on the serving side, and games are typically played to 11 points, win by 2. Serves rotate between teammates on the same side until a fault occurs. Common faults include hitting the ball out of bounds, into the net, or volleying from within the kitchen.
+                </p>
+                <p>
+                  These rules make pickleball fast-paced yet strategic, appealing to players of all ages.
                 </p>
               </CardContent>
               <div

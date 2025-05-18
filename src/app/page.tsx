@@ -23,7 +23,7 @@ export default function HomePage() {
       icon: Brain, // Changed from Lightbulb
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
-      href: '/coaching', // Changed from /club-directory
+      href: '/coaching',
     },
     {
       title: 'Coaching Clinics',
@@ -44,50 +44,50 @@ export default function HomePage() {
   ];
 
   return (
-    <>
+    <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
       {/* Hero Section - Full Width Background */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <AnimatedSection animationClass="animate-fadeIn" delay={100}>
+      <AnimatedSection animationClass="animate-fadeIn" delay={100}>
+        <section className="relative py-20 md:py-32 overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src="/playing.JPG"
               alt="Pickleball action background"
               fill
               style={{ objectFit: 'cover' }}
-              className="" 
+              className=""
               priority
             />
           </div>
-        </AnimatedSection>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center"> {/* Changed to full width for hero text */}
-              <AnimatedSection animationClass="animate-fadeInUp">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                  Welcome to Odisha Pickleball Association
-                </h1>
-                <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
-                  Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
-                </p>
-              </AnimatedSection>
-              <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-                <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                    <Link href="/contact-us">
-                      Join OPA <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                    <Link href="/events">
-                      Upcoming Events
-                    </Link>
-                  </Button>
-                </div>
-              </AnimatedSection>
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+              <div className="md:col-span-12 text-center"> {/* Changed to full width for hero text */}
+                <AnimatedSection animationClass="animate-fadeInUp">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                    Welcome to Odisha Pickleball Association
+                  </h1>
+                  <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
+                    Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
+                  </p>
+                </AnimatedSection>
+                <AnimatedSection delay={400} animationClass="animate-fadeInUp">
+                  <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                      <Link href="/contact-us">
+                        Join OPA <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                    <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                      <Link href="/events">
+                        Upcoming Events
+                      </Link>
+                    </Button>
+                  </div>
+                </AnimatedSection>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* Key Highlights Section - Full Width Background */}
       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
@@ -266,6 +266,6 @@ export default function HomePage() {
           </div>
         </section>
       </AnimatedSection>
-    </>
+    </AnimatedSection>
   );
 }

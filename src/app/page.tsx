@@ -35,7 +35,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette,
+      icon: Palette, // Consider Trophy icon if available or more appropriate
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -65,7 +65,7 @@ export default function HomePage() {
       description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball players group',
-      href: '#',
+      href: '#', // Link to a news article page when available
     },
   ];
 
@@ -80,7 +80,7 @@ export default function HomePage() {
               alt="Pickleball action background"
               fill
               style={{ objectFit: 'cover' }}
-              className=""
+              className="" 
               priority
             />
           </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67]">
+        <section className="py-16 bg-[#4B5D67] relative"> 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
@@ -246,7 +246,16 @@ export default function HomePage() {
       </AnimatedSection>
       
       <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
-        <section className="py-16 bg-secondary/30">
+        <section className="py-16 bg-secondary/30 relative"> 
+          <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 hidden md:block">
+            <Image
+              src="/konark.png"
+              alt="Spinning Konark Wheel"
+              width={150}
+              height={150}
+              className="animate-spin-slow object-contain"
+            />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <AnimatedSection animationClass="animate-fadeInDown">
               <h2 className="text-3xl font-bold text-foreground mb-12">Latest News</h2>
@@ -290,7 +299,6 @@ export default function HomePage() {
           </div>
         </section>
       </AnimatedSection>
-
 
       <AnimatedSection delay={100} animationClass="animate-zoomIn">
         <section className="py-16 text-center bg-accent/20">

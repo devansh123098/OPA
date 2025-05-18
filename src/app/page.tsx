@@ -6,7 +6,6 @@ import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
 // PageWrapper import removed as it's not directly used here anymore after full-width sections
-// import PageWrapper from '@/components/layout/page-wrapper';
 
 export default function HomePage() {
   const initiatives = [
@@ -56,10 +55,10 @@ export default function HomePage() {
     {
       id: 'news2',
       title: 'IPA Hosts Special Meeting In New Delhi To Mark Official Recognition As National Sports Federation',
-      description: 'Whether you are a beginner or an advanced player, find the right coaching for you.',
+      description: 'The objective of the meeting was to outline IPA’s strategic roadmap for the development and promotion of pickleball across India.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball coaching session',
-      href: '/coaching',
+      href: '/coaching', // This link might need to be updated to a relevant news article
     },
     {
       id: 'news3',
@@ -115,6 +114,7 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
+            {/* Small pickleball icon removed from here */}
           </div>
         </div>
       </section>
@@ -185,7 +185,7 @@ export default function HomePage() {
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animationClass="animate-fadeIn">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> 
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
@@ -193,6 +193,7 @@ export default function HomePage() {
                   </p>
                 </AnimatedSection>
               </div>
+              {/* Small pickleball icon removed */}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -324,18 +325,7 @@ export default function HomePage() {
         <section className="py-16 bg-accent/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-               <div className="md:col-span-5 order-last md:order-first mt-10 md:mt-0">
-                <AnimatedSection animationClass="animate-slideInFromLeft">
-                  <Image
-                    src="/pickleball ball .webp"
-                    alt="Pickleball"
-                    data-ai-hint="pickleball equipment"
-                    width={150}
-                    height={150}
-                    className="animate-float mx-auto md:mx-0"
-                  />
-                </AnimatedSection>
-              </div>
+               {/* Small pickleball icon removed */}
               <div className="md:col-span-7 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromRight">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>

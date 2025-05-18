@@ -4,13 +4,13 @@ import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Handshake } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link'; // Added Link import
+import Link from 'next/link';
 
 export default function PartnersPage() {
   const partnerLogos = [
-    { src: '/sp1.png', alt: 'Partner Logo 1', hint: 'sponsor logo', href: '#' },
-    { src: '/sp2.png', alt: 'Partner Logo 2', hint: 'company logo', href: 'https://www.head.com/en_US/pickleball/paddle.html' },
-    { src: '/sp3.png', alt: 'Partner Logo 3', hint: 'organization logo', href: '#' },
+    { src: '/sp1.png', alt: 'Partner Logo 1', hint: 'sponsor logo', href: 'https://www.head.com/en_US/pickleball/paddle.html' },
+    { src: '/sp2.png', alt: 'Partner Logo 2', hint: 'company logo', href: 'https://franklinsports.com/sports/pickleball?srsltid=AfmBOop0tG3PnEzjYTuYb3-qu-J0k4qkJlZc0mV0TsgXMF87WzJ0wkpa' },
+    { src: '/sp3.png', alt: 'Partner Logo 3', hint: 'organization logo', href: 'https://quadwoke.com/' },
   ];
 
   return (
@@ -46,8 +46,19 @@ export default function PartnersPage() {
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 items-center">
                 {partnerLogos.map((logo, index) => (
                   <div key={index} className="flex justify-center items-center p-4 bg-secondary/20 rounded-lg aspect-[3/2] group relative overflow-hidden hover:shadow-lg transition-all duration-300">
-                    {logo.href.startsWith('http') ? (
+                    {logo.href && logo.href.startsWith('http') ? (
                       <Link href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`Link to ${logo.alt}`}>
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          data-ai-hint={logo.hint}
+                          width={200}
+                          height={120}
+                          className="object-contain max-h-full max-w-full"
+                        />
+                      </Link>
+                    ) : logo.href ? (
+                       <Link href={logo.href} aria-label={`Link to ${logo.alt}`}>
                         <Image
                           src={logo.src}
                           alt={logo.alt}

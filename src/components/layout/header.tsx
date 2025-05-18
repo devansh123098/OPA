@@ -28,7 +28,7 @@ const Header = () => {
         {/* Desktop Logo (Left) */}
         <Link href="/" className="hidden md:flex items-center" onClick={() => setIsSheetOpen(false)}>
           <Image
-            src="/opalogo.png"
+            src="/logo.png" // Reverted
             alt="Odisha Pickleball Association Logo"
             width={365}
             height={80}
@@ -40,7 +40,7 @@ const Header = () => {
         {/* Mobile Logo (Left - visible in header bar) */}
         <Link href="/" className="block md:hidden" onClick={() => setIsSheetOpen(false)}>
           <Image
-            src="/opalogo.png"
+            src="/logo.png" // Reverted
             alt="OPA Logo"
             width={200}
             height={50}
@@ -82,7 +82,7 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
                         <Image
-                          src="/opalogo.png"
+                          src="/logo.png" // Reverted
                           alt="OPA Logo"
                           width={365} 
                           height={80}

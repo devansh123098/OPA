@@ -59,16 +59,7 @@ export default function CoachingPage() {
                   </Link>
                 </Button>
               </div>
-              <div className="mt-8 flex justify-center">
-                <Image
-                  src="https://placehold.co/600x400.png"
-                  alt="Coaching session placeholder"
-                  data-ai-hint="sports training coach"
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-md object-cover"
-                />
-              </div>
+              {/* Image section removed from here */}
             </CardContent>
             <div
               className="absolute top-0 left-[-150%] w-[50%] h-full

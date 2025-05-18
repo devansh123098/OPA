@@ -1,4 +1,6 @@
 
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import PageWrapper from '@/components/layout/page-wrapper';
@@ -7,14 +9,15 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { placeholderEvents, type Event } from '@/lib/constants';
 import { CalendarDays, MapPin, Ticket, Clock } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast'; // Added useToast import
 
 export default function EventsPage() {
   const events: Event[] = placeholderEvents;
+  const { toast } = useToast(); // Initialize useToast
 
   return (
     <>
       <section className="relative py-16 md:py-20 overflow-hidden bg-black">
-        {/* Background Image Removed */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
             <div className="md:col-span-12 text-center md:text-left">
@@ -34,15 +37,23 @@ export default function EventsPage() {
       <PageWrapper>
         {events.length === 0 ? (
           <AnimatedSection>
-            <p className="text-center text-muted-foreground text-lg">
-              No upcoming events scheduled at the moment. Please check back soon!
-            </p>
-             <div className="absolute top-0 left-[-150%] w-[50%] h-full
-                         bg-gradient-to-r from-transparent via-white/10 to-transparent
-                         transform -skew-x-12
-                         transition-all duration-700 ease-out
-                         group-hover:left-[150%] group-hover:duration-500">
-            </div>
+            <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-2xl text-foreground">No Events Scheduled</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-center text-muted-foreground text-lg">
+                  No upcoming events scheduled at the moment. Please check back soon!
+                </p>
+              </CardContent>
+              <div
+                className="absolute top-0 left-[-150%] w-[50%] h-full
+                           bg-gradient-to-r from-transparent via-white/10 to-transparent
+                           transform -skew-x-12
+                           transition-all duration-700 ease-out
+                           group-hover:left-[150%] group-hover:duration-500">
+              </div>
+            </Card>
           </AnimatedSection>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,10 +91,16 @@ export default function EventsPage() {
                   </CardContent>
                   <CardFooter>
                     {event.registrationLink ? (
-                      <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                        <Link href={event.registrationLink}>
-                          <Ticket className="h-4 w-4 mr-2" /> Register Now
-                        </Link>
+                      <Button 
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                        onClick={() => {
+                          toast({
+                            title: "Event Coming Soon!!!",
+                            description: `Details for "${event.title}" will be available shortly.`,
+                          });
+                        }}
+                      >
+                        <Ticket className="h-4 w-4 mr-2" /> Register Now
                       </Button>
                     ) : (
                       <Button variant="outline" disabled className="w-full">Registration Closed/Details Soon</Button>
@@ -101,7 +118,6 @@ export default function EventsPage() {
             ))}
           </div>
         )}
-        {/* Removed "More Event Features Coming Soon!" section */}
       </PageWrapper>
     </>
   );

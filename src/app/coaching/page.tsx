@@ -3,28 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Edit } from 'lucide-react';
 
 export default function CoachingPage() {
   return (
     <>
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        <AnimatedSection animationClass="animate-fadeIn">
-          <Image
-            src="/ppr.jpeg"
-            alt="Odisha Pickleball Coaching"
-            data-ai-hint="coaching certification"
-            fill
-            style={{ objectFit: 'contain' }} // Changed from 'cover' to 'contain'
-            className="opacity-100"
-            priority
-          />
-        </AnimatedSection>
+      <section className="relative py-16 md:py-20 overflow-hidden bg-black"> {/* Added bg-black */}
+        {/* Image component for ppr.jpeg removed */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center md:text-left"> {/* Adjusted to full width */}
+            <div className="md:col-span-12 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl font-bold tracking-tight text-white">
                   Coaching Programs
@@ -34,7 +24,6 @@ export default function CoachingPage() {
                 </p>
               </AnimatedSection>
             </div>
-            {/* Removed small pickleball icon div */}
           </div>
         </div>
       </section>

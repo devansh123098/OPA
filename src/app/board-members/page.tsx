@@ -96,14 +96,6 @@ export default function BoardMembersPage() {
           </div>
         )}
         
-        <AnimatedSection delay={boardMembers.length > 0 ? (boardMembers.length * 100 + 200) : 200} animationClass="animate-fadeInUp">
-           <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
-              <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Information Coming Soon</h2>
-              <p className="text-center text-muted-foreground">
-                  We will be adding more board member profiles, including executive, technical, and advisory roles, as well as filter options.
-              </p>
-          </div>
-        </AnimatedSection>
       </PageWrapper>
     </>
   );

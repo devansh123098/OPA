@@ -10,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { NAV_LINKS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
-import AnimatedSection from '@/components/animated-section'; // Added for the new icon
 
 const Header = () => {
   const pathname = usePathname();
@@ -47,17 +46,8 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Logo and Decorative Ball (Right on Homepage) */}
-            <div className="hidden md:flex items-center gap-x-3">
-              <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-                <Image
-                  src="/pickleball ball .webp"
-                  alt="Decorative pickleball icon"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 object-contain animate-float"
-                />
-              </AnimatedSection>
+            {/* Logo (Right on Homepage) */}
+            <div className="hidden md:flex">
               <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
                 <Image 
                   src="/logo.png" 
@@ -84,35 +74,24 @@ const Header = () => {
               />
             </Link>
 
-            {/* Desktop Navigation and Decorative Ball (Right on Other Pages) */}
-            <div className="hidden md:flex items-center gap-x-3">
-              <nav className="flex items-center space-x-1">
-                {NAV_LINKS.map((link) => (
-                  <Button
-                    key={link.href}
-                    variant="ghost"
-                    asChild
-                    className={cn(
-                      "text-sm font-medium transition-colors",
-                      mounted && pathname === link.href 
-                        ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
-                        : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                    )}
-                  >
-                    <Link href={link.href}>{link.label}</Link>
-                  </Button>
-                ))}
-              </nav>
-              <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-                <Image
-                  src="/pickleball ball .webp"
-                  alt="Decorative pickleball icon"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 object-contain animate-float"
-                />
-              </AnimatedSection>
-            </div>
+            {/* Desktop Navigation (Right on Other Pages) */}
+            <nav className="hidden md:flex items-center space-x-1">
+              {NAV_LINKS.map((link) => (
+                <Button
+                  key={link.href}
+                  variant="ghost"
+                  asChild
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    mounted && pathname === link.href 
+                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
+                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                  )}
+                >
+                  <Link href={link.href}>{link.label}</Link>
+                </Button>
+              ))}
+            </nav>
           </>
         )}
 

@@ -126,9 +126,9 @@ export default function AboutPickleballPage() {
             </p>
              <div className="mt-8">
                 <Image
-                  src="https://placehold.co/800x400.png"
-                  alt="Modern pickleball game"
-                  data-ai-hint="pickleball players action"
+                  src="/court.jpg"
+                  alt="Modern pickleball court"
+                  data-ai-hint="pickleball court"
                   width={800}
                   height={400}
                   className="rounded-lg shadow-xl object-cover mx-auto"

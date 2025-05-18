@@ -31,13 +31,13 @@ export default function RankingPage() {
 
       <PageWrapper> {/* Removed className="bg-black" */}
         <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-          <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
+          <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-black"> {/* Added bg-black */}
             <CardHeader className="flex flex-row items-center gap-3">
               <BarChartHorizontal className="h-8 w-8 text-primary" />
-              <CardTitle className="text-2xl">Live Leaderboards Coming Soon!</CardTitle>
+              <CardTitle className="text-2xl text-white">Live Leaderboards Coming Soon!</CardTitle> {/* Changed to text-white */}
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground text-lg mt-4">
+              <p className="text-gray-300 text-lg mt-4"> {/* Changed to text-gray-300 */}
                 Want to see your name on the leaderboard? Participate in OPA-approved tournaments and register with our ranking system.
               </p>
               <div className="mt-8 mb-8 flex justify-center">

@@ -36,11 +36,14 @@ export default function CoachingPage() {
               <CardTitle className="text-2xl">Become a Certified Coach</CardTitle>
             </CardHeader>
             <CardContent>
+              <p className="text-muted-foreground text-lg mb-4">
+                At Odisha Pickleball Association, we believe that great coaches build great athletes. Our Coaching Certification Pathway is designed to equip aspiring and experienced coaches in Odisha with the knowledge, skills, and values required to succeed at all levels of sport from grassroots to elite performance.
+              </p>
               <p className="text-muted-foreground text-lg">
-                At Odisha Pickleball Association, we believe that great coaches build great athletes. Our Coaching Certification Pathway is designed to equip aspiring and experienced coaches in Odisha with the knowledge, skills, and values required to succeed at all levels of sport from grassroots to elite performance. Whether you're just starting out or looking to take your coaching to the next level, our structured program offers clear progression and support every step of the way.
+                Whether you&apos;re just starting out or looking to take your coaching to the next level, our structured program offers clear progression and support every step of the way.
               </p>
               <div className="mt-6 flex justify-center">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" href="https://pprpickleball.org/" target="_blank" rel="noopener noreferrer">
                   <Link href="https://pprpickleball.org/" target="_blank" rel="noopener noreferrer">
                     <Edit className="mr-2 h-5 w-5" />
                     Register Now

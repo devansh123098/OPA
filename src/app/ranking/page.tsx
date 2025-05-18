@@ -11,7 +11,7 @@ export default function RankingPage() {
   return (
     <>
       <section className="relative py-16 md:py-20 overflow-hidden bg-black">
-        {/* Background Image Removed */}
+        {/* Background Image Removed, solid black background applied */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
             <div className="md:col-span-12 text-center md:text-left">
@@ -24,11 +24,12 @@ export default function RankingPage() {
                 </p>
               </AnimatedSection>
             </div>
+            {/* Small pickleball icon div removed */}
           </div>
         </div>
       </section>
 
-      <PageWrapper>
+      <PageWrapper className="bg-black"> {/* Added bg-black here */}
         <AnimatedSection delay={100} animationClass="animate-fadeInUp">
           <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
             <CardHeader className="flex flex-row items-center gap-3">

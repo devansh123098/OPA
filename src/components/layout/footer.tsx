@@ -16,7 +16,7 @@ const Footer = () => {
 
   const socialLinks = [
     { href: '#', icon: Facebook, label: 'Facebook' },
-    { href: 'https://www.instagram.com/odishapickleballofficial/', icon: Instagram, label: 'Instagram' },
+    { href: '#', icon: Instagram, label: 'Instagram' }, // Reverted
     { href: '#', icon: Twitter, label: 'Twitter' },
     { href: '#', icon: Youtube, label: 'YouTube' },
   ];

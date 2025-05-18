@@ -75,7 +75,7 @@ export const placeholderClubs: Club[] = [
     location: 'Bhubaneswar, Odisha',
     contactPerson: 'Mr. Ashok Das',
     phone: '+91 99370 23493',
-    email: 'associationodishapickleball@gmail.com', 
+    email: 'associationodishapickleball@gmail.com',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'sports club'
   },
@@ -85,7 +85,7 @@ export const placeholderClubs: Club[] = [
     location: 'Cuttack, Odisha',
     contactPerson: 'Ms. Priya Mohanty',
     phone: '+91 91234 56789',
-    email: 'associationodishapickleball@gmail.com', 
+    email: 'associationodishapickleball@gmail.com',
     website: '#',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'team sport'
@@ -95,7 +95,7 @@ export const placeholderClubs: Club[] = [
     name: 'Puri Paddlers',
     location: 'Puri, Odisha',
     contactPerson: 'Mr. Surya Behera',
-    email: 'associationodishapickleball@gmail.com', 
+    email: 'associationodishapickleball@gmail.com',
     image: 'https://placehold.co/400x300.png',
     imageHint: 'community group'
   },
@@ -120,7 +120,7 @@ export const placeholderCoaches: Coach[] = [
     location: 'Bhubaneswar',
     specialization: 'Beginner & Intermediate Training',
     experience: '5+ years',
-    email: 'associationodishapickleball@gmail.com', 
+    email: 'associationodishapickleball@gmail.com',
     image: 'https://placehold.co/300x300.png',
     imageHint: 'coach portrait'
   },
@@ -146,7 +146,7 @@ export interface NewsArticle {
   href: string;
 }
 
-export const placeholderNews: NewsArticle[] = [
+export const placeholderNews: NewsArticle[] = [ // This is used in the old page structure, keeping it for now
   {
     id: '1',
     title: 'OPA State Championship Announced!',
@@ -179,7 +179,7 @@ export interface BoardMember {
   role: string;
   image: string;
   imageHint: string;
-  bio?: string; 
+  bio?: string;
 }
 
 export const placeholderBoardMembers: BoardMember[] = [
@@ -187,7 +187,7 @@ export const placeholderBoardMembers: BoardMember[] = [
     id: 'bm1',
     name: 'Ms. Shribani Mohanty',
     role: 'President',
-    image: '/shribani.jpg', 
+    image: '/shribani.jpg',
     imageHint: 'portrait female',
     bio: 'Leading the Odisha Pickleball Association with a vision for growth and community engagement.'
   },
@@ -200,4 +200,3 @@ export const placeholderBoardMembers: BoardMember[] = [
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },
 ];
-

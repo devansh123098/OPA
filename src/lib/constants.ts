@@ -6,6 +6,7 @@ export const NAV_LINKS = [
   { href: '/events', label: 'Tournaments' },
   { href: '/coaching', label: 'Coaching' },
   { href: '/ranking', label: 'Ranking' },
+  { href: '/partners', label: 'Partners' }, // Added Partners link
   { href: '/contact-us', label: 'Contact Us' },
 ];
 
@@ -31,7 +32,7 @@ export const placeholderEvents: Event[] = [
     description: 'Join us for the biggest pickleball tournament in Odisha! Categories for all skill levels.',
     registrationLink: '#',
     image: '/comingsoon.webp',
-    imageHint: 'event coming soon'
+    imageHint: 'pickleball tournament'
   },
   {
     id: '2',
@@ -41,7 +42,7 @@ export const placeholderEvents: Event[] = [
     location: 'Bhubaneswar Sports Complex',
     description: 'Learn the basics of pickleball from certified coaches. Paddles and balls provided.',
     image: '/comingsoon.webp',
-    imageHint: 'workshop coming soon'
+    imageHint: 'workshop event'
   },
   {
     id: '3',
@@ -52,7 +53,7 @@ export const placeholderEvents: Event[] = [
     description: 'Sharpen your dinking skills and strategy with advanced drills and coaching.',
     registrationLink: '#',
     image: '/comingsoon.webp',
-    imageHint: 'clinic coming soon'
+    imageHint: 'pickleball clinic'
   },
 ];
 
@@ -137,7 +138,7 @@ export const placeholderCoaches: Coach[] = [
   }
 ];
 
-export interface NewsArticle {
+export interface NewsArticle { // This is used in the old page structure, keeping it for now
   id: string;
   title: string;
   description: string;
@@ -146,7 +147,7 @@ export interface NewsArticle {
   href: string;
 }
 
-export const placeholderNews: NewsArticle[] = [ // This is used in the old page structure, keeping it for now
+export const placeholderNews: NewsArticle[] = [
   {
     id: '1',
     title: 'OPA State Championship Announced!',
@@ -200,4 +201,3 @@ export const placeholderBoardMembers: BoardMember[] = [
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },
 ];
-

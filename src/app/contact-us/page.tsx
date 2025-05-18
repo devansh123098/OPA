@@ -123,7 +123,7 @@ export default function ContactUsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-6 w-6 text-primary" />
-                <p className="text-muted-foreground">+91 12345 67890 (Placeholder)</p>
+                <p className="text-muted-foreground">+91 99370 23493</p>
               </div>
               <div className="mt-6 h-80 bg-secondary/30 rounded-md overflow-hidden">
                  <iframe

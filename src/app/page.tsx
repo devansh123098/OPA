@@ -36,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, 
+      icon: Palette,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -48,8 +48,8 @@ export default function HomePage() {
       id: 'news1',
       title: 'The Indian Pickleball Association (IPA) - now officially recognised by the Ministry of Youth Affairs and Sports, Government of India',
       description: 'With systematic and painstaking groundwork laid by the members in IPA and a fast-growing community behind it, IPA is ready to drive the next chapter: building a nationwide ecosystem of access, excellence, and opportunity.',
-      image: '/news1.webp', 
-      imageHint: 'IPA recognition sports ministry', 
+      image: '/news1.webp',
+      imageHint: 'IPA recognition sports ministry',
       href: 'https://www.timesnownews.com/sports/pickleball/ipa-to-lead-national-expansion-and-global-strategy-article-151547725',
     },
     {
@@ -90,7 +90,7 @@ export default function HomePage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center md:text-left"> 
+            <div className="md:col-span-6 text-center md:text-left"> 
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                   Welcome to Odisha Pickleball Association
@@ -113,6 +113,9 @@ export default function HomePage() {
                   </Button>
                 </div>
               </AnimatedSection>
+            </div>
+            <div className="md:col-span-6">
+              {/* This div is intentionally left empty to push text content to the left and manage space */}
             </div>
           </div>
         </div>
@@ -184,7 +187,7 @@ export default function HomePage() {
         <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> 
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
@@ -323,7 +326,7 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> 
+              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromRight">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
@@ -336,6 +339,19 @@ export default function HomePage() {
                       </Link>
                     </Button>
                   </div>
+                </AnimatedSection>
+              </div>
+              {/* Image Column */}
+              <div className="md:col-span-5 lg:col-span-4 mt-8 md:mt-0">
+                <AnimatedSection animationClass="animate-slideInFromLeft">
+                  <Image
+                    src="https://placehold.co/500x500.png"
+                    alt="Pickleball player"
+                    data-ai-hint="pickleball player pose"
+                    width={500}
+                    height={500}
+                    className="rounded-lg shadow-xl mx-auto object-cover aspect-square"
+                  />
                 </AnimatedSection>
               </div>
             </div>

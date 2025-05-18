@@ -54,7 +54,7 @@ export default function HomePage() {
               alt="Pickleball action background"
               fill
               style={{ objectFit: 'cover' }}
-              className=""
+              className="" 
               priority
             />
           </div>
@@ -85,25 +85,26 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Small floating pickleball icon was removed from here earlier */}
           </div>
         </div>
       </section>
 
       {/* Key Highlights Section - Full Width Background */}
       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-        <section className="py-16 bg-primary/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-            <div className="hidden md:flex items-center justify-center mr-8 shrink-0"> {/* Added shrink-0 to prevent image from shrinking flex item */}
-              <Image
-                src="/konark.png"
-                alt="Spinning Konark Wheel"
-                width={100}
-                height={100}
-                className="animate-spin-slow object-contain"
-              />
-            </div>
-            <div className="flex-grow"> {/* Added flex-grow to allow content to take remaining space */}
+        <section className="py-16 bg-primary/20 relative"> {/* Added relative */}
+          {/* Konark Image - moved and classes changed */}
+          <div className="absolute top-0 left-8 transform -translate-y-1/2 z-10 hidden md:block">
+            <Image
+              src="/konark.png"
+              alt="Spinning Konark Wheel"
+              width={100}
+              height={100}
+              className="animate-spin-slow object-contain"
+            />
+          </div>
+          {/* Main content container */}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div> {/* Removed flex-grow from this div */}
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
                   <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>

@@ -85,9 +85,9 @@ export default function AboutPickleballPage() {
         <div className="lg:col-span-1 space-y-6">
            <AnimatedSection delay={150} animationClass="animate-slideInFromRight">
             <Image
-              src="https://placehold.co/400x500.png"
-              alt="Vintage pickleball equipment"
-              data-ai-hint="old sport equipment"
+              src="/paddleandball.webp"
+              alt="Pickleball paddle and ball"
+              data-ai-hint="pickleball equipment"
               width={400}
               height={500}
               className="rounded-lg shadow-xl object-cover w-full aspect-[4/5]"

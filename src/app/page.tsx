@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Users, Dumbbell } from 'lucide-react'; // Removed Zap, Palette, Newspaper, Edit, Brain
+import { ArrowRight, Lightbulb, Users, Dumbbell, BarChartHorizontal } from 'lucide-react';
 
 export default function HomePage() {
   const keyHighlights = [
     { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
-    { title: 'Community Building', description: 'Fostering a vibrant pickleball community through inclusive events and activities.', icon: Users, href: '/events' }, // Changed from Quality Facilities
+    { title: 'Rankings', description: 'Track your progress and see where you stand among Odisha\'s top players.', icon: BarChartHorizontal, href: '/ranking' },
     { title: 'Community Events', description: 'Participate in regular tournaments, workshops, and social pickleball events.', icon: Users, href: '/events' },
     { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Dumbbell, href: '/coaching' },
   ];
@@ -27,7 +27,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Lightbulb, // Changed from Brain to Lightbulb as Brain was removed
+      icon: Lightbulb,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -43,7 +43,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Users, // Changed from Palette to Users as Palette was removed
+      icon: Users,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',

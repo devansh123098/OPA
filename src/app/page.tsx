@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react';
-import PageWrapper from '@/components/layout/page-wrapper';
+import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
+// Removed PageWrapper as sections are now full-width with inner containers
+// import PageWrapper from '@/components/layout/page-wrapper';
 
 
 export default function HomePage() {
@@ -21,7 +22,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain,
+      icon: Brain, // Consider Users2 or Child icon
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -29,7 +30,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell,
+      icon: Dumbbell, // Consider GraduationCap or Briefcase icon
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -118,18 +119,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary/20 relative">
-        <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
-          <Image
-            src="/konark.png"
-            alt="Spinning Konark Wheel"
-            width={150}
-            height={150}
-            className="animate-spin-slow object-contain"
-          />
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+      <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+        <section className="py-16 bg-primary/20 relative">
+          <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
+            <Image
+              src="/konarkandball.png"
+              alt="Spinning Konark Wheel with Pickleball"
+              width={150}
+              height={150}
+              className="animate-spin-slow object-contain"
+            />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div>
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
@@ -176,13 +177,13 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </section>
+      </AnimatedSection>
       
-      <section className="py-16 bg-[#4B5D67]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection animationClass="animate-fadeIn">
+      <AnimatedSection animationClass="animate-fadeIn">
+        <section className="py-16 bg-[#4B5D67]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
@@ -235,15 +236,15 @@ export default function HomePage() {
                 </AnimatedSection>
               ))}
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </section>
+      </AnimatedSection>
       
       <section className="py-16 bg-secondary/30 relative"> 
           <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
-              src="/konark.png"
-              alt="Spinning Konark Wheel"
+              src="/konarkandball.png"
+              alt="Spinning Konark Wheel with Pickleball"
               width={150}
               height={150}
               className="animate-spin-slow object-contain"
@@ -294,9 +295,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 text-center bg-accent/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection delay={100} animationClass="animate-zoomIn">
+      <AnimatedSection delay={100} animationClass="animate-zoomIn">
+        <section className="py-16 text-center bg-accent/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Become a part of the fastest-growing sports community in Odisha. Connect with fellow players, participate in events, and help grow the sport.
@@ -306,13 +307,13 @@ export default function HomePage() {
                 Get Involved <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </section>
+      </AnimatedSection>
 
-      <section className="py-16 bg-secondary/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
+      <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
+        <section className="py-16 bg-secondary/50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
               <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromLeft">
@@ -330,9 +331,9 @@ export default function HomePage() {
                 </AnimatedSection>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
+        </section>
+      </AnimatedSection>
     </AnimatedSection>
   );
 }

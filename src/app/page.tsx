@@ -20,15 +20,15 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain,
+      icon: Brain, // Changed from Lightbulb
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
-      href: '/coaching',
+      href: '/coaching', // Changed from /club-directory
     },
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell,
+      icon: Dumbbell, // Changed from Zap
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -36,7 +36,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette,
+      icon: Palette, // Changed from Users
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -93,12 +93,12 @@ export default function HomePage() {
       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
         <section className="py-16 bg-primary/20 relative"> {/* Added relative */}
           {/* Konark Image - moved and classes changed */}
-          <div className="absolute top-0 left-8 transform -translate-y-1/2 z-10 hidden md:block">
+          <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
               src="/konark.png"
               alt="Spinning Konark Wheel"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
               className="animate-spin-slow object-contain"
             />
           </div>

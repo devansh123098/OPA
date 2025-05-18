@@ -61,17 +61,17 @@ export default function HomePage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left">
+            <div className="md:col-span-12 text-center"> {/* Changed to full width for hero text */}
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                   Welcome to Odisha Pickleball Association
                 </h1>
-                <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto md:mx-0">
+                <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
                   Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-                <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
                   <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
                     <Link href="/contact-us">
                       Join OPA <ArrowRight className="ml-2 h-5 w-5" />
@@ -100,7 +100,7 @@ export default function HomePage() {
                 alt="Spinning Konark Wheel"
                 width={100}
                 height={100}
-                className="animate-spin object-contain"
+                className="animate-spin-slow object-contain"
               />
             </div>
             <div className="flex-grow"> {/* Added flex-grow to allow content to take remaining space */}

@@ -200,3 +200,4 @@ export const placeholderBoardMembers: BoardMember[] = [
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },
 ];
+

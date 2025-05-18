@@ -4,12 +4,13 @@ import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Handshake } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link'; // Added Link import
 
 export default function PartnersPage() {
   const partnerLogos = [
-    { src: '/sp1.png', alt: 'Partner Logo 1', hint: 'sponsor logo' },
-    { src: '/sp2.png', alt: 'Partner Logo 2', hint: 'company logo' },
-    { src: '/sp3.png', alt: 'Partner Logo 3', hint: 'organization logo' },
+    { src: '/sp1.png', alt: 'Partner Logo 1', hint: 'sponsor logo', href: '#' },
+    { src: '/sp2.png', alt: 'Partner Logo 2', hint: 'company logo', href: 'https://www.head.com/en_US/pickleball/paddle.html' },
+    { src: '/sp3.png', alt: 'Partner Logo 3', hint: 'organization logo', href: '#' },
   ];
 
   return (
@@ -45,14 +46,27 @@ export default function PartnersPage() {
               <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 items-center">
                 {partnerLogos.map((logo, index) => (
                   <div key={index} className="flex justify-center items-center p-4 bg-secondary/20 rounded-lg aspect-[3/2] group relative overflow-hidden hover:shadow-lg transition-all duration-300">
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      data-ai-hint={logo.hint}
-                      width={200}
-                      height={120}
-                      className="object-contain max-h-full max-w-full"
-                    />
+                    {logo.href.startsWith('http') ? (
+                      <Link href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={`Link to ${logo.alt}`}>
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          data-ai-hint={logo.hint}
+                          width={200}
+                          height={120}
+                          className="object-contain max-h-full max-w-full"
+                        />
+                      </Link>
+                    ) : (
+                      <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        data-ai-hint={logo.hint}
+                        width={200}
+                        height={120}
+                        className="object-contain max-h-full max-w-full"
+                      />
+                    )}
                     <div
                       className="absolute top-0 left-[-150%] w-[50%] h-full
                                  bg-gradient-to-r from-transparent via-white/10 to-transparent

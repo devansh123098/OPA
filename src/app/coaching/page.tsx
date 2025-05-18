@@ -17,7 +17,7 @@ export default function CoachingPage() {
             alt="Odisha Pickleball Coaching"
             data-ai-hint="coaching certification"
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'contain' }} // Changed from 'cover' to 'contain'
             className="opacity-100"
             priority
           />

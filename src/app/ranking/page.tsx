@@ -34,7 +34,7 @@ export default function RankingPage() {
           <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-black"> {/* Added bg-black */}
             <CardHeader className="flex flex-row items-center gap-3">
               <BarChartHorizontal className="h-8 w-8 text-primary" />
-              <CardTitle className="text-2xl text-white">Live Leaderboards Coming Soon!</CardTitle> {/* Changed to text-white */}
+              <CardTitle className="text-2xl text-white">Check Your Ranking!</CardTitle> {/* Changed to text-white */}
             </CardHeader>
             <CardContent>
               <p className="text-gray-300 text-lg mt-4"> {/* Changed to text-gray-300 */}

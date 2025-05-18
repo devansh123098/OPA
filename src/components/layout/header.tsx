@@ -20,13 +20,15 @@ const Header = () => {
     setMounted(true);
   }, []);
 
+  const isHomePage = pathname === '/';
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md">
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Desktop Logo (Left) */}
         <Link href="/" className="hidden md:flex items-center" onClick={() => setIsSheetOpen(false)}>
           <Image
-            src="/logo.png"
+            src="/opalogo.png"
             alt="Odisha Pickleball Association Logo"
             width={365}
             height={80}
@@ -38,10 +40,10 @@ const Header = () => {
         {/* Mobile Logo (Left - visible in header bar) */}
         <Link href="/" className="block md:hidden" onClick={() => setIsSheetOpen(false)}>
           <Image
-            src="/logo.png"
+            src="/opalogo.png"
             alt="OPA Logo"
-            width={200} // Adjusted size for mobile header bar
-            height={50}  // Adjusted size for mobile header bar
+            width={200}
+            height={50}
             className="object-contain"
             priority
           />
@@ -80,9 +82,9 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
                         <Image
-                          src="/logo.png"
+                          src="/opalogo.png"
                           alt="OPA Logo"
-                          width={365} // Logo inside sheet can be larger
+                          width={365} 
                           height={80}
                           className="object-contain"
                           priority

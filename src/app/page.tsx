@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
-import PageWrapper from '@/components/layout/page-wrapper'; // Added for consistency
+// PageWrapper import removed as it's not directly used here anymore after full-width sections
+// import PageWrapper from '@/components/layout/page-wrapper';
 
 export default function HomePage() {
   const initiatives = [
@@ -36,7 +37,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, // Consider changing to a trophy or medal icon if available
+      icon: Palette, 
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -48,13 +49,13 @@ export default function HomePage() {
       id: 'news1',
       title: 'The Indian Pickleball Association (IPA) - now officially recognised by the Ministry of Youth Affairs and Sports, Government of India',
       description: 'With systematic and painstaking groundwork laid by the members in IPA and a fast-growing community behind it, IPA is ready to drive the next chapter: building a nationwide ecosystem of access, excellence, and opportunity.',
-      image: '/news1.webp', // Updated image
-      imageHint: 'IPA recognition sports ministry', // Updated hint
+      image: '/news1.webp', 
+      imageHint: 'IPA recognition sports ministry', 
       href: 'https://www.timesnownews.com/sports/pickleball/ipa-to-lead-national-expansion-and-global-strategy-article-151547725',
     },
     {
       id: 'news2',
-      title: 'New Coaching Programs Launched',
+      title: 'IPA Hosts Special Meeting In New Delhi To Mark Official Recognition As National Sports Federation',
       description: 'Whether you are a beginner or an advanced player, find the right coaching for you.',
       image: 'https://placehold.co/500x300.png',
       imageHint: 'pickleball coaching session',
@@ -114,14 +115,12 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Small decorative pickleball image removed from here */}
           </div>
         </div>
       </section>
 
       {/* Key Highlights Section - Full Width Background */}
-      <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-        <section className="py-16 bg-primary/20 relative">
+       <section className="py-16 bg-primary/20 relative">
           <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
               src="/konarkandball.png"
@@ -132,7 +131,7 @@ export default function HomePage() {
             />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div>
+            <AnimatedSection animationClass="animate-zoomIn" delay={300}>
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
                   <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
@@ -177,15 +176,14 @@ export default function HomePage() {
                   </AnimatedSection>
                 ))}
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </section>
-      </AnimatedSection>
       
       {/* Discover Our Initiatives Section - Full Width Background */}
-      <AnimatedSection animationClass="animate-fadeIn">
-        <section className="py-16 bg-[#4B5D67]">
-           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-[#4B5D67]">
+         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animationClass="animate-fadeIn">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
@@ -238,9 +236,9 @@ export default function HomePage() {
                 </AnimatedSection>
               ))}
             </div>
+          </AnimatedSection>
           </div>
         </section>
-      </AnimatedSection>
       
       {/* Latest News Section - Full Width Background */}
       <section className="py-16 bg-secondary/30 relative"> 
@@ -323,11 +321,23 @@ export default function HomePage() {
 
       {/* About Pickleball Teaser Section - Full Width Background */}
       <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
-        <section className="py-16 bg-secondary/50">
+        <section className="py-16 bg-accent/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-7 text-center md:text-left"> 
+               <div className="md:col-span-5 order-last md:order-first mt-10 md:mt-0">
                 <AnimatedSection animationClass="animate-slideInFromLeft">
+                  <Image
+                    src="/pickleball ball .webp"
+                    alt="Pickleball"
+                    data-ai-hint="pickleball equipment"
+                    width={150}
+                    height={150}
+                    className="animate-float mx-auto md:mx-0"
+                  />
+                </AnimatedSection>
+              </div>
+              <div className="md:col-span-7 text-center md:text-left"> 
+                <AnimatedSection animationClass="animate-slideInFromRight">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
                     New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
@@ -339,18 +349,6 @@ export default function HomePage() {
                       </Link>
                     </Button>
                   </div>
-                </AnimatedSection>
-              </div>
-              <div className="md:col-span-5 mt-10 md:mt-0">
-                <AnimatedSection animationClass="animate-slideInFromRight">
-                  <Image
-                    src="https://placehold.co/500x500.png"
-                    alt="Pickleball player"
-                    data-ai-hint="pickleball player pose"
-                    width={500}
-                    height={500}
-                    className="rounded-lg shadow-xl mx-auto object-cover aspect-square"
-                  />
                 </AnimatedSection>
               </div>
             </div>

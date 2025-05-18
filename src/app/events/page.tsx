@@ -101,14 +101,7 @@ export default function EventsPage() {
             ))}
           </div>
         )}
-        <AnimatedSection delay={300} animationClass="animate-fadeInUp">
-          <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
-            <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Event Features Coming Soon!</h2>
-            <p className="text-center text-muted-foreground">
-              We're working on a filterable calendar, list view for upcoming events, and a carousel for past event photos and winners. Stay tuned!
-            </p>
-          </div>
-        </AnimatedSection>
+        {/* Removed "More Event Features Coming Soon!" section */}
       </PageWrapper>
     </>
   );

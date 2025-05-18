@@ -84,7 +84,7 @@ export default function AssociationInfoPage() {
                   <BarChart className="h-16 w-16 text-primary mx-auto mb-4" /> {/* Increased icon size */}
                   <h3 className="text-2xl font-semibold text-foreground">Founded</h3>
                   <p className="text-5xl font-bold text-accent mt-2">2023</p> {/* Increased stat value size */}
-                  <p className="text-base text-muted-foreground mt-1"></p> {/* Placeholder removed */}
+                  {/* Empty p tag removed */}
                   <div
                     className="absolute top-0 left-[-150%] w-[50%] h-full
                                bg-gradient-to-r from-transparent via-white/10 to-transparent
@@ -97,7 +97,7 @@ export default function AssociationInfoPage() {
                   <Users className="h-16 w-16 text-primary mx-auto mb-4" /> {/* Increased icon size */}
                   <h3 className="text-2xl font-semibold text-foreground">Members</h3>
                   <p className="text-5xl font-bold text-accent mt-2">500+</p> {/* Increased stat value size */}
-                  <p className="text-base text-muted-foreground mt-1"></p> {/* Placeholder removed */}
+                   {/* Empty p tag removed */}
                   <div
                     className="absolute top-0 left-[-150%] w-[50%] h-full
                                bg-gradient-to-r from-transparent via-white/10 to-transparent
@@ -110,7 +110,7 @@ export default function AssociationInfoPage() {
                   <TrendingUp className="h-16 w-16 text-primary mx-auto mb-4" /> {/* Increased icon size */}
                   <h3 className="text-2xl font-semibold text-foreground">Districts</h3>
                   <p className="text-5xl font-bold text-accent mt-2">10+</p> {/* Increased stat value size */}
-                  <p className="text-base text-muted-foreground mt-1">Covered</p> {/* Placeholder text removed */}
+                  <p className="text-base text-muted-foreground mt-1">Covered</p>
                   <div
                     className="absolute top-0 left-[-150%] w-[50%] h-full
                                bg-gradient-to-r from-transparent via-white/10 to-transparent

@@ -29,7 +29,7 @@ export default function RankingPage() {
         </div>
       </section>
 
-      <PageWrapper className="bg-black"> {/* Added bg-black here */}
+      <PageWrapper> {/* Removed className="bg-black" */}
         <AnimatedSection delay={100} animationClass="animate-fadeInUp">
           <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
             <CardHeader className="flex flex-row items-center gap-3">

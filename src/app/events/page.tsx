@@ -7,13 +7,19 @@ import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { placeholderEvents, type Event } from '@/lib/constants';
+import { placeholderEvents as serverPlaceholderEvents, type Event } from '@/lib/constants'; // Renamed import for clarity
 import { CalendarDays, MapPin, Ticket, Clock } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast'; // Added useToast import
+import { useToast } from '@/hooks/use-toast';
+import { useState, useEffect } from 'react'; // Added useState and useEffect
 
 export default function EventsPage() {
-  const events: Event[] = placeholderEvents;
-  const { toast } = useToast(); // Initialize useToast
+  const [events, setEvents] = useState<Event[]>([]); // Initialize with empty array
+  const { toast } = useToast();
+
+  useEffect(() => {
+    // Set events data on the client side after mount
+    setEvents(serverPlaceholderEvents);
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <>
@@ -35,8 +41,30 @@ export default function EventsPage() {
       </section>
 
       <PageWrapper>
-        {events.length === 0 ? (
-          <AnimatedSection>
+        {/* If events state is empty (initial render) or serverPlaceholderEvents is truly empty, show coming soon. */}
+        {events.length === 0 && serverPlaceholderEvents.length > 0 && (
+           <AnimatedSection>
+            <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-2xl text-foreground">Loading Events...</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-center text-muted-foreground text-lg">
+                  Please wait while we fetch the latest events.
+                </p>
+              </CardContent>
+               <div
+                  className="absolute top-0 left-[-150%] w-[50%] h-full
+                             bg-gradient-to-r from-transparent via-white/10 to-transparent
+                             transform -skew-x-12
+                             transition-all duration-700 ease-out
+                             group-hover:left-[150%] group-hover:duration-500">
+                </div>
+            </Card>
+          </AnimatedSection>
+        )}
+        {events.length === 0 && serverPlaceholderEvents.length === 0 && (
+           <AnimatedSection>
             <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-foreground">No Events Scheduled</CardTitle>
@@ -46,16 +74,17 @@ export default function EventsPage() {
                   No upcoming events scheduled at the moment. Please check back soon!
                 </p>
               </CardContent>
-              <div
-                className="absolute top-0 left-[-150%] w-[50%] h-full
-                           bg-gradient-to-r from-transparent via-white/10 to-transparent
-                           transform -skew-x-12
-                           transition-all duration-700 ease-out
-                           group-hover:left-[150%] group-hover:duration-500">
-              </div>
+               <div
+                  className="absolute top-0 left-[-150%] w-[50%] h-full
+                             bg-gradient-to-r from-transparent via-white/10 to-transparent
+                             transform -skew-x-12
+                             transition-all duration-700 ease-out
+                             group-hover:left-[150%] group-hover:duration-500">
+                </div>
             </Card>
           </AnimatedSection>
-        ) : (
+        )}
+        {events.length > 0 && (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
               <AnimatedSection key={event.id} delay={index * 100} animationClass="animate-fadeInUp">
@@ -118,6 +147,7 @@ export default function EventsPage() {
             ))}
           </div>
         )}
+        
       </PageWrapper>
     </>
   );

@@ -15,7 +15,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { href: '/ranking', icon: Instagram, label: 'Instagram' }, // Changed href to /ranking
+    { href: 'https://www.instagram.com/odishapickleballofficial/', icon: Instagram, label: 'Instagram' },
   ];
 
   return (
@@ -85,7 +85,8 @@ const Footer = () => {
                 <Link key={social.label} href={social.href}
                   className="text-gray-300 hover:text-primary transition-colors"
                   aria-label={social.label}
-                  // Removed target="_blank" and rel="noopener noreferrer" for internal link
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
                   <social.icon className="h-6 w-6" />
                 </Link>

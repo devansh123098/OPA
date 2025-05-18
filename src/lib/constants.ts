@@ -30,8 +30,8 @@ export const placeholderEvents: Event[] = [
     location: 'Kalinga Stadium, Bhubaneswar',
     description: 'Join us for the biggest pickleball tournament in Odisha! Categories for all skill levels.',
     registrationLink: '#',
-    image: 'https://placehold.co/600x400.png',
-    imageHint: 'pickleball tournament'
+    image: '/comingsoon.webp',
+    imageHint: 'event coming soon'
   },
   {
     id: '2',
@@ -40,8 +40,8 @@ export const placeholderEvents: Event[] = [
     time: '10:00 AM - 1:00 PM',
     location: 'Bhubaneswar Sports Complex',
     description: 'Learn the basics of pickleball from certified coaches. Paddles and balls provided.',
-    image: 'https://placehold.co/600x400.png',
-    imageHint: 'pickleball workshop'
+    image: '/comingsoon.webp',
+    imageHint: 'workshop coming soon'
   },
   {
     id: '3',
@@ -51,8 +51,8 @@ export const placeholderEvents: Event[] = [
     location: 'Cuttack Indoor Stadium',
     description: 'Sharpen your dinking skills and strategy with advanced drills and coaching.',
     registrationLink: '#',
-    image: 'https://placehold.co/600x400.png',
-    imageHint: 'pickleball training'
+    image: '/comingsoon.webp',
+    imageHint: 'clinic coming soon'
   },
 ];
 
@@ -131,6 +131,7 @@ export const placeholderCoaches: Coach[] = [
     specialization: 'Advanced Strategy & Doubles Play',
     experience: '8+ years, Level 2 Certified',
     phone: '+91 99887 76655',
+    email: 'associationodishapickleball@gmail.com',
     image: 'https://placehold.co/300x300.png',
     imageHint: 'sports coach'
   }
@@ -199,3 +200,4 @@ export const placeholderBoardMembers: BoardMember[] = [
     bio: 'Dedicated to expanding pickleball accessibility and fostering talent across Odisha.'
   },
 ];
+

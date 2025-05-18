@@ -56,8 +56,8 @@ export default function HomePage() {
       id: 'news2',
       title: 'IPA Hosts Special Meeting In New Delhi To Mark Official Recognition As National Sports Federation',
       description: 'The objective of the meeting was to outline IPA’s strategic roadmap for the development and promotion of pickleball across India.',
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'pickleball coaching session',
+      image: 'https://images.timesnownews.com/thumb/msid-151596199,width-1280,height-720,resizemode-75/151596199.jpg',
+      imageHint: 'pickleball meeting',
       href: 'https://www.timesnownews.com/sports/pickleball/ipa-hosts-special-meeting-in-new-delhi-to-mark-official-recognition-as-national-sports-federation-article-151596188',
     },
     {
@@ -114,7 +114,6 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Small pickleball icon removed from here */}
           </div>
         </div>
       </section>
@@ -193,7 +192,6 @@ export default function HomePage() {
                   </p>
                 </AnimatedSection>
               </div>
-              {/* Small pickleball icon removed */}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -325,7 +323,6 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-               {/* Small pickleball icon removed */}
               <div className="md:col-span-7 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromRight">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>

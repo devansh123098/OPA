@@ -11,6 +11,7 @@ export default function CoachingPage() {
   return (
     <>
       <section className="relative py-16 md:py-20 overflow-hidden bg-black">
+        {/* Background Image Removed */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
             <div className="md:col-span-12 text-center md:text-left">
@@ -36,8 +37,7 @@ export default function CoachingPage() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground text-lg">
-                Information about our coaching pathways, certification prerequisites, fees, syllabus, and application process will be detailed here soon.
-                We are dedicated to fostering high-quality coaching talent in Odisha.
+                At Odisha Pickleball Association, we believe that great coaches build great athletes. Our Coaching Certification Pathway is designed to equip aspiring and experienced coaches in Odisha with the knowledge, skills, and values required to succeed at all levels of sport from grassroots to elite performance. Whether you're just starting out or looking to take your coaching to the next level, our structured program offers clear progression and support every step of the way.
               </p>
               <div className="mt-6 flex justify-center">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">

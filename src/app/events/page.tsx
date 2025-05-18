@@ -16,9 +16,9 @@ export default function EventsPage() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="/bgintop.jpg"
+            src="/board.jpeg"
             alt="Odisha Pickleball Events"
-            data-ai-hint="sports event crowd"
+            data-ai-hint="pickleball action"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-100"
@@ -59,6 +59,13 @@ export default function EventsPage() {
             <p className="text-center text-muted-foreground text-lg">
               No upcoming events scheduled at the moment. Please check back soon!
             </p>
+            <div
+              className="absolute top-0 left-[-150%] w-[50%] h-full
+                         bg-gradient-to-r from-transparent via-white/10 to-transparent
+                         transform -skew-x-12
+                         transition-all duration-700 ease-out
+                         group-hover:left-[150%] group-hover:duration-500">
+            </div>
           </AnimatedSection>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -13,9 +13,9 @@ export default function RankingPage() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="/bgintop.jpg"
+            src="/board.jpeg"
             alt="Odisha Pickleball Ranking"
-            data-ai-hint="sports leaderboard chart"
+            data-ai-hint="pickleball action"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-100"

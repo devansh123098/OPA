@@ -77,8 +77,9 @@ export default function ContactUsPage() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="/bgintop.jpg"
+            src="/board.jpeg"
             alt="Contact Odisha Pickleball Association"
+            data-ai-hint="pickleball action"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-100"

@@ -14,9 +14,9 @@ export default function BoardMembersPage() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="/bgintop.jpg" // Changed from placeholder to bgintop.jpg
+            src="/board.jpeg" 
             alt="Odisha Pickleball Association Board"
-            data-ai-hint="team leadership"
+            data-ai-hint="pickleball action"
             fill
             style={{ objectFit: 'cover' }}
             className="opacity-100"

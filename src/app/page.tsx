@@ -48,8 +48,8 @@ export default function HomePage() {
       id: 'news1',
       title: 'The Indian Pickleball Association (IPA) - now officially recognised by the Ministry of Youth Affairs and Sports, Government of India',
       description: 'With systematic and painstaking groundwork laid by the members in IPA and a fast-growing community behind it, IPA is ready to drive the next chapter: building a nationwide ecosystem of access, excellence, and opportunity.',
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'pickleball tournament trophy',
+      image: '/news1.webp', // Updated image
+      imageHint: 'IPA recognition sports ministry', // Updated hint
       href: 'https://www.timesnownews.com/sports/pickleball/ipa-to-lead-national-expansion-and-global-strategy-article-151547725',
     },
     {

@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -103,15 +104,13 @@ export default function ContactUsPage() {
         <AnimatedSection delay={100} animationClass="animate-slideInFromLeft">
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Association Office</CardTitle>
+              <CardTitle className="text-2xl text-foreground">Office</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex items-center gap-3 mb-3">
-                <MapPin className="h-6 w-6 text-primary" />
+              <div className="flex items-start gap-3 mb-3"> {/* Changed items-center to items-start for multiline address */}
+                <MapPin className="h-6 w-6 text-primary mt-1" /> {/* Added mt-1 for better alignment */}
                 <p className="text-muted-foreground">
-                  Odisha Pickleball Association<br />
-                  C/O State Olympic Association Office<br />
-                  Near Kalinga Stadium, Nayapalli<br />
+                  Kalinga Stadium,<br />
                   Bhubaneswar, Odisha - 751012
                 </p>
               </div>

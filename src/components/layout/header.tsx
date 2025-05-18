@@ -20,80 +20,41 @@ const Header = () => {
     setMounted(true);
   }, []);
 
-  const isHomePage = pathname === '/';
+  // const isHomePage = pathname === '/'; // No longer needed for desktop layout order
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md"> {/* Removed rounded-lg */}
+    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md"> {/* Removed rounded-lg from previous step if it was there */}
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
-        {isHomePage ? (
-          <>
-            {/* Desktop Navigation (Left on Homepage) */}
-            <nav className="hidden md:flex items-center space-x-1">
-              {NAV_LINKS.map((link) => (
-                <Button
-                  key={link.href}
-                  variant="ghost"
-                  asChild
-                  className={cn(
-                    "text-sm font-medium transition-colors",
-                    mounted && pathname === link.href 
-                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
-                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                  )}
-                >
-                  <Link href={link.href}>{link.label}</Link>
-                </Button>
-              ))}
-            </nav>
+        {/* Desktop Logo (Always Left) */}
+        <Link href="/" className="hidden md:flex items-center" onClick={() => setIsSheetOpen(false)}>
+          <Image 
+            src="/logo.png" 
+            alt="Odisha Pickleball Association Logo" 
+            width={365} 
+            height={80} 
+            className="object-contain" 
+            priority 
+          />
+        </Link>
 
-            {/* Logo (Right on Homepage) */}
-            <div className="hidden md:flex">
-              <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
-                <Image 
-                  src="/logo.png" 
-                  alt="Odisha Pickleball Association Logo" 
-                  width={365} 
-                  height={80} 
-                  className="object-contain" 
-                  priority 
-                />
-              </Link>
-            </div>
-          </>
-        ) : (
-          <>
-            {/* Logo (Left on Other Pages) */}
-            <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
-              <Image 
-                src="/logo.png" 
-                alt="Odisha Pickleball Association Logo" 
-                width={365} 
-                height={80} 
-                className="object-contain" 
-                priority 
-              />
-            </Link>
-
-            {/* Desktop Navigation (Right on Other Pages) */}
-            <nav className="hidden md:flex items-center space-x-1">
-              {NAV_LINKS.map((link) => (
-                <Button
-                  key={link.href}
-                  variant="ghost"
-                  asChild
-                  className={cn(
-                    "text-sm font-medium transition-colors",
-                    mounted && pathname === link.href 
-                      ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
-                      : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                  )}
-                >
-                  <Link href={link.href}>{link.label}</Link>
-                </Button>
-              ))}
-            </nav>
-          </>
-        )}
+        {/* Desktop Navigation (Always Right) */}
+        <nav className="hidden md:flex items-center space-x-1">
+          {NAV_LINKS.map((link) => (
+            <Button
+              key={link.href}
+              variant="ghost"
+              asChild
+              className={cn(
+                "text-sm font-medium transition-colors",
+                mounted && pathname === link.href 
+                  ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold" 
+                  : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+              )}
+            >
+              <Link href={link.href}>{link.label}</Link>
+            </Button>
+          ))}
+        </nav>
 
         {/* Mobile Navigation Trigger */}
          <div className="md:hidden">

@@ -4,7 +4,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react'; // Added Newspaper
+import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react';
+import PageWrapper from '@/components/layout/page-wrapper';
+
 
 export default function HomePage() {
   const initiatives = [
@@ -76,8 +78,9 @@ export default function HomePage() {
         <AnimatedSection animationClass="animate-fadeIn" delay={100}>
           <div className="absolute inset-0">
             <Image
-              src="/playing.JPG"
+              src="/mainimage.JPG"
               alt="Pickleball action background"
+              data-ai-hint="pickleball game"
               fill
               style={{ objectFit: 'cover' }}
               className="" 
@@ -87,7 +90,7 @@ export default function HomePage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center"> {/* Changed from md:col-span-7 lg:col-span-7 */}
+            <div className="md:col-span-12 text-center"> 
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                   Welcome to Odisha Pickleball Association
@@ -111,23 +114,22 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
-            {/* Removed the small pickleball ball image section */}
           </div>
         </div>
       </section>
 
-      <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-        <section className="py-16 bg-primary/20 relative">
-          <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
-            <Image
-              src="/konark.png"
-              alt="Spinning Konark Wheel"
-              width={150}
-              height={150}
-              className="animate-spin-slow object-contain"
-            />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-primary/20 relative">
+        <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
+          <Image
+            src="/konark.png"
+            alt="Spinning Konark Wheel"
+            width={150}
+            height={150}
+            className="animate-spin-slow object-contain"
+          />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animationClass="animate-zoomIn" delay={300}>
             <div>
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
@@ -174,15 +176,15 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-      </AnimatedSection>
-
-      <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67] relative"> 
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </AnimatedSection>
+        </div>
+      </section>
+      
+      <section className="py-16 bg-[#4B5D67]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animationClass="animate-fadeIn">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> {/* Changed to col-span-12 */}
+              <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
@@ -190,7 +192,6 @@ export default function HomePage() {
                   </p>
                 </AnimatedSection>
               </div>
-               {/* Removed the small pickleball ball image section */}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -234,12 +235,11 @@ export default function HomePage() {
                 </AnimatedSection>
               ))}
             </div>
-          </div>
-        </section>
-      </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </section>
       
-      <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
-        <section className="py-16 bg-secondary/30 relative"> 
+      <section className="py-16 bg-secondary/30 relative"> 
           <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
               src="/konark.png"
@@ -249,7 +249,8 @@ export default function HomePage() {
               className="animate-spin-slow object-contain"
             />
           </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
             <AnimatedSection animationClass="animate-fadeInDown">
               <h2 className="text-3xl font-bold text-foreground mb-12">Latest News</h2>
             </AnimatedSection>
@@ -289,13 +290,13 @@ export default function HomePage() {
                 </AnimatedSection>
               ))}
             </div>
-          </div>
-        </section>
-      </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </section>
 
-      <AnimatedSection delay={100} animationClass="animate-zoomIn">
-        <section className="py-16 text-center bg-accent/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 text-center bg-accent/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection delay={100} animationClass="animate-zoomIn">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Become a part of the fastest-growing sports community in Odisha. Connect with fellow players, participate in events, and help grow the sport.
@@ -305,15 +306,15 @@ export default function HomePage() {
                 Get Involved <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </div>
-        </section>
-      </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </section>
 
-      <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
-        <section className="py-16 bg-secondary/50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-secondary/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-12 text-center md:text-left"> {/* Changed to col-span-12 */}
+              <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
@@ -328,11 +329,10 @@ export default function HomePage() {
                   </div>
                 </AnimatedSection>
               </div>
-              {/* Removed the small pickleball ball image section */}
             </div>
-          </div>
-        </section>
-      </AnimatedSection>
+          </AnimatedSection>
+        </div>
+      </section>
     </AnimatedSection>
   );
 }

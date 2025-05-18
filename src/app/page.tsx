@@ -64,8 +64,8 @@ export default function HomePage() {
       id: 'news3',
       title: 'JKPA gets IPA affiliation, gains national recognition',
       description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'pickleball players group',
+      image: 'https://www.kashmirnewsobserver.com/userfiles/image/s_638817728915951067_JKPA_gets.jpg',
+      imageHint: 'JKPA IPA affiliation',
       href: '#', 
     },
   ];
@@ -120,6 +120,7 @@ export default function HomePage() {
 
       {/* Key Highlights Section - Full Width Background */}
        <section className="py-16 bg-primary/20 relative">
+          <AnimatedSection animationClass="animate-zoomIn" delay={300}>
           <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
               src="/konarkandball.png"
@@ -130,7 +131,7 @@ export default function HomePage() {
             />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection animationClass="animate-zoomIn" delay={300}>
+            
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
                   <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
@@ -175,8 +176,9 @@ export default function HomePage() {
                   </AnimatedSection>
                 ))}
               </div>
-            </AnimatedSection>
+            
           </div>
+          </AnimatedSection>
         </section>
       
       {/* Discover Our Initiatives Section - Full Width Background */}

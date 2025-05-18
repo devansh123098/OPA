@@ -2,10 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-// PageWrapper is not used for full-width sections directly on homepage
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react'; // Added Palette, Brain, Dumbbell, Newspaper
+import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react';
 
 export default function HomePage() {
   const initiatives = [
@@ -20,7 +19,7 @@ export default function HomePage() {
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
-      icon: Brain, // Changed from Lightbulb
+      icon: Brain,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'children playing sports',
       href: '/coaching',
@@ -28,7 +27,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell, // Changed from Zap
+      icon: Dumbbell,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'sports coaching',
       href: '/coaching',
@@ -36,18 +35,45 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Palette, // Changed from Users
+      icon: Palette,
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
     },
   ];
 
+  const newsItems = [
+    {
+      id: 'news1',
+      title: 'State Championship Dates Announced!',
+      description: 'Mark your calendars for the biggest pickleball event in Odisha this year. Details inside.',
+      image: 'https://placehold.co/500x300.png',
+      imageHint: 'pickleball tournament trophy',
+      href: '/events',
+    },
+    {
+      id: 'news2',
+      title: 'New Coaching Programs Launched',
+      description: 'Whether you are a beginner or an advanced player, find the right coaching for you.',
+      image: 'https://placehold.co/500x300.png',
+      imageHint: 'pickleball coaching session',
+      href: '/coaching',
+    },
+    {
+      id: 'news3',
+      title: 'OPA Community Day Success!',
+      description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
+      image: 'https://placehold.co/500x300.png',
+      imageHint: 'pickleball players group',
+      href: '#',
+    },
+  ];
+
+
   return (
     <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
-      {/* Hero Section - Full Width Background */}
-      <AnimatedSection animationClass="animate-fadeIn" delay={100}>
-        <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <AnimatedSection animationClass="animate-fadeIn" delay={100}>
           <div className="absolute inset-0">
             <Image
               src="/playing.JPG"
@@ -58,41 +84,39 @@ export default function HomePage() {
               priority
             />
           </div>
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-12 text-center"> {/* Changed to full width for hero text */}
-                <AnimatedSection animationClass="animate-fadeInUp">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                    Welcome to Odisha Pickleball Association
-                  </h1>
-                  <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
-                    Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
-                  </p>
-                </AnimatedSection>
-                <AnimatedSection delay={400} animationClass="animate-fadeInUp">
-                  <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                      <Link href="/contact-us">
-                        Join OPA <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
-                    </Button>
-                    <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                      <Link href="/events">
-                        Upcoming Events
-                      </Link>
-                    </Button>
-                  </div>
-                </AnimatedSection>
-              </div>
+        </AnimatedSection>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+            <div className="md:col-span-12 text-center">
+              <AnimatedSection animationClass="animate-fadeInUp">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                  Welcome to Odisha Pickleball Association
+                </h1>
+                <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
+                  Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={400} animationClass="animate-fadeInUp">
+                <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                  <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    <Link href="/contact-us">
+                      Join OPA <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="text-white border-white bg-transparent hover:bg-accent hover:text-accent-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    <Link href="/events">
+                      Upcoming Events
+                    </Link>
+                  </Button>
+                </div>
+              </AnimatedSection>
             </div>
           </div>
-        </section>
-      </AnimatedSection>
+        </div>
+      </section>
 
-      {/* Key Highlights Section - Full Width Background */}
       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-        <section className="py-16 bg-primary/20 relative"> {/* Added relative */}
-          {/* Konark Image - moved and classes changed */}
+        <section className="py-16 bg-primary/20 relative">
           <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
               src="/konark.png"
@@ -102,9 +126,8 @@ export default function HomePage() {
               className="animate-spin-slow object-contain"
             />
           </div>
-          {/* Main content container */}
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div> {/* Removed flex-grow from this div */}
+            <div>
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
                   <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
@@ -123,7 +146,7 @@ export default function HomePage() {
                   { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Dumbbell, href: '/coaching' },
                 ].map((item, index) => (
                   <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
-                    <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group">
+                    <Card className="h-full group relative overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col bg-card">
                       <CardHeader className="items-center text-center">
                         <div className="p-3 rounded-full bg-primary/10 text-primary mb-3 inline-block">
                           <item.icon className="h-8 w-8" />
@@ -138,6 +161,13 @@ export default function HomePage() {
                           <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                         </Button>
                       </CardFooter>
+                      <div
+                        className="absolute top-0 left-[-150%] w-[50%] h-full
+                                   bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                   transform -skew-x-12
+                                   transition-all duration-700 ease-out
+                                   group-hover:left-[150%] group-hover:duration-500">
+                      </div>
                     </Card>
                   </AnimatedSection>
                 ))}
@@ -147,19 +177,18 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
-      {/* Discover Our Initiatives - Full Width Background */}
-       <AnimatedSection animationClass="animate-fadeIn" delay={300}>
-        <section className="py-16 bg-[#4B5D67]"> {/* Keep this specific background color */}
+      <AnimatedSection animationClass="animate-fadeIn" delay={300}>
+        <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
-                  <Image
-                    src="/pickleball ball .webp"
-                    alt="Pickleball icon"
-                    width={150}
-                    height={150}
-                    className="animate-float object-contain mx-auto"
-                  />
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Pickleball icon"
+                  width={150}
+                  height={150}
+                  className="animate-float object-contain mx-auto"
+                />
               </AnimatedSection>
               <div className="md:col-span-9 lg:col-span-9 text-center md:text-left">
                 <AnimatedSection animationClass="animate-fadeInUp">
@@ -174,7 +203,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {initiatives.map((item, index) => (
                 <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-scaleFadeInUp">
-                  <Card className="h-full hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card overflow-hidden group relative hover:scale-105">
+                  <Card className="h-full group relative overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col bg-card">
                     <div className="relative h-48 w-full">
                       <Image
                         src={item.image}
@@ -188,7 +217,7 @@ export default function HomePage() {
                     <CardHeader>
                       <div className="flex items-center mb-2">
                         <div className="p-2 rounded-full bg-accent/10 text-accent mr-3">
-                           <item.icon className="h-5 w-5" />
+                          <item.icon className="h-5 w-5" />
                         </div>
                         <CardTitle className="text-xl">{item.title}</CardTitle>
                       </div>
@@ -215,11 +244,57 @@ export default function HomePage() {
           </div>
         </section>
       </AnimatedSection>
+      
+      <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
+        <section className="py-16 bg-secondary/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <AnimatedSection animationClass="animate-fadeInDown">
+              <h2 className="text-3xl font-bold text-foreground mb-12">Latest News</h2>
+            </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newsItems.map((news, index) => (
+                <AnimatedSection key={news.id} delay={index * 100 + 100} animationClass="animate-scaleFadeInUp">
+                  <Card className="h-full flex flex-col overflow-hidden shadow-lg group relative hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
+                    <div className="relative h-56 w-full">
+                      <Image
+                        src={news.image}
+                        alt={news.title}
+                        data-ai-hint={news.imageHint}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        className="transition-transform duration-300"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-xl text-foreground">{news.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-muted-foreground text-sm">{news.description}</p>
+                    </CardContent>
+                    <CardFooter>
+                      <Button variant="outline" asChild className="hover:bg-primary/10 hover:text-primary text-foreground w-full">
+                        <Link href={news.href}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                      </Button>
+                    </CardFooter>
+                     <div
+                      className="absolute top-0 left-[-150%] w-[50%] h-full
+                                 bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                 transform -skew-x-12
+                                 transition-all duration-700 ease-out
+                                 group-hover:left-[150%] group-hover:duration-500">
+                    </div>
+                  </Card>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
-      {/* Join Our Community Section - Full Width */}
+
       <AnimatedSection delay={100} animationClass="animate-zoomIn">
         <section className="py-16 text-center bg-accent/20">
-         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
               Become a part of the fastest-growing sports community in Odisha. Connect with fellow players, participate in events, and help grow the sport.
@@ -233,36 +308,35 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
-      {/* About Pickleball Teaser Section - Full Width */}
       <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
+            <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
               <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
-                  <AnimatedSection animationClass="animate-slideInFromLeft">
+                <AnimatedSection animationClass="animate-slideInFromLeft">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
-                      New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
+                    New to the sport? Discover the history, rules, and why pickleball is captivating players of all ages and skill levels.
                   </p>
                   <div className="mt-6">
-                      <Button asChild variant="outline" className="hover:bg-primary/10 hover:text-primary text-foreground">
+                    <Button asChild variant="outline" className="hover:bg-primary/10 hover:text-primary text-foreground">
                       <Link href="/about-pickleball">
-                          Read More <ArrowRight className="ml-2 h-4 w-4" />
+                        Read More <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
-                      </Button>
+                    </Button>
                   </div>
-                  </AnimatedSection>
+                </AnimatedSection>
               </div>
               <AnimatedSection animationClass="animate-slideInFromRight" delay={100} className="md:col-span-5 lg:col-span-5 mt-10 md:mt-0 flex justify-center">
-                  <Image
-                      src="/pickleball ball .webp"
-                      alt="Pickleball ball and paddle"
-                      width={150}
-                      height={150}
-                      className="rounded-lg object-contain animate-float"
-                  />
+                <Image
+                  src="/pickleball ball .webp"
+                  alt="Pickleball ball and paddle"
+                  width={150}
+                  height={150}
+                  className="rounded-lg object-contain animate-float"
+                />
               </AnimatedSection>
-              </div>
+            </div>
           </div>
         </section>
       </AnimatedSection>

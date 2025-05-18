@@ -16,7 +16,7 @@ export default function EventsPage() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <AnimatedSection animationClass="animate-fadeIn">
           <Image
-            src="/bgintop.jpg" 
+            src="/bgintop.jpg"
             alt="Odisha Pickleball Events"
             data-ai-hint="sports event crowd"
             fill
@@ -64,7 +64,7 @@ export default function EventsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
               <AnimatedSection key={event.id} delay={index * 100} animationClass="animate-fadeInUp">
-                <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                <Card className="h-full flex flex-col group relative overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
                   <div className="relative h-56 w-full">
                     <Image
                       src={event.image}
@@ -72,7 +72,7 @@ export default function EventsPage() {
                       data-ai-hint={event.imageHint}
                       fill
                       style={{ objectFit: 'cover' }}
-                      className="transition-transform duration-300 group-hover:scale-105"
+                      className="transition-transform duration-300"
                     />
                   </div>
                   <CardHeader>
@@ -106,6 +106,13 @@ export default function EventsPage() {
                       <Button variant="outline" disabled className="w-full">Registration Closed/Details Soon</Button>
                     )}
                   </CardFooter>
+                  <div
+                    className="absolute top-0 left-[-150%] w-[50%] h-full
+                               bg-gradient-to-r from-transparent via-white/10 to-transparent
+                               transform -skew-x-12
+                               transition-all duration-700 ease-out
+                               group-hover:left-[150%] group-hover:duration-500">
+                  </div>
                 </Card>
               </AnimatedSection>
             ))}
@@ -113,10 +120,10 @@ export default function EventsPage() {
         )}
         <AnimatedSection delay={300} animationClass="animate-fadeInUp">
           <div className="mt-12 p-6 bg-secondary/20 rounded-lg">
-              <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Event Features Coming Soon!</h2>
-              <p className="text-center text-muted-foreground">
-                  We're working on a filterable calendar, list view for upcoming events, and a carousel for past event photos and winners. Stay tuned!
-              </p>
+            <h2 className="text-2xl font-semibold text-center text-foreground mb-4">More Event Features Coming Soon!</h2>
+            <p className="text-center text-muted-foreground">
+              We're working on a filterable calendar, list view for upcoming events, and a carousel for past event photos and winners. Stay tuned!
+            </p>
           </div>
         </AnimatedSection>
       </PageWrapper>

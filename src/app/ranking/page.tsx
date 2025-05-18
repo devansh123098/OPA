@@ -23,7 +23,7 @@ export default function RankingPage() {
           />
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
+          <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
             <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl font-bold tracking-tight text-white">
@@ -52,7 +52,7 @@ export default function RankingPage() {
 
       <PageWrapper>
         <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-          <Card className="shadow-lg">
+          <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
             <CardHeader className="flex flex-row items-center gap-3">
               <BarChartHorizontal className="h-8 w-8 text-primary" />
               <CardTitle className="text-2xl">Live Leaderboards Coming Soon!</CardTitle>
@@ -83,6 +83,13 @@ export default function RankingPage() {
                 />
               </div>
             </CardContent>
+            <div
+              className="absolute top-0 left-[-150%] w-[50%] h-full
+                         bg-gradient-to-r from-transparent via-white/10 to-transparent
+                         transform -skew-x-12
+                         transition-all duration-700 ease-out
+                         group-hover:left-[150%] group-hover:duration-500">
+            </div>
           </Card>
         </AnimatedSection>
       </PageWrapper>

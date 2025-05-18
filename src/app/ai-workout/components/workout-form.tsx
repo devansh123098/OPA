@@ -1,3 +1,4 @@
+
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -79,7 +80,7 @@ export function WorkoutForm() {
   return (
     <div className="space-y-10">
       <AnimatedSection animationClass="animate-fadeInUp">
-        <Card className="shadow-xl">
+        <Card className="shadow-xl group relative overflow-hidden hover:scale-105 transition-all duration-300">
           <CardHeader>
             <CardTitle className="text-2xl text-foreground flex items-center">
               <Wand2 className="h-7 w-7 mr-3 text-primary" />
@@ -166,12 +167,19 @@ export function WorkoutForm() {
               </form>
             </Form>
           </CardContent>
+          <div
+            className="absolute top-0 left-[-150%] w-[50%] h-full
+                       bg-gradient-to-r from-transparent via-white/10 to-transparent
+                       transform -skew-x-12
+                       transition-all duration-700 ease-out
+                       group-hover:left-[150%] group-hover:duration-500">
+          </div>
         </Card>
       </AnimatedSection>
 
       {workoutPlan && (
         <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
-          <Card className="shadow-xl mt-10">
+          <Card className="shadow-xl mt-10 group relative overflow-hidden hover:scale-105 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">Your Custom Workout Plan</CardTitle>
             </CardHeader>
@@ -180,6 +188,13 @@ export function WorkoutForm() {
                 {workoutPlan.workoutRoutine}
               </div>
             </CardContent>
+            <div
+              className="absolute top-0 left-[-150%] w-[50%] h-full
+                         bg-gradient-to-r from-transparent via-white/10 to-transparent
+                         transform -skew-x-12
+                         transition-all duration-700 ease-out
+                         group-hover:left-[150%] group-hover:duration-500">
+            </div>
           </Card>
         </AnimatedSection>
       )}

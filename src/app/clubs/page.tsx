@@ -57,7 +57,7 @@ export default function ClubsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {clubs.map((club, index) => (
                 <AnimatedSection key={club.id} delay={index * 100} animationClass="animate-fadeInUp">
-                  <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                  <Card className="h-full flex flex-col group relative overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
                     <div className="relative h-48 w-full">
                       <Image
                         src={club.image}
@@ -100,13 +100,20 @@ export default function ClubsPage() {
                         </div>
                       )}
                     </CardContent>
+                    <div
+                      className="absolute top-0 left-[-150%] w-[50%] h-full
+                                 bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                 transform -skew-x-12
+                                 transition-all duration-700 ease-out
+                                 group-hover:left-[150%] group-hover:duration-500">
+                    </div>
                   </Card>
                 </AnimatedSection>
               ))}
             </div>
           )}
         </TabsContent>
-        
+
         <TabsContent value="coaches">
            {coaches.length === 0 ? (
             <AnimatedSection>
@@ -118,7 +125,7 @@ export default function ClubsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {coaches.map((coach, index) => (
                 <AnimatedSection key={coach.id} delay={index * 100} animationClass="animate-fadeInUp">
-                  <Card className="h-full flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                  <Card className="h-full flex flex-col group relative overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
                      <div className="relative h-48 w-full">
                       <Image
                         src={coach.image}
@@ -157,6 +164,13 @@ export default function ClubsPage() {
                         </div>
                       )}
                     </CardContent>
+                    <div
+                      className="absolute top-0 left-[-150%] w-[50%] h-full
+                                 bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                 transform -skew-x-12
+                                 transition-all duration-700 ease-out
+                                 group-hover:left-[150%] group-hover:duration-500">
+                    </div>
                   </Card>
                 </AnimatedSection>
               ))}

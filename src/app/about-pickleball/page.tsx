@@ -41,7 +41,7 @@ export default function AboutPickleballPage() {
       <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-6">
           <AnimatedSection delay={100} animationClass="animate-fadeInUp">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-foreground">A Summer Invention</CardTitle>
               </CardHeader>
@@ -53,11 +53,18 @@ export default function AboutPickleballPage() {
                   The story goes that Pritchard and Bell returned to Pritchard's home one Saturday afternoon after a game of golf to find their families bored. Pritchard's property had an old badminton court, but they couldn't find a full set of badminton rackets. Improvising, they started hitting a Wiffle ball over the net with table tennis paddles.
                 </p>
               </CardContent>
+              <div
+                className="absolute top-0 left-[-150%] w-[50%] h-full
+                           bg-gradient-to-r from-transparent via-white/10 to-transparent
+                           transform -skew-x-12
+                           transition-all duration-700 ease-out
+                           group-hover:left-[150%] group-hover:duration-500">
+              </div>
             </Card>
           </AnimatedSection>
 
           <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-2xl text-foreground">Evolution of the Game</CardTitle>
               </CardHeader>
@@ -72,6 +79,13 @@ export default function AboutPickleballPage() {
                   The name "Pickleball" has a couple of origin stories. According to Joel Pritchard's wife, Joan, she started calling the game pickleball because "the combination of different sports reminded me of the pickle boat in crew where oarsmen were chosen from the leftovers of other boats." Another account is that the game was named after the Pritchards' family dog, Pickles, who would chase stray balls and run off with them. Both stories are popular, adding to the sport's quirky charm.
                 </p>
               </CardContent>
+              <div
+                className="absolute top-0 left-[-150%] w-[50%] h-full
+                           bg-gradient-to-r from-transparent via-white/10 to-transparent
+                           transform -skew-x-12
+                           transition-all duration-700 ease-out
+                           group-hover:left-[150%] group-hover:duration-500">
+              </div>
             </Card>
           </AnimatedSection>
         </div>
@@ -88,7 +102,7 @@ export default function AboutPickleballPage() {
             />
           </AnimatedSection>
           <AnimatedSection delay={250} animationClass="animate-slideInFromRight">
-            <Card className="shadow-lg bg-secondary/30">
+            <Card className="shadow-lg bg-secondary/30 group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl text-foreground">Key Milestones</CardTitle>
               </CardHeader>
@@ -102,6 +116,13 @@ export default function AboutPickleballPage() {
                   <li><strong>2010s-Present:</strong> Explosive growth across all demographics, becoming one of the fastest-growing sports in North America and spreading internationally.</li>
                 </ul>
               </CardContent>
+              <div
+                className="absolute top-0 left-[-150%] w-[50%] h-full
+                           bg-gradient-to-r from-transparent via-white/10 to-transparent
+                           transform -skew-x-12
+                           transition-all duration-700 ease-out
+                           group-hover:left-[150%] group-hover:duration-500">
+              </div>
             </Card>
           </AnimatedSection>
         </div>

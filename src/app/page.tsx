@@ -66,7 +66,7 @@ export default function HomePage() {
       description: 'Following the recognition, the IPA - announced that India will host the Pickleball Asia Cup 2025 later this year.',
       image: 'https://www.kashmirnewsobserver.com/userfiles/image/s_638817728915951067_JKPA_gets.jpg',
       imageHint: 'JKPA IPA affiliation',
-      href: '#', 
+      href: 'https://www.timesnownews.com/sports/pickleball/indian-pickleball-association-gets-official-recognition-from-sports-ministry-approval-as-the-national-federation-for-pickleball-in-india-article-151539176',
     },
   ];
 
@@ -90,7 +90,7 @@ export default function HomePage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
+            <div className="md:col-span-12 text-center md:text-left"> 
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                   Welcome to Odisha Pickleball Association
@@ -184,23 +184,12 @@ export default function HomePage() {
         <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
+              <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
                     Explore key features and programs offered by the Odisha Pickleball Association.
                   </p>
-                </AnimatedSection>
-              </div>
-              <div className="hidden md:flex md:col-span-5 lg:col-span-4 justify-center md:justify-end items-center">
-                <AnimatedSection animationClass="animate-slideInFromRight" delay={150}>
-                  <Image
-                    src="/pickleball ball .webp"
-                    alt="Pickleball"
-                    width={150}
-                    height={150}
-                    className="animate-float object-contain"
-                  />
                 </AnimatedSection>
               </div>
             </div>
@@ -334,7 +323,7 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
+              <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-slideInFromRight">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
@@ -347,17 +336,6 @@ export default function HomePage() {
                       </Link>
                     </Button>
                   </div>
-                </AnimatedSection>
-              </div>
-               <div className="hidden md:flex md:col-span-5 lg:col-span-4 justify-center md:justify-end items-center mt-8 md:mt-0">
-                <AnimatedSection animationClass="animate-slideInFromLeft" delay={150}>
-                  <Image
-                    src="/pickleball ball .webp"
-                    alt="Pickleball"
-                    width={150}
-                    height={150}
-                    className="animate-float object-contain"
-                  />
                 </AnimatedSection>
               </div>
             </div>

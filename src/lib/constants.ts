@@ -6,7 +6,7 @@ export const NAV_LINKS = [
   { href: '/events', label: 'Tournaments' },
   { href: '/coaching', label: 'Coaching' },
   { href: '/ranking', label: 'Ranking' },
-  { href: '/partners', label: 'Partners' }, // Added Partners link
+  { href: '/partners', label: 'Partners' },
   { href: '/contact-us', label: 'Contact Us' },
 ];
 
@@ -25,35 +25,36 @@ export interface Event {
 export const placeholderEvents: Event[] = [
   {
     id: '1',
-    title: 'Odisha State Open Pickleball Championship',
-    date: 'October 26-28, 2024',
-    time: '9:00 AM - 5:00 PM',
-    location: 'Kalinga Stadium, Bhubaneswar',
-    description: 'Join us for the biggest pickleball tournament in Odisha! Categories for all skill levels.',
+    title: 'COMING SOON!',
+    date: '',
+    time: '',
+    location: 'Details to be announced',
+    description: 'Stay tuned for more information on our exciting upcoming tournaments and events!',
     registrationLink: '#',
     image: '/comingsoon.webp',
-    imageHint: 'pickleball tournament'
+    imageHint: 'event coming soon'
   },
   {
     id: '2',
-    title: 'Beginner Pickleball Workshop',
-    date: 'November 12, 2024',
-    time: '10:00 AM - 1:00 PM',
-    location: 'Bhubaneswar Sports Complex',
-    description: 'Learn the basics of pickleball from certified coaches. Paddles and balls provided.',
+    title: 'COMING SOON!',
+    date: '',
+    time: '',
+    location: 'Details to be announced',
+    description: 'Keep an eye on this space for workshops and community pickleball activities.',
+    registrationLink: '#',
     image: '/comingsoon.webp',
-    imageHint: 'workshop event'
+    imageHint: 'workshop coming soon'
   },
   {
     id: '3',
-    title: 'Advanced Dinking Clinic',
-    date: 'December 3, 2024',
-    time: '2:00 PM - 4:00 PM',
-    location: 'Cuttack Indoor Stadium',
-    description: 'Sharpen your dinking skills and strategy with advanced drills and coaching.',
+    title: 'COMING SOON!',
+    date: '',
+    time: '',
+    location: 'Details to be announced',
+    description: 'More pickleball events are on the way. Check back for updates!',
     registrationLink: '#',
     image: '/comingsoon.webp',
-    imageHint: 'pickleball clinic'
+    imageHint: 'event announcement'
   },
 ];
 

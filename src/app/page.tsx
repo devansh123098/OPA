@@ -64,7 +64,7 @@ export default function HomePage() {
       id: 'news3',
       title: 'Indian Pickleball Association Receives Official Recognition From The Sports Ministry As The National Federation For Pickleball In India',
       description: 'Following the recognition, the IPA - announced that India will host the Pickleball Asia Cup 2025 later this year.',
-      image: '/news3.jpg',
+      image: '/newsthree.jpg',
       imageHint: 'news article image',
       href: 'https://www.timesnownews.com/sports/pickleball/indian-pickleball-association-gets-official-recognition-from-sports-ministry-approval-as-the-national-federation-for-pickleball-in-india-article-151539176',
     },
@@ -82,6 +82,7 @@ export default function HomePage() {
               alt="Pickleball action background"
               fill
               style={{ objectFit: 'cover' }}
+              className="opacity-100"
               priority
             />
           </div>
@@ -345,3 +346,4 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
+

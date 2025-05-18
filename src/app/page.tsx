@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react';
+import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper } from 'lucide-react'; // Added Newspaper
 
 export default function HomePage() {
   const initiatives = [
@@ -87,7 +87,7 @@ export default function HomePage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-12 text-center">
+            <div className="md:col-span-12 text-center"> {/* Changed from md:col-span-7 lg:col-span-7 */}
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                   Welcome to Odisha Pickleball Association
@@ -111,6 +111,7 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
+            {/* Removed the small pickleball ball image section */}
           </div>
         </div>
       </section>
@@ -181,16 +182,7 @@ export default function HomePage() {
         <section className="py-16 bg-[#4B5D67] relative"> 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <AnimatedSection animationClass="animate-slideInFromLeft" delay={200} className="hidden md:col-span-3 lg:col-span-3 md:flex justify-center items-center">
-                <Image
-                  src="/pickleball ball .webp"
-                  alt="Pickleball icon"
-                  width={150}
-                  height={150}
-                  className="animate-float object-contain mx-auto"
-                />
-              </AnimatedSection>
-              <div className="md:col-span-9 lg:col-span-9 text-center md:text-left">
+              <div className="md:col-span-12 text-center md:text-left"> {/* Changed to col-span-12 */}
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
@@ -198,6 +190,7 @@ export default function HomePage() {
                   </p>
                 </AnimatedSection>
               </div>
+               {/* Removed the small pickleball ball image section */}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -320,7 +313,7 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-              <div className="md:col-span-7 lg:col-span-7 text-center md:text-left">
+              <div className="md:col-span-12 text-center md:text-left"> {/* Changed to col-span-12 */}
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <h2 className="text-3xl font-bold text-foreground">Learn About Pickleball</h2>
                   <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0">
@@ -335,15 +328,7 @@ export default function HomePage() {
                   </div>
                 </AnimatedSection>
               </div>
-              <AnimatedSection animationClass="animate-slideInFromRight" delay={100} className="md:col-span-5 lg:col-span-5 mt-10 md:mt-0 flex justify-center">
-                <Image
-                  src="/pickleball ball .webp"
-                  alt="Pickleball ball and paddle"
-                  width={150}
-                  height={150}
-                  className="rounded-lg object-contain animate-float"
-                />
-              </AnimatedSection>
+              {/* Removed the small pickleball ball image section */}
             </div>
           </div>
         </section>

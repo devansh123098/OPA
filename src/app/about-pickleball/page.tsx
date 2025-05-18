@@ -10,7 +10,7 @@ export default function AboutPickleballPage() {
   return (
     <PageWrapper>
       <div className="mb-12 md:grid md:grid-cols-12 md:gap-8 md:items-center">
-        <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
+        <div className="md:col-span-12 text-center md:text-left"> {/* Adjusted to full width */}
           <AnimatedSection animationClass="animate-fadeInUp">
             <div className="flex justify-center md:justify-start items-center gap-4 mb-4">
               <PickleballIcon className="h-12 w-12 text-primary" />
@@ -24,18 +24,7 @@ export default function AboutPickleballPage() {
             </p>
           </AnimatedSection>
         </div>
-        <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
-          <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
-            <Image
-              src="/pickleball ball .webp"
-              alt="Pickleball icon"
-              width={150}
-              height={150}
-              className="animate-float object-contain mx-auto"
-              priority
-            />
-          </AnimatedSection>
-        </div>
+        {/* Removed small pickleball icon div */}
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8">

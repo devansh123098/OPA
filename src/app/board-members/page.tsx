@@ -25,7 +25,7 @@ export default function BoardMembersPage() {
         </AnimatedSection>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
-            <div className="md:col-span-8 lg:col-span-9 text-center md:text-left">
+            <div className="md:col-span-12 text-center md:text-left"> {/* Adjusted to full width */}
               <AnimatedSection animationClass="animate-fadeInUp">
                 <h1 className="text-4xl font-bold tracking-tight text-white">
                   Board Members
@@ -35,18 +35,7 @@ export default function BoardMembersPage() {
                 </p>
               </AnimatedSection>
             </div>
-            <div className="hidden md:block md:col-span-4 lg:col-span-3 mt-8 md:mt-0">
-              <AnimatedSection animationClass="animate-slideInFromRight" delay={200}>
-                <Image
-                  src="/pickleball ball .webp"
-                  alt="Pickleball icon"
-                  width={150}
-                  height={150}
-                  className="animate-float object-contain mx-auto"
-                  priority
-                />
-              </AnimatedSection>
-            </div>
+            {/* Removed small pickleball icon div */}
           </div>
         </div>
       </section>

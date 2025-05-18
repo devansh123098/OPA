@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Instagram, Mail, Phone } from 'lucide-react'; // Removed Facebook, Twitter, Youtube
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react'; // Added MapPin
 import Image from 'next/image';
 
 const Footer = () => {
@@ -8,6 +8,7 @@ const Footer = () => {
   const quickLinks = [
     { href: '/', label: 'Home' },
     { href: '/association-info', label: 'About Us' },
+    { href: '/board-members', label: 'Board Members' },
     { href: '/events', label: 'Tournaments' },
     { href: '/coaching', label: 'Coaching' },
     { href: '/ranking', label: 'Ranking' },
@@ -60,19 +61,20 @@ const Footer = () => {
             <h3 className="font-semibold text-white mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 text-gray-300">
-                <Mail className="h-4 w-4 text-primary" />
+                <Mail className="h-4 w-4 text-primary shrink-0" />
                 <a href="mailto:associationodishapickleball@gmail.com" className="text-gray-300 hover:text-primary transition-colors">
                   associationodishapickleball@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-gray-300">
-                <Phone className="h-4 w-4 text-primary" />
+                <Phone className="h-4 w-4 text-primary shrink-0" />
                 <span>+91 99370 23493</span>
               </li>
               <li className="flex items-start gap-2 text-gray-300">
-                <p>
+                <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" /> 
+                <span>
                   Kalinga Stadium, Bhubaneswar, Odisha
-                </p>
+                </span>
               </li>
             </ul>
           </div>

@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Lightbulb, Zap, Users, Brain, Dumbbell, Palette, Newspaper, Edit } from 'lucide-react';
-// PageWrapper import removed as it's not directly used here anymore after full-width sections
 
 export default function HomePage() {
   const initiatives = [
@@ -62,7 +61,7 @@ export default function HomePage() {
     },
     {
       id: 'news3',
-      title: 'JKPA gets IPA affiliation, gains national recognition',
+      title: 'Indian Pickleball Association Receives Official Recognition From The Sports Ministry As The National Federation For Pickleball In India',
       description: 'Recap of our recent community day full of fun, games, and pickleball camaraderie.',
       image: 'https://www.kashmirnewsobserver.com/userfiles/image/s_638817728915951067_JKPA_gets.jpg',
       imageHint: 'JKPA IPA affiliation',
@@ -114,13 +113,13 @@ export default function HomePage() {
                 </div>
               </AnimatedSection>
             </div>
+            {/* Small pickleball icon div removed */}
           </div>
         </div>
       </section>
 
       {/* Key Highlights Section - Full Width Background */}
        <section className="py-16 bg-primary/20 relative">
-          <AnimatedSection animationClass="animate-zoomIn" delay={300}>
           <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
             <Image
               src="/konarkandball.png"
@@ -131,7 +130,7 @@ export default function HomePage() {
             />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            
+            <AnimatedSection animationClass="animate-zoomIn" delay={300}>
               <div className="text-center mb-12">
                 <AnimatedSection animationClass="animate-fadeInDown">
                   <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
@@ -176,9 +175,8 @@ export default function HomePage() {
                   </AnimatedSection>
                 ))}
               </div>
-            
+            </AnimatedSection>
           </div>
-          </AnimatedSection>
         </section>
       
       {/* Discover Our Initiatives Section - Full Width Background */}
@@ -186,7 +184,7 @@ export default function HomePage() {
          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection animationClass="animate-fadeIn">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
-              <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
+              <div className="md:col-span-12 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
                   <h2 className="text-3xl font-bold text-white">Discover Our Initiatives</h2>
                   <p className="mt-3 text-lg text-gray-200 max-w-2xl mx-auto md:mx-0">
@@ -194,6 +192,7 @@ export default function HomePage() {
                   </p>
                 </AnimatedSection>
               </div>
+              {/* Small pickleball icon div removed */}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -340,6 +339,7 @@ export default function HomePage() {
                   </div>
                 </AnimatedSection>
               </div>
+              {/* Small pickleball icon div removed */}
             </div>
           </div>
         </section>
@@ -347,5 +347,3 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
-
-    

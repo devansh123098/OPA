@@ -66,7 +66,7 @@ export default function RankingPage() {
               </p>
               <div className="mt-6 flex justify-center">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="#">
+                  <Link href="https://rankings.pwr.global/" target="_blank" rel="noopener noreferrer">
                     <Search className="mr-2 h-5 w-5" />
                     See your Rankings
                   </Link>

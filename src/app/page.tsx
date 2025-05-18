@@ -113,8 +113,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Key Highlights Section - Full Width Background */}
-       <AnimatedSection animationClass="animate-zoomIn" delay={300}>
-        <section className="py-16 bg-primary/20 relative">
+       <section className="py-16 bg-primary/20 relative">
             <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
               <Image
                 src="/konarkandball.png"
@@ -169,12 +168,10 @@ export default function HomePage() {
               </div>
             </div>
           </section>
-        </AnimatedSection>
       
       {/* Discover Our Initiatives Section - Full Width Background */}
-      <AnimatedSection animationClass="animate-fadeIn">
-        <section className="py-16 bg-[#4B5D67]">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-[#4B5D67]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
               <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
                 <AnimatedSection animationClass="animate-fadeInUp">
@@ -229,7 +226,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      </AnimatedSection>
       
       {/* Latest News Section - Full Width Background */}
       <section className="py-16 bg-secondary/30 relative"> 
@@ -333,9 +329,9 @@ export default function HomePage() {
               <div className="md:col-span-5 lg:col-span-4 mt-8 md:mt-0">
                 <AnimatedSection animationClass="animate-slideInFromLeft">
                   <Image
-                    src="/pickleballball.webp"
-                    alt="Pickleball ball and paddle"
-                    data-ai-hint="pickleball equipment"
+                    src="/pickleballball .webp"
+                    alt="Pickleball ball"
+                    data-ai-hint="pickleball ball"
                     width={500}
                     height={500}
                     className="rounded-lg shadow-xl mx-auto object-cover aspect-square"

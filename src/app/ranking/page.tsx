@@ -42,13 +42,16 @@ export default function RankingPage() {
                 A &quot;How ranking works&quot; section linking to our policy PDF will also be available.
                 Please check back soon!
               </p>
+              <p className="text-muted-foreground text-lg mt-4">
+                Want to see your name on the leaderboard? Participate in OPA-approved tournaments and register with our ranking system.
+              </p>
               <div className="mt-8 mb-8 flex justify-center">
                 <Image
                   src="/pwr.jpeg"
                   alt="PWR - Pickleball World Rankings"
                   data-ai-hint="rankings logo"
-                  width={200} // Changed from 600
-                  height={200} // Changed from 300
+                  width={200} 
+                  height={200} 
                   className="rounded-lg shadow-md object-contain mx-auto" 
                 />
               </div>

@@ -41,8 +41,8 @@ export default function RankingPage() {
               </p>
               <div className="mt-8 mb-8 flex justify-center">
                 <Image
-                  src="/pwr.jpeg"
-                  alt="PWR - Pickleball World Rankings"
+                  src="/pwrlogo.png" 
+                  alt="PWR Logo" 
                   data-ai-hint="rankings logo"
                   width={200} 
                   height={200} 
@@ -71,4 +71,3 @@ export default function RankingPage() {
     </>
   );
 }
-

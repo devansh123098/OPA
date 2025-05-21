@@ -19,7 +19,7 @@ const fontMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: 'Odisha Pickleball Association',
   description: 'Official website of the Odisha Pickleball Association.',
-  icons: null, // Explicitly set to null to avoid processing potentially corrupted src/app/icon.png
+  // icons: null, // Removed to allow Next.js to use file-based metadata (e.g., src/app/icon.png)
 };
 
 export default function RootLayout({

@@ -5,6 +5,7 @@ import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
+// Icon import removed if we are relying on public/favicon.ico
 
 const fontSans = Inter({
   subsets: ['latin'],
@@ -19,7 +20,9 @@ const fontMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: 'Odisha Pickleball Association',
   description: 'Official website of the Odisha Pickleball Association.',
-  // icons: null, // Removed to allow Next.js to use file-based metadata (e.g., src/app/icon.png)
+  icons: {
+    icon: '/favicon.ico', // Explicitly point to favicon.ico in the public folder
+  },
 };
 
 export default function RootLayout({

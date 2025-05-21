@@ -1,26 +1,26 @@
 
 import type { Metadata } from 'next';
-import { Inter, Roboto_Mono } from 'next/font/google'; // Changed from Geist_Sans, Geist_Mono
+import { Inter, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
-const fontSans = Inter({ // Changed to Inter
+const fontSans = Inter({
   subsets: ['latin'],
-  variable: '--font-sans', // Set to --font-sans
+  variable: '--font-sans',
 });
 
-const fontMono = Roboto_Mono({ // Changed to Roboto_Mono
+const fontMono = Roboto_Mono({
   subsets: ['latin'],
-  variable: '--font-mono', // Set to --font-mono
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
   title: 'Odisha Pickleball Association',
   description: 'Official website of the Odisha Pickleball Association.',
   icons: {
-    icon: '/opalogo.png', // Updated to use opalogo.png from public folder
+    icon: [{ url: '/opalogo.png', type: 'image/png' }], // Updated to be more explicit
   },
 };
 

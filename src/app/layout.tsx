@@ -19,6 +19,9 @@ const fontMono = Roboto_Mono({ // Changed to Roboto_Mono
 export const metadata: Metadata = {
   title: 'Odisha Pickleball Association',
   description: 'Official website of the Odisha Pickleball Association.',
+  icons: {
+    icon: '/favicon.ico', // Tells browsers to look for favicon.ico in the public folder
+  },
 };
 
 export default function RootLayout({

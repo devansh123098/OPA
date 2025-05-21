@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: 'Odisha Pickleball Association',
   description: 'Official website of the Odisha Pickleball Association.',
   icons: {
-    icon: [{ url: '/opalogo.png', type: 'image/png' }], // Updated to be more explicit
+    icon: [{ url: '/favicon.ico', type: 'image/png', sizes: 'any' }], // Changed to favicon.ico, kept type as png assuming original is png
   },
 };
 

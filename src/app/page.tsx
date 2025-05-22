@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Users, Dumbbell, BarChartHorizontal, Zap } from 'lucide-react';
+import { ArrowRight, Lightbulb, Users, BarChartHorizontal, Zap } from 'lucide-react';
 
 export default function HomePage() {
   const keyHighlights = [
@@ -20,32 +20,32 @@ export default function HomePage() {
       title: 'Community Leagues',
       description: 'Join local leagues and compete with players of all skill levels. Fun and competitive play guaranteed.',
       icon: Users,
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'community league', // Updated hint
+      image: '/cd1.jpg', // Updated image
+      imageHint: 'community league cd1', 
       href: '/events',
     },
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
       icon: Lightbulb,
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'youth sports', // Updated hint
+      image: '/cd2.jpg', // Updated image
+      imageHint: 'youth sports cd2',
       href: '/coaching',
     },
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
       icon: Dumbbell,
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'coaching clinic', // Updated hint
+      image: '/cd3.webp', // Updated image
+      imageHint: 'coaching clinic cd3',
       href: '/coaching',
     },
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
       icon: Users,
-      image: 'https://placehold.co/500x300.png',
-      imageHint: 'pickleball championship', // Updated hint
+      image: '/cd4.avif', // Updated image
+      imageHint: 'pickleball championship cd4',
       href: '/events',
     },
   ];
@@ -118,9 +118,8 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection animationClass="animate-zoomIn" delay={100}>
-          <section className="py-16 bg-primary/20 relative">
-            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block"> {/* Removed hidden */}
+      <section className="py-16 bg-primary/20 relative">
+            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block">
               <Image
                 src="/konarkandball.png"
                 alt="Spinning Konark Wheel with Pickleball"
@@ -129,50 +128,51 @@ export default function HomePage() {
                 className="animate-spin-slow object-contain"
               />
             </div>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <AnimatedSection animationClass="animate-fadeInDown">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
-                  <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Discover what makes the Odisha Pickleball Association special.
-                  </p>
-                </div>
-              </AnimatedSection>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {keyHighlights.map((item, index) => (
-                  <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
-                    <Card className="h-full group relative overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col bg-card">
-                      <CardHeader className="items-center text-center">
-                        <div className="p-3 rounded-full bg-primary/10 text-primary mb-3 inline-block">
-                          <item.icon className="h-8 w-8" />
-                        </div>
-                        <CardTitle className="text-xl">{item.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-center flex-grow">
-                        <p className="text-muted-foreground">{item.description}</p>
-                      </CardContent>
-                      <CardFooter className="justify-center">
-                        <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent text-foreground">
-                          <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                        </Button>
-                      </CardFooter>
-                      <div
-                        className="absolute top-0 left-[-150%] w-[50%] h-full
-                                   bg-gradient-to-r from-transparent via-white/10 to-transparent
-                                   transform -skew-x-12
-                                   transition-all duration-700 ease-out
-                                   group-hover:left-[150%] group-hover:duration-500">
-                      </div>
-                    </Card>
-                  </AnimatedSection>
-                ))}
+        <AnimatedSection animationClass="animate-zoomIn" delay={100} className="w-full">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimatedSection animationClass="animate-fadeInDown">
+              <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
+                <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Discover what makes the Odisha Pickleball Association special.
+                </p>
               </div>
+            </AnimatedSection>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {keyHighlights.map((item, index) => (
+                <AnimatedSection key={item.title} delay={index * 150 + 200} animationClass="animate-zoomIn">
+                  <Card className="h-full group relative overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col bg-card">
+                    <CardHeader className="items-center text-center">
+                      <div className="p-3 rounded-full bg-primary/10 text-primary mb-3 inline-block">
+                        <item.icon className="h-8 w-8" />
+                      </div>
+                      <CardTitle className="text-xl">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-center flex-grow">
+                      <p className="text-muted-foreground">{item.description}</p>
+                    </CardContent>
+                    <CardFooter className="justify-center">
+                      <Button variant="outline" asChild className="hover:bg-accent/10 hover:text-accent text-foreground">
+                        <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                      </Button>
+                    </CardFooter>
+                    <div
+                      className="absolute top-0 left-[-150%] w-[50%] h-full
+                                 bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                 transform -skew-x-12
+                                 transition-all duration-700 ease-out
+                                 group-hover:left-[150%] group-hover:duration-500">
+                    </div>
+                  </Card>
+                </AnimatedSection>
+              ))}
             </div>
-          </section>
-      </AnimatedSection>
+          </div>
+        </AnimatedSection>
+      </section>
       
-      <AnimatedSection animationClass="animate-fadeInUp" delay={150}>
-        <section className="py-16 bg-[#4B5D67]">
+      <section className="py-16 bg-[#4B5D67]">
+        <AnimatedSection animationClass="animate-fadeInUp" delay={150} className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
                 <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
@@ -227,20 +227,20 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-          </section>
-      </AnimatedSection>
+          </AnimatedSection>
+        </section>
       
-      <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
-        <section className="py-16 bg-secondary/30 relative"> 
-            <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 md:block"> {/* Removed hidden */}
-              <Image
-                src="/konarkandball.png"
-                alt="Spinning Konark Wheel with Pickleball"
-                width={150}
-                height={150}
-                className="animate-spin-slow object-contain"
-              />
-            </div>
+      <section className="py-16 bg-secondary/30 relative"> 
+        <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 md:block">
+          <Image
+            src="/konarkandball.png"
+            alt="Spinning Konark Wheel with Pickleball"
+            width={150}
+            height={150}
+            className="animate-spin-slow object-contain"
+          />
+        </div>
+        <AnimatedSection animationClass="animate-fadeInUp" delay={200} className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
               <AnimatedSection animationClass="animate-fadeInDown">
@@ -290,11 +290,11 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
           </div>
-        </section>
-      </AnimatedSection>
+        </AnimatedSection>
+      </section>
 
-      <AnimatedSection delay={100} animationClass="animate-zoomIn">
-        <section className="py-16 text-center bg-accent/20">
+      <section className="py-16 text-center bg-accent/20">
+        <AnimatedSection delay={100} animationClass="animate-zoomIn" className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
@@ -306,11 +306,11 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-        </section>
-      </AnimatedSection>
+        </AnimatedSection>
+      </section>
 
-      <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp">
-        <section className="py-16 bg-secondary/50">
+      <section className="py-16 bg-secondary/50">
+        <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp" className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
               <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
@@ -342,8 +342,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
-      </AnimatedSection>
+        </AnimatedSection>
+      </section>
     </AnimatedSection>
   );
 }

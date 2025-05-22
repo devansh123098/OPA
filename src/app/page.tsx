@@ -21,7 +21,7 @@ export default function HomePage() {
       description: 'Join local leagues and compete with players of all skill levels. Fun and competitive play guaranteed.',
       icon: Users,
       image: 'https://placehold.co/500x300.png',
-      imageHint: 'community sports',
+      imageHint: 'community league', // Updated hint
       href: '/events',
     },
     {
@@ -29,7 +29,7 @@ export default function HomePage() {
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
       icon: Lightbulb,
       image: 'https://placehold.co/500x300.png',
-      imageHint: 'children playing sports',
+      imageHint: 'youth sports', // Updated hint
       href: '/coaching',
     },
     {
@@ -37,15 +37,15 @@ export default function HomePage() {
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
       icon: Dumbbell,
       image: 'https://placehold.co/500x300.png',
-      imageHint: 'sports coaching',
+      imageHint: 'coaching clinic', // Updated hint
       href: '/coaching',
     },
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Users, 
+      icon: Users,
       image: 'https://placehold.co/500x300.png',
-      imageHint: 'trophy award',
+      imageHint: 'pickleball championship', // Updated hint
       href: '/events',
     },
   ];
@@ -120,7 +120,7 @@ export default function HomePage() {
 
       <AnimatedSection animationClass="animate-zoomIn" delay={100}>
           <section className="py-16 bg-primary/20 relative">
-            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 block md:block"> {/* Removed hidden */}
+            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block"> {/* Removed hidden */}
               <Image
                 src="/konarkandball.png"
                 alt="Spinning Konark Wheel with Pickleball"
@@ -232,7 +232,7 @@ export default function HomePage() {
       
       <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
         <section className="py-16 bg-secondary/30 relative"> 
-            <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 block md:block"> {/* Removed hidden */}
+            <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 md:block"> {/* Removed hidden */}
               <Image
                 src="/konarkandball.png"
                 alt="Spinning Konark Wheel with Pickleball"

@@ -31,7 +31,7 @@ const Footer = () => {
                 alt="OPA Logo in Footer"
                 width={40}
                 height={40}
-                className="h-10 w-10 object-contain bg-slate-200 rounded-md p-1" // Added light background for visibility
+                className="h-10 w-10 object-contain" // Removed bg-slate-200 rounded-md p-1
               />
               <span className="font-semibold text-lg text-white">
                 Odisha Pickleball Association

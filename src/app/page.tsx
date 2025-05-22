@@ -5,14 +5,14 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Users, BarChartHorizontal, Zap } from 'lucide-react';
+import { ArrowRight, Lightbulb, Users, BarChartHorizontal, Zap } from 'lucide-react'; // Ensured Zap is imported
 
 export default function HomePage() {
   const keyHighlights = [
     { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
     { title: 'Rankings', description: 'Track your progress and see where you stand among Odisha\'s top players.', icon: BarChartHorizontal, href: '/ranking' },
     { title: 'Community Events', description: 'Participate in regular tournaments, workshops, and social pickleball events.', icon: Users, href: '/events' },
-    { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Dumbbell, href: '/coaching' },
+    { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Zap, href: '/coaching' }, // Changed from Dumbbell to Zap
   ];
 
   const initiatives = [
@@ -20,38 +20,38 @@ export default function HomePage() {
       title: 'Community Leagues',
       description: 'Join local leagues and compete with players of all skill levels. Fun and competitive play guaranteed.',
       icon: Users,
-      image: '/cd1.jpg', // Updated image
-      imageHint: 'community league cd1', 
+      image: '/cd1.jpg',
+      imageHint: 'community league',
       href: '/events',
     },
     {
       title: 'Youth Programs',
       description: 'Specialized coaching and events designed to introduce young players to the joys of pickleball.',
       icon: Lightbulb,
-      image: '/cd2.jpg', // Updated image
-      imageHint: 'youth sports cd2',
+      image: '/cd2.jpg',
+      imageHint: 'youth sports',
       href: '/coaching',
     },
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Dumbbell,
-      image: '/cd3.webp', // Updated image
-      imageHint: 'coaching clinic cd3',
+      icon: Zap, // Using Zap here too for consistency if Dumbbell was intended for 'strength'
+      image: '/cd3.webp',
+      imageHint: 'coaching clinic',
       href: '/coaching',
     },
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Users,
-      image: '/cd4.avif', // Updated image
-      imageHint: 'pickleball championship cd4',
+      icon: Users, // Using Users as it's an event
+      image: '/cd4.avif',
+      imageHint: 'pickleball championship',
       href: '/events',
     },
   ];
 
   const newsItems = [
-     {
+    {
       id: 'news1',
       title: 'The Indian Pickleball Association (IPA) - now officially recognised by the Ministry of Youth Affairs and Sports, Government of India',
       description: 'With systematic and painstaking groundwork laid by the members in IPA and a fast-growing community behind it, IPA is ready to drive the next chapter: building a nationwide ecosystem of access, excellence, and opportunity.',
@@ -77,27 +77,24 @@ export default function HomePage() {
     },
   ];
 
-
   return (
     <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
-      <section className="relative overflow-hidden">
-        <AnimatedSection animationClass="animate-fadeIn" delay={100}>
-          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
-            <Image
-              src="/mainimage.JPG"
-              alt="Pickleball action background"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="opacity-100"
-              priority
-            />
-          </div>
-        </AnimatedSection>
-      </section>
+      <AnimatedSection animationClass="animate-fadeIn" delay={100}>
+        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
+          <Image
+            src="/mainimage.JPG"
+            alt="Pickleball action background"
+            fill
+            style={{ objectFit: 'cover' }}
+            className="opacity-100" // Changed from opacity-20
+            priority
+          />
+        </div>
+      </AnimatedSection>
 
       <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-gradientWave text-foreground">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-gradientWave">
             Welcome to Odisha Pickleball Association
           </h1>
           <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -119,20 +116,20 @@ export default function HomePage() {
       </AnimatedSection>
 
       <section className="py-16 bg-primary/20 relative">
-            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block">
-              <Image
-                src="/konarkandball.png"
-                alt="Spinning Konark Wheel with Pickleball"
-                width={150}
-                height={150}
-                className="animate-spin-slow object-contain"
-              />
-            </div>
+        <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block">
+          <Image
+            src="/konarkandball.png"
+            alt="Spinning Konark Wheel with Pickleball"
+            width={150}
+            height={150}
+            className="animate-spin-slow object-contain"
+          />
+        </div>
         <AnimatedSection animationClass="animate-zoomIn" delay={100} className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection animationClass="animate-fadeInDown">
               <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
+                <h2 className="text-3xl font-bold text-foreground">Key Highlights</h2>
                 <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                   Discover what makes the Odisha Pickleball Association special.
                 </p>
@@ -257,7 +254,7 @@ export default function HomePage() {
                           data-ai-hint={news.imageHint}
                           fill
                           style={{ objectFit: 'cover' }}
-                          className="transition-transform duration-300 ease-in-out group-hover:scale-110"
+                          className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-110"
                         />
                       </div>
                       <CardHeader>
@@ -347,3 +344,5 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
+
+    

@@ -43,7 +43,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Users, // Consider an award or trophy icon if available and appropriate
+      icon: Users, 
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -97,7 +97,7 @@ export default function HomePage() {
 
       <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-gradientWave">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight animate-gradientWave text-foreground">
             Welcome to Odisha Pickleball Association
           </h1>
           <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -120,7 +120,7 @@ export default function HomePage() {
 
       <AnimatedSection animationClass="animate-zoomIn" delay={100}>
           <section className="py-16 bg-primary/20 relative">
-            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
+            <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 block md:block"> {/* Removed hidden */}
               <Image
                 src="/konarkandball.png"
                 alt="Spinning Konark Wheel with Pickleball"
@@ -232,7 +232,7 @@ export default function HomePage() {
       
       <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
         <section className="py-16 bg-secondary/30 relative"> 
-            <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 hidden md:block">
+            <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 block md:block"> {/* Removed hidden */}
               <Image
                 src="/konarkandball.png"
                 alt="Spinning Konark Wheel with Pickleball"
@@ -347,4 +347,3 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
-

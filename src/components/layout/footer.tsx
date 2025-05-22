@@ -26,12 +26,12 @@ const Footer = () => {
           {/* About OPA */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
-              <Image 
-                src="/opalogo.png" 
-                alt="OPA Logo in Footer" 
+              <Image
+                src="/opalogo.png"
+                alt="OPA Logo in Footer"
                 width={40}
-                height={40} 
-                className="h-10 w-10 object-contain" 
+                height={40}
+                className="h-10 w-10 object-contain bg-slate-200 rounded-md p-1" // Added light background for visibility
               />
               <span className="font-semibold text-lg text-white">
                 Odisha Pickleball Association
@@ -71,14 +71,14 @@ const Footer = () => {
                 <span>+91 99370 23493</span>
               </li>
               <li className="flex items-start gap-2 text-gray-300">
-                <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" /> 
+                <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" />
                 <span>
                   Kalinga Stadium, Bhubaneswar, Odisha
                 </span>
               </li>
             </ul>
           </div>
-          
+
           {/* Follow Us */}
           <div>
             <h3 className="font-semibold text-white mb-4">Follow Us</h3>
@@ -87,7 +87,7 @@ const Footer = () => {
                 <Link key={social.label} href={social.href}
                   className="text-gray-300 hover:text-primary transition-colors"
                   aria-label={social.label}
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   <social.icon className="h-6 w-6" />

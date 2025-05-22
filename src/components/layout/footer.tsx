@@ -12,11 +12,12 @@ const Footer = () => {
     { href: '/events', label: 'Tournaments' },
     { href: '/coaching', label: 'Coaching' },
     { href: '/ranking', label: 'Ranking' },
+    { href: '/partners', label: 'Partners' },
     { href: '/contact-us', label: 'Contact Us' },
   ];
 
   const socialLinks = [
-    { href: 'https://www.instagram.com/odishapickleballofficial/', icon: Instagram, label: 'Instagram' },
+    { href: 'https://www.instagram.com/odishapickleballofficial/', icon: Instagram, label: 'Instagram', target: '_blank' },
   ];
 
   return (
@@ -27,11 +28,11 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image
-                src="/opalogo.png"
+                src="/opalogo.png" // Ensuring this path is correct
                 alt="OPA Logo in Footer"
                 width={40}
                 height={40}
-                className="h-10 w-10 object-contain" // Removed bg-slate-200 rounded-md p-1
+                className="h-10 w-10 object-contain" 
               />
               <span className="font-semibold text-lg text-white">
                 Odisha Pickleball Association
@@ -87,8 +88,8 @@ const Footer = () => {
                 <Link key={social.label} href={social.href}
                   className="text-gray-300 hover:text-primary transition-colors"
                   aria-label={social.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={social.target}
+                  rel={social.target === '_blank' ? 'noopener noreferrer' : undefined}
                 >
                   <social.icon className="h-6 w-6" />
                 </Link>

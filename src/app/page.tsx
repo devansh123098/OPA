@@ -189,14 +189,14 @@ export default function HomePage() {
                 {initiatives.map((item, index) => (
                   <AnimatedSection key={item.title} delay={index * 100 + 200} animationClass="animate-scaleFadeInUp">
                     <Card className="h-full group relative overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col bg-card">
-                      <div className="relative h-48 w-full">
+                      <div className="relative h-48 w-full overflow-hidden"> {/* Added overflow-hidden here */}
                         <Image
                           src={item.image}
                           alt={item.title}
                           data-ai-hint={item.imageHint}
                           fill
                           style={{ objectFit: 'cover' }}
-                          className="transition-transform duration-300"
+                          className="transition-transform duration-300 ease-in-out group-hover:scale-110"
                         />
                       </div>
                       <CardHeader>
@@ -204,7 +204,7 @@ export default function HomePage() {
                           <div className="p-2 rounded-full bg-accent/10 text-accent mr-3">
                             <item.icon className="h-5 w-5" />
                           </div>
-                          <CardTitle className="text-xl">{item.title}</CardTitle>
+                          <CardTitle className="text-xl group-hover:text-primary transition-colors">{item.title}</CardTitle>
                         </div>
                       </CardHeader>
                       <CardContent className="flex-grow">
@@ -249,19 +249,19 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {newsItems.map((news, index) => (
                   <AnimatedSection key={news.id} delay={index * 100 + 100} animationClass="animate-scaleFadeInUp">
-                    <Card className="h-full flex flex-col overflow-hidden shadow-lg group relative hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
-                      <div className="relative h-56 w-full">
+                    <Card className="h-full flex flex-col shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
+                      <div className="relative h-56 w-full overflow-hidden"> {/* Added overflow-hidden here */}
                         <Image
                           src={news.image}
                           alt={news.title}
                           data-ai-hint={news.imageHint}
                           fill
                           style={{ objectFit: 'cover' }}
-                          className="transition-transform duration-300"
+                          className="transition-transform duration-300 ease-in-out group-hover:scale-110"
                         />
                       </div>
                       <CardHeader>
-                        <CardTitle className="text-xl text-foreground">{news.title}</CardTitle>
+                        <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">{news.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="flex-grow">
                         <p className="text-muted-foreground text-sm">{news.description}</p>

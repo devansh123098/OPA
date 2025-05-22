@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Users, Dumbbell, BarChartHorizontal } from 'lucide-react';
+import { ArrowRight, Lightbulb, Users, Dumbbell, BarChartHorizontal, Zap } from 'lucide-react';
 
 export default function HomePage() {
   const keyHighlights = [
@@ -43,7 +43,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Users,
+      icon: Users, // Consider an award or trophy icon if available and appropriate
       image: 'https://placehold.co/500x300.png',
       imageHint: 'trophy award',
       href: '/events',
@@ -101,7 +101,7 @@ export default function HomePage() {
             Welcome to Odisha Pickleball Association
           </h1>
           <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-            The official platform for the Odisha Pickleball Association, providing comprehensive information on tournaments, club affiliations, and community engagement initiatives across the state.
+            The official platform for the Odisha Pickleball Association.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">

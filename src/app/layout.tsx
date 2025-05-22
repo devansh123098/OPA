@@ -5,7 +5,6 @@ import './globals.css';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
-// Icon import removed if we are relying on public/favicon.ico
 
 const fontSans = Inter({
   subsets: ['latin'],

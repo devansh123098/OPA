@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image
-                src="/opalogo.png" // Ensuring this path is correct
+                src="/favicon.ico" // Changed from opalogo.png
                 alt="OPA Logo in Footer"
                 width={40}
                 height={40}

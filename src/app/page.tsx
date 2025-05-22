@@ -101,7 +101,7 @@ export default function HomePage() {
             Welcome to Odisha Pickleball Association
           </h1>
           <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-            Your official hub for everything pickleball in Odisha. Discover events, clubs, and connect with the community.
+            The official platform for the Odisha Pickleball Association, providing comprehensive information on tournaments, club affiliations, and community engagement initiatives across the state.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
@@ -189,7 +189,7 @@ export default function HomePage() {
                 {initiatives.map((item, index) => (
                   <AnimatedSection key={item.title} delay={index * 100 + 200} animationClass="animate-scaleFadeInUp">
                     <Card className="h-full group relative overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col bg-card">
-                      <div className="relative h-48 w-full overflow-hidden"> {/* Added overflow-hidden here */}
+                      <div className="relative h-48 w-full overflow-hidden">
                         <Image
                           src={item.image}
                           alt={item.title}
@@ -250,7 +250,7 @@ export default function HomePage() {
                 {newsItems.map((news, index) => (
                   <AnimatedSection key={news.id} delay={index * 100 + 100} animationClass="animate-scaleFadeInUp">
                     <Card className="h-full flex flex-col shadow-lg group relative overflow-hidden hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card">
-                      <div className="relative h-56 w-full overflow-hidden"> {/* Added overflow-hidden here */}
+                      <div className="relative h-56 w-full overflow-hidden">
                         <Image
                           src={news.image}
                           alt={news.title}
@@ -347,3 +347,4 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
+

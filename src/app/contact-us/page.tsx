@@ -1,7 +1,6 @@
 
 'use client';
 
-import Image from 'next/image';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -100,7 +99,7 @@ export default function ContactUsPage() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-start gap-3 mb-3">
-                  <MapPin className="h-6 w-6 text-primary mt-1" />
+                  <MapPin className="h-6 w-6 text-primary mt-1 shrink-0" />
                   <p className="text-muted-foreground">
                     Plot # 2602, Biswanath Nagar,<br />
                     BJB Nagar S.O, BJB Nagar Khordha,<br />
@@ -108,25 +107,25 @@ export default function ContactUsPage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-3 mb-3">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-primary shrink-0" />
                   <a href="mailto:associationodishapickleball@gmail.com" className="text-accent hover:underline">
                     associationodishapickleball@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Phone className="h-6 w-6 text-primary shrink-0" />
                   <p className="text-muted-foreground">+91-700-818-9107</p>
                 </div>
                 <div className="mt-6 h-80 bg-secondary/30 rounded-md overflow-hidden">
                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.097502763551!2d85.8191678149196!3d20.29089068640914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f0b6088301%3A0x4cb4fd6bd3c6a869!2sKalinga%20Stadium!5e0!3m2!1sen!2sin!4v1625825884271!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.486700516498!2d85.84453197590234!3d20.255573381223826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7ceb11a18e3%3A0x4c109fe7278045a2!2sBISWANATH%20NAGAR!5e0!3m2!1sen!2sin!4v1716114278011!5m2!1sen!2sin"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen={false}
                       loading="lazy"
                       referrerPolicy="no-referrer-downgrade"
-                      title="Kalinga Stadium Location"
+                      title="Odisha Pickleball Association Office Location"
                     ></iframe>
                 </div>
               </CardContent>

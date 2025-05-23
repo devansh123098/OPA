@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react'; // Added MapPin
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 const Footer = () => {
@@ -28,11 +28,11 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 mb-2">
               <Image
-                src="/favicon.ico" // Changed from opalogo.png
+                src="/favicon.ico"
                 alt="OPA Logo in Footer"
                 width={40}
                 height={40}
-                className="h-10 w-10 object-contain" 
+                className="h-10 w-10 object-contain"
               />
               <span className="font-semibold text-lg text-white">
                 Odisha Pickleball Association
@@ -69,12 +69,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-gray-300">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>+91 99370 23493</span>
+                <span>+91-700-818-9107</span>
               </li>
               <li className="flex items-start gap-2 text-gray-300">
                 <MapPin className="h-4 w-4 text-primary shrink-0 mt-1" />
                 <span>
-                  Kalinga Stadium, Bhubaneswar, Odisha
+                  Plot # 2602, Biswanath Nagar,<br />
+                  BJB Nagar S.O, BJB Nagar Khordha,<br />
+                  Bhubaneswar - 751014, ODISHA
                 </span>
               </li>
             </ul>

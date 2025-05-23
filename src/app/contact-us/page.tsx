@@ -75,7 +75,6 @@ export default function ContactUsPage() {
   return (
     <>
       <section className="relative py-16 md:py-20 overflow-hidden bg-black">
-        {/* Background Image Removed */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
             <div className="md:col-span-12 text-center md:text-left">
@@ -103,8 +102,9 @@ export default function ContactUsPage() {
                 <div className="flex items-start gap-3 mb-3">
                   <MapPin className="h-6 w-6 text-primary mt-1" />
                   <p className="text-muted-foreground">
-                    Kalinga Stadium,<br />
-                    Bhubaneswar, Odisha - 751012
+                    Plot # 2602, Biswanath Nagar,<br />
+                    BJB Nagar S.O, BJB Nagar Khordha,<br />
+                    Bhubaneswar - 751014, ODISHA
                   </p>
                 </div>
                 <div className="flex items-center gap-3 mb-3">
@@ -115,7 +115,7 @@ export default function ContactUsPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-6 w-6 text-primary" />
-                  <p className="text-muted-foreground">+91 99370 23493</p>
+                  <p className="text-muted-foreground">+91-700-818-9107</p>
                 </div>
                 <div className="mt-6 h-80 bg-secondary/30 rounded-md overflow-hidden">
                    <iframe

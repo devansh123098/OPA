@@ -79,56 +79,56 @@ export default function HomePage() {
 
   return (
     <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
-      {/* Full-Screen Hero Section */}
+      {/* Hero Image Banner */}
       <AnimatedSection animationClass="animate-fadeIn" delay={100}>
-        <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-center">
-          {/* Background Image */}
+        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
           <Image
             src="/mainimage.JPG"
             alt="Pickleball action background"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-100 -z-10" // ensure image is behind text
+            className="opacity-100"
             priority
           />
-          {/* Overlay Content */}
-          <div className="relative z-10 p-4">
-            <AnimatedSection delay={200} animationClass="animate-fadeInUp">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                Welcome to Odisha Pickleball Association
-              </h1>
-              <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
-                The official platform for the Odisha Pickleball Association.
-              </p>
-              <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-                  <Link href="/contact-us">
-                    Join OPA <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-200">
-                  <Link href="/events">
-                    Upcoming Events
-                  </Link>
-                </Button>
-              </div>
-            </AnimatedSection>
-          </div>
         </div>
       </AnimatedSection>
 
+      {/* Hero Text Content Section */}
+      <PageWrapper className="text-center py-12 md:py-16">
+        <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-gradientWave">
+            Welcome to Odisha Pickleball Association
+          </h1>
+          <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
+            The official platform for the Odisha Pickleball Association.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+              <Link href="/contact-us">
+                Join OPA <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-200">
+              <Link href="/events">
+                Upcoming Events
+              </Link>
+            </Button>
+          </div>
+        </AnimatedSection>
+      </PageWrapper>
+
       {/* Key Highlights Section */}
-      <section className="py-16 bg-primary/20 relative">
-        <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block">
-          <Image
-            src="/konarkandball.png"
-            alt="Spinning Konark Wheel with Pickleball"
-            width={150}
-            height={150}
-            className="animate-spin-slow object-contain"
-          />
-        </div>
-        <AnimatedSection animationClass="animate-zoomIn" delay={100} className="w-full">
+      <AnimatedSection animationClass="animate-zoomIn" delay={100} className="w-full">
+        <section className="py-16 bg-primary/20 relative">
+           <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 hidden md:block">
+            <Image
+              src="/konarkandball.png"
+              alt="Spinning Konark Wheel with Pickleball"
+              width={150}
+              height={150}
+              className="animate-spin-slow object-contain"
+            />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection animationClass="animate-fadeInDown">
               <div className="text-center mb-12">
@@ -156,24 +156,24 @@ export default function HomePage() {
                         <Link href={item.href}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                       </Button>
                     </CardFooter>
-                    <div
-                      className="absolute top-0 left-[-150%] w-[50%] h-full
-                                 bg-gradient-to-r from-transparent via-white/10 to-transparent
-                                 transform -skew-x-12
-                                 transition-all duration-700 ease-out
-                                 group-hover:left-[150%] group-hover:duration-500">
-                    </div>
+                     <div
+                        className="absolute top-0 left-[-150%] w-[50%] h-full
+                                   bg-gradient-to-r from-transparent via-white/10 to-transparent
+                                   transform -skew-x-12
+                                   transition-all duration-700 ease-out
+                                   group-hover:left-[150%] group-hover:duration-500">
+                      </div>
                   </Card>
                 </AnimatedSection>
               ))}
             </div>
           </div>
-        </AnimatedSection>
-      </section>
+        </section>
+      </AnimatedSection>
       
       {/* Discover Our Initiatives Section */}
-      <section className="py-16 bg-[#4B5D67]">
-        <AnimatedSection animationClass="animate-fadeInUp" delay={150} className="w-full">
+       <AnimatedSection animationClass="animate-fadeInUp" delay={150} className="w-full">
+        <section className="py-16 bg-[#4B5D67]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="mb-12 md:grid md:grid-cols-12 md:gap-x-8 md:items-center">
                 <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
@@ -228,21 +228,21 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-          </AnimatedSection>
-        </section>
+          </section>
+        </AnimatedSection>
       
       {/* Latest News Section */}
-      <section className="py-16 bg-secondary/30 relative"> 
-        <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 md:block">
-          <Image
-            src="/konarkandball.png"
-            alt="Spinning Konark Wheel with Pickleball"
-            width={150}
-            height={150}
-            className="animate-spin-slow object-contain"
-          />
-        </div>
-        <AnimatedSection animationClass="animate-fadeInUp" delay={200} className="w-full">
+      <AnimatedSection animationClass="animate-fadeInUp" delay={200} className="w-full">
+        <section className="py-16 bg-secondary/30 relative"> 
+          <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 hidden md:block">
+            <Image
+              src="/konarkandball.png"
+              alt="Spinning Konark Wheel with Pickleball"
+              width={150}
+              height={150}
+              className="animate-spin-slow object-contain"
+            />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <AnimatedSection animationClass="animate-fadeInUp" delay={100}>
               <AnimatedSection animationClass="animate-fadeInDown">
@@ -292,12 +292,12 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
           </div>
-        </AnimatedSection>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* Join Our Community Section */}
-      <section className="py-16 text-center bg-accent/20">
-        <AnimatedSection delay={100} animationClass="animate-zoomIn" className="w-full">
+       <AnimatedSection delay={100} animationClass="animate-zoomIn" className="w-full">
+        <section className="py-16 text-center bg-accent/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">Join Our Community</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
@@ -309,12 +309,12 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-        </AnimatedSection>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* Learn About Pickleball Section */}
-      <section className="py-16 bg-secondary/50">
-        <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp" className="w-full">
+      <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp" className="w-full">
+        <section className="py-16 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="md:grid md:grid-cols-12 md:gap-8 md:items-center">
               <div className="md:col-span-7 lg:col-span-8 text-center md:text-left"> 
@@ -346,8 +346,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </AnimatedSection>
-      </section>
+        </section>
+      </AnimatedSection>
     </AnimatedSection>
   );
 }

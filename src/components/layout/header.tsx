@@ -20,15 +20,15 @@ const Header = () => {
     setMounted(true);
   }, []);
 
-  const isHomePage = pathname === '/';
+  // No longer need isHomePage for main header background styling
+  // const isHomePage = pathname === '/'; 
 
   return (
     <header
       className={cn(
         "sticky top-0 z-50 w-full transition-colors duration-300 ease-in-out",
-        isHomePage && mounted // Apply transparent style only on client-side for homepage to avoid flash/hydration mismatch
-          ? "bg-transparent border-b-0 shadow-none text-white" // Ensure text is white for overlay
-          : "bg-sidebar text-sidebar-foreground border-b border-sidebar-border/40 shadow-md"
+        // Always use the solid background style
+        "bg-sidebar text-sidebar-foreground border-b border-sidebar-border/40 shadow-md"
       )}
     >
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -66,8 +66,8 @@ const Header = () => {
               className={cn(
                 "text-sm font-medium transition-colors",
                 mounted && pathname === link.href
-                  ? isHomePage ? "bg-white/20 hover:bg-white/30 text-white" : "bg-sidebar-accent text-sidebar-accent-foreground" // Active link on homepage vs other pages
-                  : isHomePage ? "text-white hover:bg-white/10" : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                  ? "bg-sidebar-accent text-sidebar-accent-foreground" // Active link style
+                  : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground" // Default/hover
               )}
             >
               <Link href={link.href}>{link.label}</Link>
@@ -81,7 +81,8 @@ const Header = () => {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" 
                 className={cn(
-                  isHomePage && mounted ? "text-white hover:bg-white/10" : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                  // Consistent button styling for mobile trigger
+                  "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                 )}
               >
                 <Menu className="h-6 w-6" />
@@ -93,9 +94,9 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
                         <Image
-                          src="/logo.png"
+                          src="/logo.png" // Ensure this matches the desktop logo if intended
                           alt="OPA Logo"
-                          width={365}
+                          width={365} // Using larger logo size here too
                           height={80}
                           className="object-contain"
                           priority
@@ -117,7 +118,7 @@ const Header = () => {
                       className={cn(
                         "justify-start text-base font-medium transition-colors",
                         mounted && pathname === link.href
-                          ? "bg-sidebar-accent text-sidebar-accent-foreground" // Mobile active links always use sidebar accent
+                          ? "bg-sidebar-accent text-sidebar-accent-foreground" 
                           : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       )}
                       onClick={() => setIsSheetOpen(false)}

@@ -5,14 +5,14 @@ import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/page-wrapper';
 import AnimatedSection from '@/components/animated-section';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Lightbulb, Users, BarChartHorizontal, Zap } from 'lucide-react'; // Ensured Zap is imported
+import { ArrowRight, Lightbulb, Users, BarChartHorizontal, Zap } from 'lucide-react';
 
 export default function HomePage() {
   const keyHighlights = [
     { title: 'Expert Coaching', description: 'Learn from certified coaches to elevate your game, regardless of your skill level.', icon: Lightbulb, href: '/coaching' },
     { title: 'Rankings', description: 'Track your progress and see where you stand among Odisha\'s top players.', icon: BarChartHorizontal, href: '/ranking' },
     { title: 'Community Events', description: 'Participate in regular tournaments, workshops, and social pickleball events.', icon: Users, href: '/events' },
-    { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Zap, href: '/coaching' }, // Changed from Dumbbell to Zap
+    { title: 'Skill Development', description: 'Programs designed to help players of all ages improve and enjoy the sport.', icon: Zap, href: '/coaching' },
   ];
 
   const initiatives = [
@@ -35,7 +35,7 @@ export default function HomePage() {
     {
       title: 'Coaching Clinics',
       description: 'Improve your skills with expert-led clinics focusing on technique, strategy, and gameplay.',
-      icon: Zap, // Using Zap here too for consistency if Dumbbell was intended for 'strength'
+      icon: Zap,
       image: '/cd3.webp',
       imageHint: 'coaching clinic',
       href: '/coaching',
@@ -43,7 +43,7 @@ export default function HomePage() {
     {
       title: 'Annual Championship',
       description: 'The premier pickleball event in Odisha, attracting top talent and enthusiastic spectators.',
-      icon: Users, // Using Users as it's an event
+      icon: Users,
       image: '/cd4.avif',
       imageHint: 'pickleball championship',
       href: '/events',
@@ -79,42 +79,45 @@ export default function HomePage() {
 
   return (
     <AnimatedSection animationClass="animate-fadeInUp" delay={50} threshold={0.01} once={true}>
+      {/* Full-Screen Hero Section */}
       <AnimatedSection animationClass="animate-fadeIn" delay={100}>
-        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
+        <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-center">
+          {/* Background Image */}
           <Image
             src="/mainimage.JPG"
             alt="Pickleball action background"
             fill
             style={{ objectFit: 'cover' }}
-            className="opacity-100" // Changed from opacity-20
+            className="opacity-100 -z-10" // ensure image is behind text
             priority
           />
-        </div>
-      </AnimatedSection>
-
-      <AnimatedSection animationClass="animate-fadeInUp" delay={200}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground animate-gradientWave">
-            Welcome to Odisha Pickleball Association
-          </h1>
-          <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-            The official platform for the Odisha Pickleball Association.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
-              <Link href="/contact-us">
-                Join OPA <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-200">
-              <Link href="/events">
-                Upcoming Events
-              </Link>
-            </Button>
+          {/* Overlay Content */}
+          <div className="relative z-10 p-4">
+            <AnimatedSection delay={200} animationClass="animate-fadeInUp">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+                Welcome to Odisha Pickleball Association
+              </h1>
+              <p className="mt-4 text-xl text-gray-200 max-w-2xl mx-auto">
+                The official platform for the Odisha Pickleball Association.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-200">
+                  <Link href="/contact-us">
+                    Join OPA <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button size="lg" asChild className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg transform hover:scale-105 transition-transform duration-200">
+                  <Link href="/events">
+                    Upcoming Events
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </AnimatedSection>
 
+      {/* Key Highlights Section */}
       <section className="py-16 bg-primary/20 relative">
         <div className="absolute top-0 left-0 transform -translate-y-1/2 z-10 md:block">
           <Image
@@ -168,6 +171,7 @@ export default function HomePage() {
         </AnimatedSection>
       </section>
       
+      {/* Discover Our Initiatives Section */}
       <section className="py-16 bg-[#4B5D67]">
         <AnimatedSection animationClass="animate-fadeInUp" delay={150} className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -227,6 +231,7 @@ export default function HomePage() {
           </AnimatedSection>
         </section>
       
+      {/* Latest News Section */}
       <section className="py-16 bg-secondary/30 relative"> 
         <div className="absolute top-0 right-0 transform -translate-y-1/2 z-10 md:block">
           <Image
@@ -290,6 +295,7 @@ export default function HomePage() {
         </AnimatedSection>
       </section>
 
+      {/* Join Our Community Section */}
       <section className="py-16 text-center bg-accent/20">
         <AnimatedSection delay={100} animationClass="animate-zoomIn" className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,6 +312,7 @@ export default function HomePage() {
         </AnimatedSection>
       </section>
 
+      {/* Learn About Pickleball Section */}
       <section className="py-16 bg-secondary/50">
         <AnimatedSection delay={200} animationClass="animate-scaleFadeInUp" className="w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,5 +351,3 @@ export default function HomePage() {
     </AnimatedSection>
   );
 }
-
-    

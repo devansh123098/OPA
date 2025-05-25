@@ -23,12 +23,19 @@ const Header = () => {
   const isHomePage = pathname === '/';
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/40 bg-sidebar text-sidebar-foreground shadow-md">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-colors duration-300 ease-in-out",
+        isHomePage && mounted // Apply transparent style only on client-side for homepage to avoid flash/hydration mismatch
+          ? "bg-transparent border-b-0 shadow-none text-white" // Ensure text is white for overlay
+          : "bg-sidebar text-sidebar-foreground border-b border-sidebar-border/40 shadow-md"
+      )}
+    >
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Desktop Logo (Left) */}
         <Link href="/" className="hidden md:flex items-center" onClick={() => setIsSheetOpen(false)}>
           <Image
-            src="/logo.png" 
+            src="/logo.png"
             alt="Odisha Pickleball Association Logo"
             width={365}
             height={80}
@@ -40,7 +47,7 @@ const Header = () => {
         {/* Mobile Logo (Left - visible in header bar) */}
         <Link href="/" className="block md:hidden" onClick={() => setIsSheetOpen(false)}>
           <Image
-            src="/logo.png" 
+            src="/logo.png"
             alt="OPA Logo"
             width={200}
             height={50}
@@ -59,8 +66,8 @@ const Header = () => {
               className={cn(
                 "text-sm font-medium transition-colors",
                 mounted && pathname === link.href
-                  ? "bg-sidebar-accent text-sidebar-accent-foreground font-semibold"
-                  : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                  ? isHomePage ? "bg-white/20 hover:bg-white/30 text-white" : "bg-sidebar-accent text-sidebar-accent-foreground" // Active link on homepage vs other pages
+                  : isHomePage ? "text-white hover:bg-white/10" : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
               )}
             >
               <Link href={link.href}>{link.label}</Link>
@@ -72,7 +79,11 @@ const Header = () => {
          <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
+              <Button variant="ghost" size="icon" 
+                className={cn(
+                  isHomePage && mounted ? "text-white hover:bg-white/10" : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                )}
+              >
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
@@ -82,9 +93,9 @@ const Header = () => {
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center" onClick={() => setIsSheetOpen(false)}>
                         <Image
-                          src="/logo.png" 
+                          src="/logo.png"
                           alt="OPA Logo"
-                          width={365} 
+                          width={365}
                           height={80}
                           className="object-contain"
                           priority
@@ -106,7 +117,7 @@ const Header = () => {
                       className={cn(
                         "justify-start text-base font-medium transition-colors",
                         mounted && pathname === link.href
-                          ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                          ? "bg-sidebar-accent text-sidebar-accent-foreground" // Mobile active links always use sidebar accent
                           : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       )}
                       onClick={() => setIsSheetOpen(false)}

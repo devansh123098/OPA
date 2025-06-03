@@ -105,7 +105,7 @@ const Footer = () => {
             &copy; {currentYear} Odisha Pickleball Association. All rights reserved.
           </p>
           <p className="mt-1">
-            Designed with <span className="text-primary">&hearts;</span> for the love of Pickleball.
+            Designed by Devansh Mohanty
           </p>
         </div>
       </div>

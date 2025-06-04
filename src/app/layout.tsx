@@ -46,9 +46,6 @@ export default function RootLayout({
           <p className="text-lg md:text-xl text-gray-400">
             This website is temporarily unavailable due to unforeseen circumstances.
           </p>
-          <p className="text-sm text-gray-500">
-            (Not really! This is just a prank. Your friendly AI is standing by to reactivate it.)
-          </p>
         </div>
       </body>
     </html>
